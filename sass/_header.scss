@@ -108,6 +108,7 @@
 }
 
 .account-button {
+	cursor: pointer;
 	border: none;
 	outline: none;
 	width: 2.2rem;
@@ -119,6 +120,6 @@
 }
 
 .logout-btn {
-	margin-left: 10px;
+	margin-left: 14px;
 	background: url(../images/icons/logout-icon.svg) center/contain no-repeat;
 }

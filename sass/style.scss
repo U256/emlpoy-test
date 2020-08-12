@@ -8,17 +8,22 @@ html {
    html { font-size: 9px; }
 }
 
-section,header,footer { padding: 0 10px;}
+main {
+   min-height: calc(100vh - 64px);
+   background-color: #f9fafb; 
+   background-color: #ccc;
+   display: flex;
+}
 
 
 @import '_header';
-
+@import '_left-panel';
 @import '_footer';
 
 
 
 @media (min-width: 1999.98px) {
-
+   
 }
 
 @media (max-width: 1199.98px) {
