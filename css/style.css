@@ -1,24 +1,21 @@
-@charset "UTF-8";
 html {
   font-family: Roboto, sans-serif;
   font-size: 10px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   html {
     font-size: 9px;
   }
 }
 
-@font-face {
-  font-family: 'ProximaNova';
-  src: local("☺"), url("fonts/ProximaNova-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+section, header, footer {
+  padding: 0 10px;
 }
 
 .header {
   color: #ffffff;
+  padding: 0 24px;
   background-color: #3f51b5;
   height: 64px;
   display: -webkit-box;
@@ -29,8 +26,13 @@ html {
           align-items: center;
 }
 
+@media (max-width: 575.98px) {
+  .header {
+    padding: 0 15px;
+  }
+}
+
 .header__logo {
-  margin-left: 14px;
   height: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,10 +40,13 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../images/icons/header-logo.png) left center/36px no-repeat;
+  background: url(../images/icons/header-logo.svg) left center/36px no-repeat;
 }
 
 .header__app-version {
+  margin: 0 15px 0 34px;
+  padding: 5px;
+  min-height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,15 +54,39 @@ html {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-left: 34px;
-  padding: 3px;
   width: 70%;
   max-width: 842px;
   border-radius: 4px;
   background-color: #3c4a97;
 }
 
+@media (max-width: 991.98px) {
+  .header__app-version {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header__app-version {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.header__account-buttons {
+  margin-left: auto;
+  width: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .logo-name-text {
+  white-space: nowrap;
   margin-left: 40px;
   font-size: 2rem;
   font-weight: 500;
@@ -68,7 +97,7 @@ html {
 .app-version-logo {
   height: 19px;
   padding: 4px;
-  margin-right: 14px;
+  margin: 0 14px 0 6px;
   background-color: #26a69a;
   border-radius: 0.4rem;
   font-size: 1rem;
@@ -77,10 +106,43 @@ html {
   text-transform: uppercase;
 }
 
+@media (max-width: 575.98px) {
+  .app-version-logo {
+    display: none;
+  }
+}
+
 .app-version-upgrade {
+  color: #cdd1ea;
   line-height: 2rem;
   font-size: 1.4rem;
-  color: #cdd1ea;
+}
+
+@media (max-width: 991.98px) {
+  .app-version-upgrade {
+    display: none;
+  }
+}
+
+.app-version-upgrade-shorted {
+  display: none;
+}
+
+@media (max-width: 991.98px) and (min-width: 575.98px) {
+  .app-version-upgrade-shorted {
+    display: block;
+  }
+}
+
+.app-version-upgrade-small {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .app-version-upgrade-small {
+    display: block;
+    text-decoration: underline;
+  }
 }
 
 .app-version-upgrade a {
@@ -90,7 +152,19 @@ html {
   color: #fff;
 }
 
-section, header, footer {
-  padding: 0 10px;
+.account-button {
+  border: none;
+  outline: none;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.notifications-btn {
+  background: url(../images/icons/notification-icon.svg) center/contain no-repeat;
+}
+
+.logout-btn {
+  margin-left: 10px;
+  background: url(../images/icons/logout-icon.svg) center/contain no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
