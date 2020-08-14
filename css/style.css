@@ -13,7 +13,6 @@ html {
 main {
   min-height: calc(100vh - 64px);
   background-color: #f9fafb;
-  background-color: #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +214,7 @@ main {
 .user-block__logo {
   width: 100px;
   height: 100px;
-  background-color: #cccccc;
+  background-color: #ccc;
   border-radius: 50%;
   margin-bottom: 15px;
 }
