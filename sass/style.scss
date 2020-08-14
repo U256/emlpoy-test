@@ -15,10 +15,16 @@ main {
    display: flex;
 }
 
+.clean-btn {
+   outline: none;
+   border: none;
+   background-color: #fff;
+}
 
 @import '_header';
 @import '_left-panel';
 
+@import 'enter-page';
 @import 'notifications-bar';
 @import '_footer';
 

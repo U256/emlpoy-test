@@ -1,0 +1,308 @@
+.enter-page {
+	background-color: #f9fafb;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #9ea0a5;
+
+	&__block-container {
+		margin: 15px;
+		background-color: #ffffff;
+		box-shadow: 0 1px 3px rgba(63, 63, 68, 0.595), 0 0 0 rgba(63, 63, 68, 0.465);
+		display: flex;
+		width: 960px;
+		height: 640px;
+		border-radius: 8px;
+
+		@media (max-width: 991.98px) {
+			width: 530px; 
+			height: 550px;
+		}
+		@media (max-width: 575.98px) {
+			width: 300px;
+			height: 520px;
+		}
+	}
+
+	// contains start, login and  blocks
+	&__main-column {
+		height: 100%;
+		flex: 0 0 487px;
+		padding: 55px 63px;
+
+		@media (max-width: 991.98px) {
+			flex: 1 0 auto;
+		}
+
+		@media (max-width: 575.98px) {
+			flex: 1 0 300px;
+			padding: 20px;
+		}
+	}
+
+	//// contains image and citation
+	&__decoration-column { 
+		height: 100%;
+		flex: 0 0 473px;
+		display: flex;
+		position: relative;
+		z-index: 2;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 0 18px 24px 24px;
+		border-radius: 0 8px 8px 0;
+		color: #ffffff;
+		background: url(../images/login-bg.svg) center right no-repeat;
+
+		@media (max-width: 991.98px) {
+			display: none;
+		}
+	}
+}
+
+
+//.enter-block__main:
+.enter-steps {
+	//start, registraton & login steps
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	//unactive by default
+	display: none;
+}
+
+// // start step
+// .enter-start {}
+
+// // login step
+// .enter-login {}
+
+// // registration step
+// .enter-registration {}
+
+
+
+// enter-steps:   content of steps
+.enter-top-row {
+	margin-bottom: auto;
+	padding-bottom: 10px;
+	height: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.enter-back-btn {
+		// back to start section
+		font-size: 1.4rem;
+		padding: 10px 10px 10px 26px;
+		background: url(../images/icons/toleft-arrow.png) left/18px 14px no-repeat;
+		color: #9ea0a5; 
+
+		@media (min-width: 991.98px) {
+			//pointer on big screens
+			cursor: pointer;
+		}
+
+		@media (max-width: 575.98px) {
+			padding: 6px 22px;
+		}
+	}
+
+	.switch-step {
+		// from 'in' to 'up' & vice versa
+		font-size: 1.4rem;
+
+		.switch-btn {
+			padding: 6px;
+			text-decoration: underline;
+			color: #9ea0a5;
+
+			@media (min-width: 991.98px) {
+				//pointer on big screens
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.enter-title {
+	color: #212529;
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 28px;
+	margin-bottom: 5px;
+}
+
+.enter-subtitle {
+	font-size: 1.4rem;
+	line-height: 20px;
+	margin-bottom: 40px;
+
+	@media (max-width: 991.98px) {
+		margin-bottom: 15px;	
+	}
+}
+
+// "submit", to-login, to-signin, to-registration buttons
+.forward-btn {
+	width: 100%;
+	height: 40px;
+	border-radius: 6px;
+	background-color: #1665d8;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 2.25px;
+	line-height: 16px;
+	margin-bottom: 20px;
+
+	@media (min-width: 991.98px) {
+		//pointer on big screens
+		cursor: pointer;
+	}
+}
+
+//forward-buttons in start block:
+.to-login {
+	margin-bottom: 20px;
+}
+
+.to-registration {
+	background-color: #e2eaf6;
+	border: 3px solid #1665d8;
+	color: #1665d8;
+}
+
+
+
+//FORM:
+.enter-form {
+	margin-bottom: auto;
+	width: 100%;
+
+	.login-field-wrapper{
+		position: relative;
+	}
+
+	.login-field {
+		margin-bottom: 26px;
+		padding: 13px 16px;
+		width: 100%;
+		height: 50px;
+		border: 2px solid #adadad;
+		border-radius: 5px;
+		outline: none;
+		color: #aaaaaa;
+		font-size: 16px;
+		letter-spacing: 0.15px;
+
+
+		@media (max-width: 991.98px) {	
+			height: 36px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.login-field:focus {
+		border: 3px solid #1665d8;
+		color: black;
+	}
+
+
+	.login-terms-check {
+		// CheckBox agree with terms and policy when register 
+		width: 18px;
+		height: 18px;
+		position: relative;
+		top: 3px;
+		left: 0;
+		background-color: #425a70;
+		margin-right: 10px;
+	}
+
+	.login-terms-check-text {
+		color: #9ea0a5;
+		font-size: 16px;
+		line-height: 20px;
+
+		a {
+			//terms and conditions
+			color: #5b5c5d;
+		}
+	}
+}
+
+.login-field-wrapper:hover:before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 10px;
+	z-index: 10;
+	padding: 0 6px;
+	height: 20px;
+	color: #1665d8;
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.7px;
+}
+.wrapper-name:hover:before {
+	content: 'Name';
+}
+.wrapper-last-name:hover:before {
+	content: 'Last name';
+}
+.wrapper-email:hover:before {
+	content: 'Email';
+}
+.wrapper-password:hover:before {
+	content: 'Password';
+}
+.checkbox-wrapper {
+	display: flex;
+	margin-bottom: 24px;
+}
+
+
+
+
+//.enter-block__decoration:
+.decoration-text {
+
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.6px;
+	line-height: 25px;
+	margin-bottom: 16px;
+}
+
+.decoration-author {
+	display: flex;
+	background: url(../images/icons/login-cit-author.png) left/32px 32px no-repeat;
+	padding-left: 50px;
+
+	&__name {
+		font-size: 17px;
+		letter-spacing: -0.05px;
+	}
+
+	&__post {
+		padding-top: 3px;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+	}
+}
+
+
+
+//activate step
+.active__step {
+	display: flex;
+}
