@@ -1,11 +1,20 @@
 .notifications-bar {
-
-	display: none;
-	
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	transition: 0.3s;
+	right: 0;
+	bottom: 0;
 	width: 342px;
 	height: 395px;
 	background-color: #fff;
 	padding-top: 4px;
+	border-radius: 8px 0 0 0 ;
+
+	&__active {
+		opacity: 1;
+		overflow: visible;
+	}
 
 	/* полоса прокрутки (скроллбар) */
 	::-webkit-scrollbar {
@@ -42,6 +51,20 @@
 	}
 }
 
+.close-bar {
+	position: absolute;
+	top: -60px;
+	right: 10px;
+	
+
+		&__btn {
+			background-color: rgba(255, 255, 255, 0);
+			color: rgb(83, 83, 83);
+			font-size: 55px;
+		}
+}
+
+
 .bar-text {
 	margin: 0 8px 0 20px;
 
@@ -61,7 +84,7 @@
 }
 
 .bar-logo {
-	background: url(../images/icons/notifications-icon.png) center/contain no-repeat;
+	background: url(../images/icons/notification-icon.png) center/contain no-repeat;
 	width: 184px;
 	height: 92px;
 }

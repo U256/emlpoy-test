@@ -173,7 +173,7 @@ main {
 }
 
 .notifications-btn {
-  background: url(../images/icons/notification-icon.svg) center/contain no-repeat;
+  background: url(../images/icons/notification-bell-icon.svg) center/contain no-repeat;
 }
 
 .logout-btn {
@@ -624,13 +624,25 @@ main {
 }
 
 .notifications-bar {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: 0;
+  bottom: 0;
   width: 342px;
   height: 395px;
   background-color: #fff;
   padding-top: 4px;
+  border-radius: 8px 0 0 0;
   /* полоса прокрутки (скроллбар) */
   /* ползунок скроллбара */
+}
+
+.notifications-bar__active {
+  opacity: 1;
+  overflow: visible;
 }
 
 .notifications-bar ::-webkit-scrollbar {
@@ -668,6 +680,18 @@ main {
   scrollbar-color: #c7ced4 #fff;
 }
 
+.close-bar {
+  position: absolute;
+  top: -60px;
+  right: 10px;
+}
+
+.close-bar__btn {
+  background-color: rgba(255, 255, 255, 0);
+  color: #535353;
+  font-size: 55px;
+}
+
 .bar-text {
   margin: 0 8px 0 20px;
 }
@@ -687,7 +711,7 @@ main {
 }
 
 .bar-logo {
-  background: url(../images/icons/notifications-icon.png) center/contain no-repeat;
+  background: url(../images/icons/notification-icon.png) center/contain no-repeat;
   width: 184px;
   height: 92px;
 }
