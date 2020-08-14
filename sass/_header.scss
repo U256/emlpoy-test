@@ -1,5 +1,5 @@
 .header {
-	color: #ffffff;
+	color: $inv-text;
 	padding: 0 24px;
 	background-color: #3f51b5;
 	height: 64px;
@@ -103,7 +103,7 @@
 		white-space: nowrap;
 		display: inline;
 		text-decoration: none;
-		color: #fff;
+		color: $inv-text;
 	}
 }
 

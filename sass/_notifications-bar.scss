@@ -1,15 +1,16 @@
 .notifications-bar {
 	position: absolute;
+	right: 0;
+	bottom: 0;
 	opacity: 0;
 	overflow: hidden;
 	transition: 0.3s;
-	right: 0;
-	bottom: 0;
 	width: 342px;
 	height: 395px;
-	background-color: #fff;
+	background-color: $clean-bg;
 	padding-top: 4px;
 	border-radius: 8px 0 0 0 ;
+	color: $small-title-text;
 
 	&__active {
 		opacity: 1;
@@ -37,7 +38,7 @@
 		width: 328px;
 		height: 97px;
 		margin: 0 7px 10px 7px;
-		background-color: #f9fafb;
+		background-color: $soft-background;
 	}
 
 	&__alerts-block {
@@ -46,8 +47,7 @@
 		overflow-y: auto;
 
 		scrollbar-width: thin;
-		scrollbar-color: #c7ced4 #fff;
-
+		scrollbar-color: #c7ced4 $clean-bg;
 	}
 }
 
@@ -70,7 +70,6 @@
 
 	.bar-title {
 		margin-bottom: 3px;
-		color: #3a3b3f;
 		font-size: 1.4rem;
 		font-weight: 500;
 		letter-spacing: -0.04px;
@@ -78,7 +77,7 @@
 	}
 
 	.bar-count {
-		color: #9ea0a5;
+		color: $pale-text;
 		font-size: 1.2rem;
 	}
 }
@@ -111,11 +110,10 @@
 }
 
 .message-name {
-	color: #3a3b3f;
 		font-size: 1.4rem;
 }
 .message-time {
-	color: #9ea0a5;
+	color: $pale-text;
 	font-size: 1.2rem;
 }
 

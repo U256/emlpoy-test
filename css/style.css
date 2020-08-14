@@ -23,10 +23,11 @@ main {
   outline: none;
   border: none;
   background-color: #fff;
+  color: inherit;
 }
 
 .header {
-  color: #ffffff;
+  color: #fff;
   padding: 0 24px;
   background-color: #3f51b5;
   height: 64px;
@@ -302,7 +303,7 @@ main {
 
 .enter-page__block-container {
   margin: 15px;
-  background-color: #ffffff;
+  background-color: #fff;
   -webkit-box-shadow: 0 1px 3px rgba(63, 63, 68, 0.595), 0 0 0 rgba(63, 63, 68, 0.465);
           box-shadow: 0 1px 3px rgba(63, 63, 68, 0.595), 0 0 0 rgba(63, 63, 68, 0.465);
   display: -webkit-box;
@@ -371,7 +372,7 @@ main {
           justify-content: flex-end;
   padding: 0 18px 24px 24px;
   border-radius: 0 8px 8px 0;
-  color: #ffffff;
+  color: #fff;
   background: url(../images/login-bg.svg) center right no-repeat;
 }
 
@@ -417,7 +418,6 @@ main {
   font-size: 1.4rem;
   padding: 10px 10px 10px 26px;
   background: url(../images/icons/toleft-arrow.png) left/18px 14px no-repeat;
-  color: #9ea0a5;
 }
 
 @media (min-width: 991.98px) {
@@ -439,7 +439,6 @@ main {
 .enter-top-row .switch-step .switch-btn {
   padding: 6px;
   text-decoration: underline;
-  color: #9ea0a5;
 }
 
 @media (min-width: 991.98px) {
@@ -472,9 +471,9 @@ main {
   width: 100%;
   height: 40px;
   border-radius: 6px;
-  background-color: #1665d8;
+  background-color: #3f51b5;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2.25px;
@@ -494,8 +493,8 @@ main {
 
 .to-registration {
   background-color: #e2eaf6;
-  border: 3px solid #1665d8;
-  color: #1665d8;
+  border: 3px solid #3f51b5;
+  color: #3f51b5;
 }
 
 .enter-form {
@@ -522,13 +521,20 @@ main {
 
 @media (max-width: 991.98px) {
   .enter-form .login-field {
+    height: 42px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .enter-form .login-field {
     height: 36px;
     margin-bottom: 15px;
   }
 }
 
-.enter-form .login-field:focus {
-  border: 3px solid #1665d8;
+.enter-form .login-field:hover {
+  border: 3px solid #3f51b5;
   color: black;
 }
 
@@ -543,7 +549,6 @@ main {
 }
 
 .enter-form .login-terms-check-text {
-  color: #9ea0a5;
   font-size: 16px;
   line-height: 20px;
 }
@@ -560,7 +565,7 @@ main {
   z-index: 10;
   padding: 0 6px;
   height: 20px;
-  color: #1665d8;
+  color: #3f51b5;
   background-color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -625,17 +630,18 @@ main {
 
 .notifications-bar {
   position: absolute;
+  right: 0;
+  bottom: 0;
   opacity: 0;
   overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  right: 0;
-  bottom: 0;
   width: 342px;
   height: 395px;
   background-color: #fff;
   padding-top: 4px;
   border-radius: 8px 0 0 0;
+  color: #3a3b3f;
   /* полоса прокрутки (скроллбар) */
   /* ползунок скроллбара */
 }
@@ -698,7 +704,6 @@ main {
 
 .bar-text .bar-title {
   margin-bottom: 3px;
-  color: #3a3b3f;
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: -0.04px;
@@ -746,7 +751,6 @@ main {
 }
 
 .message-name {
-  color: #3a3b3f;
   font-size: 1.4rem;
 }
 
