@@ -83,65 +83,73 @@
             </button>
          </div>
       </section>
-      <section rel="0" class="prim-blocks dashboard-block">
-         <div class="dashboard-block__info-row">
-            <div class="budget-frame">
-               <div class="budget-frame__title"> </div>
-               <div class="budget-frame__amount"></div>
-               <div class="budget-frame__changes-row">
-                  <div class="change-percent"></div>
-                  <div class="change-period">Since last month </div>
+      <div class="prim-blocks-wrapper">
+         <section class="prim-blocks dashboard-block">
+            <div class="dashboard-block__info-row">
+               <div class="budget-frame">
+                  <div class="budget-frame__title"> </div>
+                  <div class="budget-frame__amount"></div>
+                  <div class="budget-frame__changes-row">
+                     <div class="change-percent"></div>
+                     <div class="change-period">Since last month </div>
+                  </div>
+               </div>
+               <div class="users-frame">
+                  <div class="budget-frame__title"> </div>
+                  <div class="budget-frame__amount"></div>
+                  <div class="budget-frame__changes-row">
+                     <div class="change-line  "></div>
+                  </div>
+               </div>
+               <div class="progress-frame">
+                  <div class="budget-frame__title"> </div>
+                  <div class="budget-frame__amount"></div>
+                  <div class="budget-frame__changes-row">
+                     <div class="change-percent"></div>
+                     <div class="change-period">Since last month</div>
+                  </div>
+               </div>
+               <div class="profit-frame">
+                  <div class="budget-frame__title"> </div>
+                  <div class="budget-frame__amount"></div>
+                  <div class="budget-frame__changes-row">
+                     <div class="change-percent"></div>
+                     <div class="change-period">Since last month</div>
+                  </div>
                </div>
             </div>
-            <div class="users-frame">
-               <div class="budget-frame__title"> </div>
-               <div class="budget-frame__amount"></div>
-               <div class="budget-frame__changes-row">
-                  <div class="change-line  "></div>
-               </div>
+            <div class="dashboard-block__schedules-row">
+               <div class="users-schedule-frame"> </div>
+               <div class="users-circle-comparer-frame"> </div>
             </div>
-            <div class="progress-frame">
-               <div class="budget-frame__title"> </div>
-               <div class="budget-frame__amount"></div>
-               <div class="budget-frame__changes-row">
-                  <div class="change-percent"></div>
-                  <div class="change-period">Since last month</div>
-               </div>
+            <div class="dashboard-block__bottom-row">
+               <div class="latest-products-frame"> </div>
+               <div class="latest-orders-frame"></div>
             </div>
-            <div class="profit-frame">
-               <div class="budget-frame__title"> </div>
-               <div class="budget-frame__amount"></div>
-               <div class="budget-frame__changes-row">
-                  <div class="change-percent"></div>
-                  <div class="change-period">Since last month</div>
-               </div>
+         </section>
+         <section class="prim-blocks users-block">
+            users-block
+         </section>
+         <section class="prim-blocks products-block">
+            products-block
+         </section>
+         <section class="prim-blocks authentication-block">
+            <div class="authentication-block__tab-profile">authentication-block</div>
+            <div class="authentication-block__tab-account">
+               Account tab
             </div>
-         </div>
-         <div class="dashboard-block__schedules-row">
-            <div class="users-schedule-frame"> </div>
-            <div class="users-circle-comparer-frame"> </div>
-         </div>
-         <div class="dashboard-block__bottom-row">
-            <div class="latest-products-frame"> </div>
-            <div class="latest-orders-frame"></div>
-         </div>
-      </section>
-      <section rel="1" class="prim-blocks users-block">
-         users-block
-      </section>
-      <section rel="2" class="prim-blocks products-block">
-         products-block
-      </section>
-      <section rel="3" class="prim-blocks authentication-block">
-         authentication-block
-      </section>
-      <section rel="4" class="prim-blocks typography-block">
-         typography-block
-      </section>
-      <section rel="5" class="prim-blocks icons-images-block">
-         icons-images-block
-      </section>
-      <section rel="block" class="notifications-bar">
+            <div class="authentication-block__tab-price-plans">
+               Price Plans
+            </div>
+         </section>
+         <section class="prim-blocks typography-block">
+            typography-block
+         </section>
+         <section class="prim-blocks icons-images-block">
+            icons-images-block
+         </section>
+      </div>
+      <section class="notifications-bar">
          <div class="close-bar">
             <div class="clean-btn close-bar__btn">&times</div>
          </div>
@@ -163,6 +171,7 @@
                      hours ago
                   </div>
                </div>
+               <button class="clean-btn alert-item__toevent">&gt</button>
             </div>
          </div>
       </section>

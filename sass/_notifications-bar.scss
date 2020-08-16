@@ -21,6 +21,11 @@
 		overflow: visible;
 	}
 
+	@media (max-width: 767.98px) {
+		width: 270px;
+		height: 280px;
+	}
+
 	/* полоса прокрутки (скроллбар) */
 	::-webkit-scrollbar {
 		width: 8px; /* ширина для вертикального скролла */
@@ -39,15 +44,16 @@
 	&__top {
 		display: flex;
 		align-items: center;
-		width: 328px;
-		height: 97px;
+		width: 95%;
+		height: 24.5%;
 		margin: 0 7px 10px 7px;
 		background-color: $soft-background;
+
 	}
 
 	&__alerts-block {
 		margin: 0 7px 5px;
-		height: 275px;
+		height: 69.6%;
 		overflow-y: auto;
 
 		scrollbar-width: thin;
@@ -61,12 +67,12 @@
 	right: 10px;
 	
 
-		&__btn {
-			cursor: pointer;
-			background-color: rgba(255, 255, 255, 0);
-			color: rgb(83, 83, 83);
-			font-size: 55px;
-		}
+	&__btn {
+		cursor: pointer;
+		background-color: rgba(255, 255, 255, 0);
+		color: rgb(83, 83, 83);
+		font-size: 55px;
+	}
 }
 
 
@@ -89,13 +95,13 @@
 
 .bar-logo {
 	background: url(../images/icons/notification-icon.png) center/contain no-repeat;
-	width: 184px;
-	height: 92px;
+	width: 46%; //184 ->
+	height: 95%; //92 ->
 }
 
 //notifications-bar__alerts-block
 .alert-item {
-	width: 310px;
+	width: 90%;
 	height: 64px;
 	display: flex;
 	align-items: center;
@@ -106,11 +112,23 @@
 		width: 36px;
 		height: 36px;
 		background: url(../images/icons/users-operation.svg) center/contain no-repeat;
+
+		@media (max-width: 767.98px) {
+			margin-left: 0;
+		}
 	}
 
 	&__message {
 		display: flex;
 		flex-direction: column;
+	}
+
+	&__toevent {
+		justify-self: flex-end;
+		margin-left: auto;
+		font-size: 2.6rem;
+		font-weight: 500;
+		color: $pale-text;
 	}
 }
 

@@ -12,6 +12,7 @@ html {
 
 main {
   position: relative;
+  z-index: 1;
   min-height: calc(100vh - 64px);
   background-color: #f9fafb;
   display: -webkit-box;
@@ -239,6 +240,12 @@ main {
   cursor: pointer;
 }
 
+@media (min-width: 991.98px) {
+  .left-panel__switcher {
+    display: none;
+  }
+}
+
 .left-panel__user-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,6 +358,13 @@ main {
   overflow: visible;
 }
 
+@media (max-width: 767.98px) {
+  .notifications-bar {
+    width: 270px;
+    height: 280px;
+  }
+}
+
 .notifications-bar ::-webkit-scrollbar {
   width: 8px;
   /* ширина для вертикального скролла */
@@ -372,15 +386,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 328px;
-  height: 97px;
+  width: 95%;
+  height: 24.5%;
   margin: 0 7px 10px 7px;
   background-color: #f9fafb;
 }
 
 .notifications-bar__alerts-block {
   margin: 0 7px 5px;
-  height: 275px;
+  height: 69.6%;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #c7ced4 #fff;
@@ -418,12 +432,12 @@ main {
 
 .bar-logo {
   background: url(../images/icons/notification-icon.png) center/contain no-repeat;
-  width: 184px;
-  height: 92px;
+  width: 46%;
+  height: 95%;
 }
 
 .alert-item {
-  width: 310px;
+  width: 90%;
   height: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,6 +455,12 @@ main {
   background: url(../images/icons/users-operation.svg) center/contain no-repeat;
 }
 
+@media (max-width: 767.98px) {
+  .alert-item__logo {
+    margin-left: 0;
+  }
+}
+
 .alert-item__message {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -449,6 +469,14 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.alert-item__toevent {
+  justify-self: flex-end;
+  margin-left: auto;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: #9ea0a5;
 }
 
 .message-name {
@@ -460,19 +488,45 @@ main {
   font-size: 1.2rem;
 }
 
-.prim-blocks {
-  display: none;
+.prim-blocks-wrapper {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   min-height: calc(100vh-64px);
+}
+
+.prim-blocks {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   padding: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .prim-blocks {
+    padding: 12px;
+  }
+}
+
+.activ {
+  position: relative;
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .dashboard-block {
   background-color: #c1e0b8;
-  position: relative;
-  z-index: 3;
 }
 
 .users-block {
