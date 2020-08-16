@@ -1,16 +1,20 @@
 .notifications-bar {
+	padding-top: 4px;
 	position: absolute;
+	z-index: 15;
 	right: 0;
 	bottom: 0;
-	opacity: 0;
-	overflow: hidden;
-	transition: 0.3s;
 	width: 342px;
 	height: 395px;
 	background-color: $clean-bg;
-	padding-top: 4px;
+	border-left: 1px solid $sec-highlight-text;
+	border-top: 1px solid $sec-highlight-text;
 	border-radius: 8px 0 0 0 ;
 	color: $small-title-text;
+
+	opacity: 0;
+	overflow: hidden;
+	transition: 0.3s;
 
 	&__active {
 		opacity: 1;
@@ -58,6 +62,7 @@
 	
 
 		&__btn {
+			cursor: pointer;
 			background-color: rgba(255, 255, 255, 0);
 			color: rgb(83, 83, 83);
 			font-size: 55px;

@@ -41,28 +41,52 @@
    </header>
    <main class="main">
       <section class="left-panel">
+         <div class="left-panel__switcher">
+            &#9776;
+         </div>
          <div class="left-panel__user-block">
             <div class="user-block__logo"></div>
             <div class="user-block__name">User name</div>
             <div class="user-block__post">User post</div>
          </div>
-         <div class="left-panel__tab-links">
-            <button class="tab-btn dashboard-tab-btn">Dashboard</button>
-            <button class="tab-btn users-tab-btn">Users</button>
-            <button class="tab-btn products-tab-btn">Products</button>
-            <button class="tab-btn authentication-tab-btn">Authentication</button>
-            <button class="tab-btn typography-tab-btn">Typography</button>
-            <button class="tab-btn icons-images-tab-btn">Icons & Images</button>
+         <div class="left-panel__toblock-links">
+            <button rel="0" class="toblock-btn dashboard-toblock-btn toblock-btn_active">
+               <img src="images/icons/dashboard-logo.svg" alt="dashboard-tap-btn">
+               Dashboard
+            </button>
+            <button rel="1" class="toblock-btn users-toblock-btn">
+               <img src="images/icons/users-btn-logo.svg" alt="users-toblock-btn">
+               Users
+            </button>
+            <button rel="2" class="toblock-btn products-toblock-btn">
+               <img src="images/icons/product-icon.svg" alt="products-toblock-btn">
+               Products
+            </button>
+            <button rel="3" class="toblock-btn authentication-toblock-btn">
+               <img src="images/icons/authentif-icon.svg" alt="authentication-toblock-btn">
+               Authentication
+            </button>
+            <button rel="4" class="toblock-btn typography-toblock-btn">
+               <img src="images/icons/typography-icon.svg" alt="typography-toblock-btn">
+               Typography
+            </button>
+            <button rel="5" class="toblock-btn icons-images-toblock-btn">
+               <img src="images/icons/icons-images.svg" alt="icons-images-toblock-btn">
+               Icons & Images
+            </button>
          </div>
          <div class="left-panel__support">
             <div class="support-title">Support</div>
-            <button class="tab-btn open-support">Support</button>
+            <button class="toblock-btn open-support">
+               <img src="images/icons/support-icon.svg" alt="support-toblock-btn">
+               Support
+            </button>
          </div>
       </section>
-      <section class="dashboard-block active-block">
+      <section rel="0" class="prim-blocks dashboard-block">
          <div class="dashboard-block__info-row">
             <div class="budget-frame">
-               <div class="budget-frame__title">  </div>
+               <div class="budget-frame__title"> </div>
                <div class="budget-frame__amount"></div>
                <div class="budget-frame__changes-row">
                   <div class="change-percent"></div>
@@ -70,14 +94,14 @@
                </div>
             </div>
             <div class="users-frame">
-               <div class="budget-frame__title">  </div>
+               <div class="budget-frame__title"> </div>
                <div class="budget-frame__amount"></div>
                <div class="budget-frame__changes-row">
                   <div class="change-line  "></div>
                </div>
             </div>
             <div class="progress-frame">
-               <div class="budget-frame__title">  </div>
+               <div class="budget-frame__title"> </div>
                <div class="budget-frame__amount"></div>
                <div class="budget-frame__changes-row">
                   <div class="change-percent"></div>
@@ -85,7 +109,7 @@
                </div>
             </div>
             <div class="profit-frame">
-               <div class="budget-frame__title">  </div>
+               <div class="budget-frame__title"> </div>
                <div class="budget-frame__amount"></div>
                <div class="budget-frame__changes-row">
                   <div class="change-percent"></div>
@@ -94,30 +118,30 @@
             </div>
          </div>
          <div class="dashboard-block__schedules-row">
-         <div class="users-schedule-frame"> </div>
-         <div class="users-circle-comparer-frame"> </div>
+            <div class="users-schedule-frame"> </div>
+            <div class="users-circle-comparer-frame"> </div>
          </div>
          <div class="dashboard-block__bottom-row">
             <div class="latest-products-frame"> </div>
             <div class="latest-orders-frame"></div>
          </div>
       </section>
-      <section class="users-block">
-
+      <section rel="1" class="prim-blocks users-block">
+         users-block
       </section>
-      <section class="users-block">
-
+      <section rel="2" class="prim-blocks products-block">
+         products-block
       </section>
-      <section class="authentication-block">
-
+      <section rel="3" class="prim-blocks authentication-block">
+         authentication-block
       </section>
-      <section class="typography-block">
-
+      <section rel="4" class="prim-blocks typography-block">
+         typography-block
       </section>
-      <section class="icons-images-block">
-
+      <section rel="5" class="prim-blocks icons-images-block">
+         icons-images-block
       </section>
-      <section class="notifications-bar">
+      <section rel="block" class="notifications-bar">
          <div class="close-bar">
             <div class="clean-btn close-bar__btn">&times</div>
          </div>
@@ -142,13 +166,14 @@
             </div>
          </div>
       </section>
-      <section class="about">
+      <!-- <section class="about">
          <div class="about__title">© Devias Io. 2019</div>
-         <div class="about__info">This is a free version of an end product which will be launched soon. If you want to get a
+         <div class="about__info">This is a free version of an end product which will be launched soon. If you want to
+            get a
             free copy of the end product subscribe to our personal email list</div>
-      </section>
+      </section> -->
    </main>
-   
+
    <script src="js/main.js"></script>
 </body>
 
