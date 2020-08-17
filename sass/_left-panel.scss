@@ -2,24 +2,29 @@
 	padding: 24px 16px;
 	flex: 0 0 270px;
 	min-height: calc(100vh - 64px);
+	max-height: 1016px;
 	background-color: $clean-bg;
 	transition: 0.3s;
 
 	@media (max-width: 1199.98px) {
 		flex: 0 0 230px;
 	}
+
 	@media (max-width: 991.98px) {
 		position: absolute;
-		z-index: 20;
+		z-index: 10;
+		padding: 12px 9px;
 		width: 230px;
 		top: 0; left: 0;
 		transform: translate(-100%, 0);
 		transition: 0.3s;
 	}
 
+
 	&_active {
 		transform: translate(0, 0);
 	}
+
 
 	&__switcher {
 		position: absolute;
@@ -27,7 +32,7 @@
 		padding-top: 14px;
 		font-size: 28px;
 		letter-spacing: 0.6px;
-		top: 40px;
+		top: 20px;
 		right: -42px;
 		z-index: 19;
 		width: 42px;
@@ -40,12 +45,11 @@
 		opacity: 0.6;
 		cursor: pointer;
 
+		//remove switcher on bog screens
 		@media (min-width: 991.98px) {
 			display: none;
 		}
 	}
-
-
 
 	&__user-block {
 		display: flex;
@@ -54,9 +58,17 @@
 		border-bottom: 2px solid #e4e7eb;
 		margin-bottom: 20px;
 		padding-bottom: 10px;
+
+		@media (max-width: 757.98px) {
+			flex-direction: row;
+			justify-content: space-around;
+			margin-bottom: 10px;
+			padding-bottom: 0;
+		}
 	}
 
 	&__toblock-links {
+		padding-bottom: 5px;
 		margin-bottom: 15px;
 		border-bottom: 2px solid #e4e7eb;
 	}
@@ -74,20 +86,26 @@
 	margin-bottom: 15px;
 }
 
-.user-block__name {
-	color: #3a3b3f;
-	font-size: 1.6rem;
-	letter-spacing: -0.005rem;
-	line-height: 2rem;
-	margin-bottom: 4px;
+.user-block__text {
+	text-align: center;
+
+	.user-name {
+		color: #3a3b3f;
+		font-size: 1.6rem;
+		letter-spacing: -0.005rem;
+		line-height: 2rem;
+		margin-bottom: 4px;
+	}
+
+	.user-post {
+		color: $pale-text;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+		padding-bottom: 13px;
+	}
 }
 
-.user-block__post {
-	color: $pale-text;
-	font-size: 1.2rem;
-	line-height: 1.6rem;
-	padding-bottom: 13px;
-}
+
 
 //left-panel__toblock-links:
 .toblock-btn {
@@ -106,6 +124,11 @@
 	text-align: left;
 	cursor: pointer;
 
+	@media (max-width: 757.98px) {
+		margin: 3px 0 3px 3px;
+		height: 41px;
+	}
+
 	&_active {
 		border-radius: 6px 0 0 6px;
 		border-left: 3px solid $sec-highlight-text;
@@ -121,6 +144,11 @@
 		margin-right: 6px;
 		position: relative;
 		left: 0; top: 6px;
+
+		@media (max-width: 757.98px) {
+			width: 20px;
+			height: 20px;
+		}
 	}
 }
 

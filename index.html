@@ -46,8 +46,10 @@
          </div>
          <div class="left-panel__user-block">
             <div class="user-block__logo"></div>
-            <div class="user-block__name">User name</div>
-            <div class="user-block__post">User post</div>
+            <div class="user-block__text">
+               <div class="user-name">User name</div>
+               <div class="user-post">User post</div>
+            </div>
          </div>
          <div class="left-panel__toblock-links">
             <button rel="0" class="toblock-btn dashboard-toblock-btn toblock-btn_active">
@@ -84,48 +86,59 @@
          </div>
       </section>
       <div class="prim-blocks-wrapper">
-         <section class="prim-blocks dashboard-block">
-            <div class="dashboard-block__info-row">
-               <div class="budget-frame">
-                  <div class="budget-frame__title"> </div>
-                  <div class="budget-frame__amount"></div>
-                  <div class="budget-frame__changes-row">
-                     <div class="change-percent"></div>
-                     <div class="change-period">Since last month </div>
+         <section class="prim-blocks dashboard-block active-prim-block">
+            <div class="barboard-rows dashboard-block__info-row">
+               <div class="soft-bd info-unit budget-unit">
+                  <div class="info-unit__title">Budget</div>
+                  <div class="info-unit__amount">--</div>
+                  <div class="info-unit__changes-row">
+                     <span class="change-percent">%</span>
+                     <span class="change-period">Since last month </span>
                   </div>
                </div>
-               <div class="users-frame">
-                  <div class="budget-frame__title"> </div>
-                  <div class="budget-frame__amount"></div>
-                  <div class="budget-frame__changes-row">
-                     <div class="change-line  "></div>
+               <div class="soft-bd info-unit users-unit">
+                  <div class="info-unit__title">Total users </div>
+                  <div class="info-unit__amount">--</div>
+                  <div class="info-unit__changes-row">
+                     <div class="change-line"></div>
                   </div>
                </div>
-               <div class="progress-frame">
-                  <div class="budget-frame__title"> </div>
-                  <div class="budget-frame__amount"></div>
-                  <div class="budget-frame__changes-row">
-                     <div class="change-percent"></div>
-                     <div class="change-period">Since last month</div>
+               <div class="soft-bd info-unit progress-unit">
+                  <div class="info-unit__title">Progress</div>
+                  <div class="info-unit__amount">--</div>
+                  <div class="info-unit__changes-row">
+                     <span class="change-percent">%</span>
+                     <span class="change-period">Since last month</span>
                   </div>
                </div>
-               <div class="profit-frame">
-                  <div class="budget-frame__title"> </div>
-                  <div class="budget-frame__amount"></div>
-                  <div class="budget-frame__changes-row">
-                     <div class="change-percent"></div>
-                     <div class="change-period">Since last month</div>
+               <div class="soft-bd info-unit profit-unit">
+                  <div class="info-unit__title">Total profit </div>
+                  <div class="info-unit__amount">--</div>
+                  <div class="info-unit__changes-row">
+                     <span class="change-percent">%</span>
+                     <span class="change-period">Since last month</span>
                   </div>
                </div>
             </div>
-            <div class="dashboard-block__schedules-row">
-               <div class="users-schedule-frame"> </div>
-               <div class="users-circle-comparer-frame"> </div>
+            <div class="barboard-rows dashboard-block__schedules-row">
+               <div class="soft-bd scedule-containers users-schedule-container">
+                  <!-- вставка  -->
+                  11111111111111111111111111111111111
+                  <br>
+
+                  <!--  -->
+               </div>
+               <div class="soft-bd scedule-containers users-circle-comparer-container"> 1</div>
             </div>
-            <div class="dashboard-block__bottom-row">
-               <div class="latest-products-frame"> </div>
-               <div class="latest-orders-frame"></div>
+            <div class="barboard-rows dashboard-block__bottom-row">
+               <div class="soft-bd blocks-of-latest latest-products">latest-products</div>
+               <div class="soft-bd blocks-of-latest latest-orders">latest-orders</div>
             </div>
+            <section class="about">
+               <div class="about__title">© Devias Io. 2019</div>
+               <div class="about__info">This is a free version of an end product which will be launched soon. If you
+                  want to get a free copy of the end product subscribe to our personal email list</div>
+            </section>
          </section>
          <section class="prim-blocks users-block">
             users-block
@@ -175,12 +188,6 @@
             </div>
          </div>
       </section>
-      <!-- <section class="about">
-         <div class="about__title">© Devias Io. 2019</div>
-         <div class="about__info">This is a free version of an end product which will be launched soon. If you want to
-            get a
-            free copy of the end product subscribe to our personal email list</div>
-      </section> -->
    </main>
 
    <script src="js/main.js"></script>

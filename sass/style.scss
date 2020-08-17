@@ -34,6 +34,13 @@ main {
    color: inherit;
 }
 
+.soft-bd {
+   background-color: $clean-bg;
+	box-shadow: 0 1px 3px rgba(63, 63, 68, 0.15), 0 1px 0 rgba(63, 63, 68, 0.05);
+	border: 1px solid rgba(63, 63, 68, 0);
+	border-radius: 4px;
+}
+
 
 @import 'header';
 @import 'left-panel';
@@ -78,7 +85,7 @@ main {
 // }
 
 
-// 1999.98px - extra
+// 1999.98px - 4к
 // 1199.98px - xl
 //991.98px - lg
 //767.98px - md
