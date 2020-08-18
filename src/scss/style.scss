@@ -7,6 +7,10 @@ $inv-text: #fff;
 $clean-bg: #fff;
 $soft-background:#f9fafb;
 
+
+@import 'reset';
+
+
 html {
    font-family: Roboto, sans-serif;
    font-size: 10px;
@@ -39,9 +43,6 @@ main {
 	border-radius: 4px;
 }
 
-
-@import 'reset';
-
 @import 'header';
 @import 'left-panel';
 @import 'notifications-bar';
@@ -54,8 +55,6 @@ main {
 
 @import 'enter-page';
 @import 'bottom-about';
-
-
 
 @media (min-width: 1999.98px) {
    
