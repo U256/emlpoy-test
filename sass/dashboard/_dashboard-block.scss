@@ -1,0 +1,38 @@
+.dashboard-block {
+	//flex - column - cen 
+	color: $small-title-text;
+	width: auto;
+
+	.dashboard-rows {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__info-row {
+		@media (max-width: 575.98px) {
+			flex-wrap: nowrap;
+			flex-direction: column;
+		}
+	}
+
+	&__schedules-row {
+
+		@media (max-width: 1199.98px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__bottom-row {
+		display: flex;
+		border-bottom: 2px solid #dfe3e8;
+	}
+}
+
+@import 'dashboard__info-row';
+
+@import 'dashboard__schedules-row';
+
+@import 'dashboard__bottom-row'

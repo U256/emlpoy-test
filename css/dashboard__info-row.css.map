@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/dashboard/dashboard__info-row.scss"
+    ],
+    "names": [],
+    "file": "dashboard__info-row.css"
+}

@@ -87,7 +87,7 @@
       </section>
       <div class="prim-blocks-wrapper">
          <section class="prim-blocks dashboard-block active-prim-block">
-            <div class="barboard-rows dashboard-block__info-row">
+            <div class="dashboard-rows dashboard-block__info-row">
                <div class="soft-bd info-unit budget-unit">
                   <div class="info-unit__title">Budget</div>
                   <div class="info-unit__amount">--</div>
@@ -120,7 +120,7 @@
                   </div>
                </div>
             </div>
-            <div class="barboard-rows dashboard-block__schedules-row">
+            <div class="dashboard-rows dashboard-block__schedules-row">
                <div class="soft-bd scedule-containers users-schedule-container">
                   <!-- вставка  -->
                   11111111111111111111111111111111111
@@ -130,15 +130,150 @@
                </div>
                <div class="soft-bd scedule-containers users-circle-comparer-container"> 1</div>
             </div>
-            <div class="barboard-rows dashboard-block__bottom-row">
-               <div class="soft-bd blocks-of-latest latest-products">latest-products</div>
-               <div class="soft-bd blocks-of-latest latest-orders">latest-orders</div>
+            <div class="dashboard-rows dashboard-block__bottom-row">
+               <div class="soft-bd blocks-of-latest latest-products">
+                  <div class="latest-products__top">
+                     <div class="latest-products-top-text">
+                        <div class="latest-products-top-text__title">latest-products</div>
+                        <div class="latest-products-top-text__count">5 in total</div>
+                     </div>
+                  </div>
+                  <div class="latest-products__prod-items">
+                     <div class="prod-item">
+                        <div class="prod-item__logo prod-item__logo-1"></div>
+                        <div class="prod-item__message">
+                           <div class="prod-item-name">
+                              Dropbox
+                           </div>
+                           <div class="prod-item-update">
+                              Updated
+                           </div>
+                        </div>
+                        <button class="clean-btn prod-item__toevent"></button>
+                     </div>
+                     <div class="prod-item">
+                        <div class="prod-item__logo prod-item__logo-2"></div>
+                        <div class="prod-item__message">
+                           <div class="prod-item-name">
+                              Medium Corporation
+                           </div>
+                           <div class="prod-item-update">
+                              Updated
+                           </div>
+                        </div>
+                        <button class="clean-btn prod-item__toevent"></button>
+                     </div>
+                     <div class="prod-item">
+                        <div class="prod-item__logo prod-item__logo-3"></div>
+                        <div class="prod-item__message">
+                           <div class="prod-item-name">
+                              GitHub
+                           </div>
+                           <div class="prod-item-update">
+                              Updated
+                           </div>
+                        </div>
+                        <button class="clean-btn prod-item__toevent"></button>
+                     </div>
+                     <div class="prod-item">
+                        <div class="prod-item__logo prod-item__logo-4"></div>
+                        <div class="prod-item__message">
+                           <div class="prod-item-name">
+                              Slac
+                           </div>
+                           <div class="prod-item-update">
+                              Updated
+                           </div>
+                        </div>
+                        <button class="clean-btn prod-item__toevent"></button>
+                     </div>
+                  </div>
+                  <button class="clean-btn latest-products__view-all">View all</button>
+               </div>
+               <div class="soft-bd blocks-of-latest latest-orders">
+                  <div class="latest-orders__top-row">
+                     <div class="l-orders-title">Latest Orders</div>
+                     <div class="l-orders-total"> total</div>
+                     <!-- выпадайка -->
+                     <button class="l-orders-create-entry">new enty</button>
+                  </div>
+                  <div class="latest-orders__table-row">
+                     <table class="l-orders-table">
+                        <thead>
+                           <tr>
+                              <th>Order ID</th>
+                              <th>Customer</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                              <th>Actions</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="l-roders-tr-0">
+                              <th>--</th>
+                              <th>--</th>
+                              <th>--</th>
+                              <th>-</th>
+                              <th>--</th>
+                           </tr>
+                           <tr class="l-roders-tr-1">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                           <tr class="l-roders-tr-2">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                           <tr class="l-roders-tr-3">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                           <tr class="l-roders-tr-4">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                           <tr class="l-roders-tr-5">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="latest-orders__bt-row">
+                     <span class="l-orders-content-resize">
+                        Rows per-page:
+                        <select name="rows-resize-selector">
+                           <option>5</option>
+                           <option>10</option>
+                        </select>
+                     </span>
+                     <span class="l-orders-table-page">1-10 of --</span>
+                     <button class="clean-btn l-orders-switches l-orders-prew-page"></button>
+                     <button class="clean-btn l-orders-switches l-orders-next-page"></button>
+                  </div>
+               </div>
             </div>
-            <section class="about">
-               <div class="about__title">© Devias Io. 2019</div>
+
+            <div class="about">
+               <h4 class="about__title">© Devias Io. 2019</h4>
                <div class="about__info">This is a free version of an end product which will be launched soon. If you
                   want to get a free copy of the end product subscribe to our personal email list</div>
-            </section>
+            </div>
          </section>
          <section class="prim-blocks users-block">
             users-block
@@ -147,7 +282,9 @@
             products-block
          </section>
          <section class="prim-blocks authentication-block">
-            <div class="authentication-block__tab-profile">authentication-block</div>
+            <div class="authentication-block__tab-profile active-auth-tab">
+
+            </div>
             <div class="authentication-block__tab-account">
                Account tab
             </div>
@@ -162,35 +299,37 @@
             icons-images-block
          </section>
       </div>
-      <section class="notifications-bar">
-         <div class="close-bar">
-            <div class="clean-btn close-bar__btn">&times</div>
-         </div>
-         <div class="notifications-bar__top">
-            <div class="bar-text">
-               <div class="bar-title">User Notifications</div>
-               <div class="bar-count">new notifications</div>
-            </div>
-            <div class="bar-logo"></div>
-         </div>
-         <div class="notifications-bar__alerts-block">
-            <div class="alert-item">
-               <div class="alert-item__logo"></div>
-               <div class="alert-item__message">
-                  <div class="message-name">
-                     New order has been received
-                  </div>
-                  <div class="message-time">
-                     hours ago
-                  </div>
-               </div>
-               <button class="clean-btn alert-item__toevent">&gt</button>
-            </div>
-         </div>
-      </section>
    </main>
+   <section class="notifications-bar">
+      <div class="close-bar">
+         <div class="clean-btn close-bar__btn">&times</div>
+      </div>
+      <div class="notifications-bar__top">
+         <div class="bar-text">
+            <div class="bar-title">User Notifications</div>
+            <div class="bar-count">new notifications</div>
+         </div>
+         <div class="bar-logo"></div>
+      </div>
+      <div class="notifications-bar__alerts-block">
+         <div class="alert-item">
+            <div class="alert-item__logo"></div>
+            <div class="alert-item__message">
+               <div class="message-name">
+                  New order has been received
+               </div>
+               <div class="message-time">
+                  hours ago
+               </div>
+            </div>
+            <button class="clean-btn alert-item__toevent">&gt</button>
+         </div>
+      </div>
+   </section>
 
    <script src="js/main.js"></script>
+   <script src="js/left-panel.js"></script>
+   <script src="js/notifications.js"></script>
 </body>
 
 </html>
