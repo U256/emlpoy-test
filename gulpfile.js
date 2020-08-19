@@ -14,14 +14,14 @@ let path = {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/style.scss",
 		js: source_folder + "/js/**/*.js",
-		img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
+		img: source_folder + "/images/**/*",
 		fonts: source_folder + "/fonts/*.ttf",
 	},
 	watch: {
 		html: source_folder + "/**/*.html",
 		css: source_folder + "/scss/**/*.scss",
 		js: source_folder + "/js/**/*.js",
-		img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}"
+		img: source_folder + "/images/**/*"
 	},
 	clean: "./" + project_folder + "/"
 }
@@ -32,7 +32,7 @@ let { src, dest } = require('gulp'),
 	fileinclude = require("gulp-file-include"),
 	del = require("del"),
 	scss = require("gulp-sass"),
-	group_media = require("gulp-group-css-media-queries"),
+	// group_media = require("gulp-group-css-media-queries"),
 	clean_css = require("gulp-clean-css"),
 	rename = require("gulp-rename"),
 	uglify = require("gulp-uglify-es").default,
@@ -67,9 +67,9 @@ function css() {
 				outputStyle: "expanded"
 			})
 		)
-		.pipe(
-			group_media()
-		)
+		// .pipe(
+		// 	group_media()
+		// )
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
 		.pipe(

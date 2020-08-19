@@ -43,6 +43,19 @@ main {
 	border-radius: 4px;
 }
 
+.flex-col {
+   display: flex;
+	flex-direction: column;
+   justify-content: space-between;
+}
+
+.flex {
+   display: flex;
+   align-items: center;
+}
+
+
+
 @import 'header';
 @import 'left-panel';
 @import 'notifications-bar';
@@ -65,7 +78,7 @@ main {
 }
 
 @media (max-width: 991.98px) {
-
+   
 }
 
 @media (max-width: 767.98px) {
