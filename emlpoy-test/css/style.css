@@ -765,7 +765,6 @@ main {
 .prim-blocks-wrapper {
   position: relative;
   flex: 1 0 auto;
-  min-height: calc(100vh-64px);
   background-color: #f9fafb;
 }
 
@@ -802,7 +801,6 @@ main {
 
 .dashboard-block {
   color: #3a3b3f;
-  width: auto;
 }
 
 .dashboard-block .dashboard-rows {
@@ -970,6 +968,22 @@ main {
   }
 }
 
+.users-schedule__top {
+  justify-content: space-between;
+}
+
+.users-schedule__schedule {
+  height: 450px;
+}
+
+.users-circle__circle {
+  height: 450px;
+}
+
+.users-circle__bottom {
+  justify-content: space-between;
+}
+
 .blocks-of-latest {
   background: #fff;
   height: 518px;
@@ -1130,8 +1144,11 @@ main {
 }
 
 .latest-orders__bt-row {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  display: none;
 }
 
 .l-orders-title {
@@ -1161,6 +1178,7 @@ main {
 }
 
 .l-orders-table {
+  display: none;
   width: 100%;
   height: 394px;
   font-size: 14px;
@@ -1171,7 +1189,7 @@ main {
 }
 
 .l-orders-table thead tr th {
-  width: 25%;
+  width: 20%;
   border-bottom: 2px solid #e4e7eb;
   text-align: left;
 }
@@ -1192,7 +1210,7 @@ main {
 
 .l-orders-table tbody tr th {
   border-bottom: 1px solid #e4e7eb;
-  width: 25%;
+  width: 20%;
   text-align: left;
 }
 
@@ -1205,7 +1223,7 @@ main {
 }
 
 @media (max-width: 575.98px) {
-  .order-id {
+  .order-customer {
     display: none;
   }
 }
@@ -1216,18 +1234,13 @@ main {
   }
 }
 
-.latest-orders__bt-row {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .l-orders-content-resize {
   margin-right: 34px;
 }
 
 @media (max-width: 991.98px) {
   .l-orders-content-resize {
-    margin-right: 15px;
+    margin-right: 8px;
   }
 }
 
@@ -1237,7 +1250,7 @@ main {
 
 @media (max-width: 991.98px) {
   .l-orders-content-resize select {
-    margin-right: 15px;
+    margin-right: 8px;
   }
 }
 
@@ -1321,8 +1334,7 @@ main {
 }
 
 .authentication-block {
-  background-color: #e0d4b8;
-  opacity: 1;
+  color: #3a3b3f;
 }
 
 .enter-page {

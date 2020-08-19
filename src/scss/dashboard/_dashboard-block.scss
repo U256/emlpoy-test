@@ -1,7 +1,6 @@
 .dashboard-block {
 	//flex - column - cen 
 	color: $small-title-text;
-	width: auto;
 
 	.dashboard-rows {
 		display: flex;
@@ -55,7 +54,7 @@
 	color: transparent;
 }
 
-//top and bottom rows of schedules & latest products
+//top and bottom rows of schedules & latest-products
 .db-top-row {
 	height: 62px;
 	width: 100%;
@@ -64,7 +63,6 @@
 	color: $small-title-text;
 	font-size: 16px;
 }
-
 .db-bottom-row {
 	height: 37px;
 	width: 100%;

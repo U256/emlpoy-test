@@ -57,7 +57,7 @@ switchStepButtons[1].addEventListener('click', e => {
 // sigh In teleport to main site
 document.querySelector('.submit-sign-in').addEventListener('click', e => {
 	e.preventDefault()
-	location.assign("http://127.0.0.1:5501/index.html")
+	location.assign("index.html")
 });
 
 

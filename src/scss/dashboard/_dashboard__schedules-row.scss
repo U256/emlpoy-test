@@ -38,17 +38,18 @@
 
 //////////////////////////////////////.users-schedule
 .users-schedule__top {
+	justify-content: space-between;
+
 	.schedile-title {
 
 	}
 
 	.days-resize-selector {
-
 	}
 }
 
 .users-schedule__schedule {
-
+	height: 450px;
 }
 
 .users-schedule__bottom {
@@ -62,11 +63,16 @@
 }
 
 .users-circle__circle {
-	
+	height: 450px;
 }
-// .users-circle__bottom {
-// 	.to-audience-btn {}
-// }
+.users-circle__bottom {
+	justify-content: space-between;
+
+	// .days-selector {
+	// }
+
+	// .to-audience-btn {}
+}
 
 
 //////////////////////////////////////

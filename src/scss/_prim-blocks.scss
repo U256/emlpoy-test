@@ -1,8 +1,8 @@
 .prim-blocks-wrapper {
 	position: relative;
 	flex: 1 0 auto;
-	min-height: calc(100vh-64px);
 	background-color: $soft-background;
+	
 }
 
 .prim-blocks {
@@ -32,5 +32,4 @@
 	visibility: visible;
 	opacity: 1;
 	transition: 0.4s;
-	
 }

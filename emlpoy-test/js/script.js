@@ -1,8 +1,8 @@
 'use strict'
 
-/////////////////////////////////
+//logout
 document.querySelector('.logout-btn').addEventListener('click', e => {
-  location.assign("http://127.0.0.1:5501/enter-form.html")
+  location.assign("enter-form.html")
 });
 
 
