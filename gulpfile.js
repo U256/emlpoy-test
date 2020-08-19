@@ -2,10 +2,6 @@
 let project_folder = require("path").basename(__dirname);
 let source_folder = "src";
 
-
-//file system
-let fs = require('fs');
-
 let path = {
 	build: {
 		html: project_folder + "/",
@@ -17,7 +13,7 @@ let path = {
 	src: {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/style.scss",
-		js: source_folder + "/js/script.js",
+		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/*.ttf",
 	},
@@ -39,11 +35,12 @@ let { src, dest } = require('gulp'),
 	group_media = require("gulp-group-css-media-queries"),
 	clean_css = require("gulp-clean-css"),
 	rename = require("gulp-rename"),
+	uglify = require("gulp-uglify-es").default,
 	imagemin = require("gulp-imagemin"),
 	webp = require('gulp-webp'),
 	webphtml = require('gulp-webp-html'),
 	ttf2woff = require('gulp-ttf2woff'),
-	ttf2woff2 = require('gulp-ttf2woff2')
+	ttf2woff2 = require('gulp-ttf2woff2');
 
 function browserSync(params) {
 	browsersync.init({
@@ -88,6 +85,15 @@ function js() {
 	return src(path.src.js)
 		.pipe(fileinclude())
 		.pipe(dest(path.build.js))
+		.pipe(
+			uglify()
+		)
+		.pipe(
+			rename({
+				extname: ".min.js"
+			})
+		)
+		.pipe(dest(path.build.js))
 		.pipe(browsersync.stream())
 }
 
@@ -123,7 +129,34 @@ function fonts() {
 		.pipe(dest(path.build.fonts));
 };
 
+// вызываются отдельно!
+// gulp.task('otf2ttf', function () {
+// 	return src([source_folder + '/fonts/*.otf'])
+// 		.pipe(fonter({
+// 			formats: ['ttf']
+// 		}))
+// 		.pipe(dest(source_folder + '/fonts/'));
+// })
+
+// gulp.task('svgSprite', function () {
+// 	return gulp.src([source_folder + '/iconsprite/*.svg'])
+// 		.pipe(svgSprite({
+// 			mode: {
+// 				stack: {
+// 					sprite: "../icons/icons.svg",  //sprite file name
+// 					example: true
+// 				}
+// 			},
+// 		}
+// 		))
+// 		.pipe(dest(path.build.img))
+// })
+
+
 // атоподключение шрифтов
+//file system
+let fs = require('fs');
+
 function fontsStyle(params) {
 	let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
 	if (file_content == '') {
@@ -144,9 +177,7 @@ function fontsStyle(params) {
 	}
 }
 
-function cb() {
-
-}
+function cb() {}
 
 function watchFiles(params) {
 	gulp.watch([path.watch.html], html);
