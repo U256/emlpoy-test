@@ -2,7 +2,7 @@
 
 //logout
 document.querySelector('.logout-btn').addEventListener('click', e => {
-  location.assign("enter-form.html")
+  location.assign("enter-page.html")
 });
 
 

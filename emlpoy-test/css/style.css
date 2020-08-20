@@ -714,7 +714,7 @@ main {
 }
 
 .bar-logo {
-  background: url(../images/icons/notif-icon.PNG) center/contain no-repeat;
+  background: url(../images/icons/ntfs-logo.svg) center/contain no-repeat;
   width: 46%;
   height: 95%;
 }
@@ -777,18 +777,26 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  color: #3a3b3f;
   width: 100%;
   height: 100%;
   visibility: hidden;
   opacity: 0;
   transition: 0.4s;
-  padding: 24px;
+  padding: 24px 16px;
 }
 
 @media (max-width: 991.98px) {
   .prim-blocks {
     padding: 12px;
   }
+}
+
+.prim-blocks * {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0px;
 }
 
 .active-prim-block {
@@ -799,8 +807,19 @@ main {
   transition: 0.4s;
 }
 
+.active-prim-block * {
+  position: static;
+}
+
 .dashboard-block {
   color: #3a3b3f;
+  padding: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .dashboard-block {
+    padding: 12px;
+  }
 }
 
 .dashboard-block .dashboard-rows {
@@ -1148,7 +1167,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  display: none;
 }
 
 .l-orders-title {
@@ -1178,7 +1196,6 @@ main {
 }
 
 .l-orders-table {
-  display: none;
   width: 100%;
   height: 394px;
   font-size: 14px;
@@ -1335,6 +1352,161 @@ main {
 
 .authentication-block {
   color: #3a3b3f;
+  padding-top: 0;
+}
+
+.auth-top-row {
+  background-color: #f9fafb;
+  width: 100%;
+  flex: 0 0 57px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #9ea0a5;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .auth-top-row {
+    margin-bottom: 12px;
+  }
+}
+
+.to-tab-btn {
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
+  border-bottom: 3px solid transparent;
+  background-color: inherit;
+}
+
+.to-tab-btn__active {
+  border-bottom: 3px solid #1665d8;
+}
+
+.auth-tabs {
+  width: 100%;
+  flex: 1 0 auto;
+  position: absolute;
+  z-index: -4;
+  transition: opacity 0.4s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.auth-tabs * {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  opacity: 0;
+}
+
+.active-auth-tab {
+  position: relative;
+  z-index: 5;
+  visibility: visible;
+  opacity: 1;
+}
+
+.active-auth-tab * {
+  position: static;
+  opacity: 1;
+}
+
+.tab-profile {
+  display: flex;
+}
+
+.auth-btn {
+  height: 4rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  border-radius: 5px;
+  padding: 0 16px;
+  min-width: 120px;
+}
+
+@media (max-width: 991.98px) {
+  .auth-btn {
+    min-width: 90px;
+    padding: 0 10px;
+  }
+}
+
+.ava-change {
+  width: 375px;
+  height: 249px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 991.98px) {
+  .ava-change {
+    margin-right: 24px;
+  }
+}
+
+.ava-change__top-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.ava-change__info {
+  flex: 0 0 50%;
+  height: 100%;
+}
+
+.ava-change__new-ava {
+  flex: 0 0 50%;
+  height: 100%;
+}
+
+.ava-change__new-ava img {
+  width: 95%;
+  height: 95%;
+}
+
+.ava-change__bt-row {
+  border-top: 1px solid #9ea0a5;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ava-person-name {
+  color: #212529;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+}
+
+.ava-location {
+  color: #9ea0a5;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.data-change .person-data-change {
+  width: 100%;
+  max-width: 910px;
+  height: 454px;
+  margin-bottom: 12px;
+}
+
+.data-change .notif-settings-change {
+  max-width: 910px;
+  height: 414px;
+  margin-bottom: 12px;
 }
 
 .enter-page {
@@ -1553,7 +1725,7 @@ main {
   color: black;
 }
 
-.enter-form .login-terms-check {
+.enter-form .terms-check {
   width: 18px;
   height: 18px;
   position: relative;
@@ -1563,12 +1735,12 @@ main {
   margin-right: 10px;
 }
 
-.enter-form .login-terms-check-text {
+.enter-form .terms-check-text {
   font-size: 16px;
   line-height: 20px;
 }
 
-.enter-form .login-terms-check-text a {
+.enter-form .terms-check-text a {
   color: #5b5c5d;
 }
 
