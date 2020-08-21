@@ -147,25 +147,7 @@
 	}
 }
 
-// "submit", to-login, to-signin, to-registration buttons
-.forward-btn {
-	width: 100%;
-	height: 40px;
-	border-radius: 6px;
-	background-color: $enter-accent;
-	text-transform: uppercase;
-	color: $inv-text;
-	font-size: 14px;
-	font-weight: 500;
-	letter-spacing: 2.25px;
-	line-height: 16px;
-	margin-bottom: 20px;
 
-	@media (min-width: 767.98px) {
-		//pointer on big screens
-		cursor: pointer;
-	}
-}
 
 //forward-buttons in start block:
 .to-login {
@@ -173,110 +155,43 @@
 }
 
 .to-registration {
-	background-color: #e2eaf6;
-	border: 3px solid $enter-accent;
-	color: $enter-accent;
+
+	background-color: $enter-accent;
+	color: $inv-text;
+	border: none;
 }
 
 
 
 //FORM:
-.enter-form {
+.enter-page-form {
 	margin-bottom: auto;
+}
+// .enter-page-field-wrapper{}
+
+.enter-page-field {
+	margin-bottom: 26px;
 	width: 100%;
 
-	.login-field-wrapper{
-		position: relative;
+	@media (max-width: 991.98px) {	
+		margin-bottom: 20px;
 	}
-
-	.login-field {
-		margin-bottom: 26px;
-		padding: 13px 16px;
-		width: 100%;
-		height: 50px;
-		border: 2px solid #adadad;
-		border-radius: 5px;
-		outline: none;
-		color: #aaaaaa;
-		font-size: 16px;
-		letter-spacing: 0.15px;
-
-
-		@media (max-width: 991.98px) {	
-			height: 42px;
-			margin-bottom: 20px;
-		}
-
-		@media (max-width: 575.98px) {	
-			height: 36px;
-			margin-bottom: 15px;
-		}
-	}
-
-	.login-field:hover {
-		border: 3px solid $enter-accent;
-		color: black;
-	}
-
-
-	.terms-check {
-		// CheckBox agree with terms and policy when register 
-		width: 18px;
-		height: 18px;
-		position: relative;
-		top: 3px;
-		left: 0;
-		background-color: #425a70;
-		margin-right: 10px;
-	}
-
-	.terms-check-text {
-		font-size: 16px;
-		line-height: 20px;
-
-		a {
-			//terms and conditions
-			color: #5b5c5d;
-		}
+	@media (max-width: 575.98px) {	
+		margin-bottom: 15px;
 	}
 }
 
-.login-field-wrapper:hover:before {
-	content: '';
-	position: absolute;
-	top: -10px;
-	left: 10px;
-	z-index: 10;
-	padding: 0 6px;
-	height: 20px;
-	color: $enter-accent;
-	background-color: $clean-bg;
-	font-size: 14px;
-	font-weight: 500;
-	letter-spacing: 0.7px;
+// Check of agree with terms and policy when register 
+// .terms-check {}
+
+.terms-check-text {
+	a {
+		//terms and conditions
+		color: #5b5c5d;
+	}
 }
 
-.wrapper-name:hover:before {
-	content: 'Name';
-}
-.wrapper-last-name:hover:before {
-	content: 'Last name';
-}
-.wrapper-email:hover:before {
-	content: 'Email';
-}
-.wrapper-password:hover:before {
-	content: 'Password';
-}
-.checkbox-wrapper {
-	display: flex;
-	margin-bottom: 24px;
-}
-
-
-
-
-//.enter-block__decoration:
+//.enter-page__decoration-column:
 .decoration-text {
 
 	font-size: 16px;

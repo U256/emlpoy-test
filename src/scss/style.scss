@@ -10,57 +10,14 @@ $soft-background:#f9fafb;
 
 @import 'reset';
 
-
-html {
-   font-family: Roboto, sans-serif;
-   font-size: 10px;
-   //300 400 500 700
-
-   @media (max-width: 575.98px) {
-      font-size: 9px; 
-   }
-}  
-
-main {
-   position: relative;
-   z-index: 1;
-   min-height: calc(100vh - 64px);
-   background-color: $soft-background; 
-   display: flex;
-}
-
-.clean-btn {
-   outline: none;
-   border: none;
-   background-color: $clean-bg;
-   color: inherit;
-}
-
-.soft-bd {
-   background-color: $clean-bg;
-	box-shadow: 0 1px 3px rgba(63, 63, 68, 0.15), 0 1px 0 rgba(63, 63, 68, 0.05);
-	border: 1px solid rgba(63, 63, 68, 0);
-	border-radius: 4px;
-}
-
-.flex-col {
-   display: flex;
-	flex-direction: column;
-   justify-content: space-between;
-}
-
-.flex {
-   display: flex;
-   align-items: center;
-}
-
-
-
 @import 'header';
 @import 'left-panel';
 @import 'notifications-bar';
 
 @import 'prim-blocks'; // base for all blocks
+
+@import 'common-styles';
+
 @import 'dashboard/dashboard-block';
 @import 'users-block';
 @import 'products-block';
@@ -68,6 +25,7 @@ main {
 
 @import 'enter-page';
 @import 'bottom-about';
+
 
 @media (min-width: 1999.98px) {
    

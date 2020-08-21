@@ -1,11 +1,6 @@
 .dashboard-block {
 	//flex - column - cen 
 	color: $small-title-text;
-	padding: 24px;
-
-	@media (max-width: 991.98px) {
-		padding: 12px;
-	}
 
 	.dashboard-rows {
 		display: flex;
@@ -40,16 +35,6 @@
 @import 'dashboard__schedules-row';
 
 @import 'dashboard__bottom-row';
-
-
-//padding for elements in containers
-.fr-padding {
-	padding: 4px 24px 4px 24px;
-
-	@media (max-width: 1199px) {
-		padding: 4px 12px 4px 12px;
-	}
-}
 
 //line before bottom of blocks
 .softline {
