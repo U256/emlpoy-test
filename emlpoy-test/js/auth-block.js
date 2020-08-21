@@ -36,7 +36,8 @@ function areRequiredFieldsFill() {
 	if (
 		personSettingsFieldsArr[0].value == '' ||
 		personSettingsFieldsArr[1].value == '' ||
-		personSettingsFieldsArr[2].value == ''
+		personSettingsFieldsArr[2].value == '' ||
+		!personSettingsFieldsArr[2].value.includes("@")
 	) return false;
 	else return true;
 }
