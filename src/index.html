@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- , shrink-to-fit=no -->
+   <title>Devias Kit</title>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet" type="text/css">
+
+   <script src="js/login-checker.js"></script>
+</head>
+
+<body>
+   <!-- blue bar at the top -->
+   @@include("_header.html")
+
+   <main class="main">
+      <!-- aside left panel -->
+      @@include("_left-panel.html")
+
+      <div class="prim-blocks-wrapper">
+         <!-- primary blocks -->
+         @@include("_dashboard-block.html")
+         @@include("_users-block.html")
+         @@include("_products-block.html")
+         @@include("_authentication-block.html")
+         @@include("_typography-block.html")
+         @@include("_icons-images-block.html")
+      </div>
+   </main>
+
+   @@include("_notifications-bar.html")
+
+   <script src="js/script.js"></script>
+   <script src="js/left-panel.js"></script>
+   <script src="js/auth-block.js"></script>
+
+   <script src="js/notifications.js"></script>
+</body>
+
+</html>

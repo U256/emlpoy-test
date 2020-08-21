@@ -1,0 +1,226 @@
+.enter-page {
+	background-color: $soft-background;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $pale-text;
+
+	&__block-container {
+		margin: 15px;
+		background-color: $clean-bg;
+		box-shadow: 0 1px 3px rgba(63, 63, 68, 0.595), 0 0 0 rgba(63, 63, 68, 0.465);
+		display: flex;
+		width: 960px;
+		height: 640px;
+		border-radius: 8px;
+
+		@media (max-width: 991.98px) {
+			width: 530px; 
+			height: 550px;
+		}
+		@media (max-width: 575.98px) {
+			width: 300px;
+			height: 520px;
+		}
+	}
+
+	// contains start, login and  blocks
+	&__main-column {
+		height: 100%;
+		flex: 0 0 487px;
+		padding: 55px 63px;
+
+		@media (max-width: 991.98px) {
+			flex: 1 0 auto;
+		}
+
+		@media (max-width: 575.98px) {
+			flex: 1 0 300px;
+			padding: 20px;
+		}
+	}
+
+	//// contains image and citation
+	&__decoration-column { 
+		height: 100%;
+		flex: 0 0 473px;
+		display: flex;
+		position: relative;
+		z-index: 2;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 0 18px 24px 24px;
+		border-radius: 0 8px 8px 0;
+		color: $inv-text;
+		background: url(../images/login-bg.svg) center right no-repeat;
+
+		@media (max-width: 991.98px) {
+			display: none;
+		}
+	}
+}
+
+
+//.enter-block__main:
+.enter-steps {
+	//start, registraton & login steps
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	//unactive by default
+	display: none;
+}
+
+// // start step
+// .enter-start {}
+
+// // login step
+// .enter-login {}
+
+// // registration step
+// .enter-registration {}
+
+
+
+// enter-steps:   content of steps
+.enter-top-row {
+	margin-bottom: auto;
+	padding-bottom: 10px;
+	height: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.enter-back-btn {
+		// back to start section
+		font-size: 1.4rem;
+		padding: 10px 10px 10px 26px;
+		background: url(../images/icons/toleft-arrow.png) left/18px 14px no-repeat;
+
+		@media (min-width: 991.98px) {
+			//pointer on big screens
+			cursor: pointer;
+		}
+
+		@media (max-width: 575.98px) {
+			padding: 6px 22px;
+		}
+	}
+
+	.switch-step {
+		// from 'in' to 'up' & vice versa
+		font-size: 1.4rem;
+
+		.switch-btn {
+			padding: 6px;
+			text-decoration: underline;
+
+			@media (min-width: 991.98px) {
+				//pointer on big screens
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.enter-title {
+	color: #212529;
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 28px;
+	margin-bottom: 5px;
+}
+
+.enter-subtitle {
+	font-size: 1.4rem;
+	line-height: 20px;
+	margin-bottom: 40px;
+
+	@media (max-width: 991.98px) {
+		margin-bottom: 15px;	
+	}
+}
+
+
+
+//forward-buttons in start block:
+.to-login {
+	margin-bottom: 20px;
+}
+
+.to-registration {
+
+	background-color: $enter-accent;
+	color: $inv-text;
+	border: none;
+}
+
+
+
+//FORM:
+.enter-page-form {
+	margin-bottom: auto;
+}
+// .enter-page-field-wrapper{}
+
+.enter-page-field {
+	margin-bottom: 26px;
+	width: 100%;
+
+	@media (max-width: 991.98px) {	
+		margin-bottom: 20px;
+	}
+	@media (max-width: 575.98px) {	
+		margin-bottom: 15px;
+	}
+}
+
+// Check of agree with terms and policy when register 
+// .terms-check {}
+
+.terms-check-text {
+	a {
+		//terms and conditions
+		color: #5b5c5d;
+	}
+}
+
+//.enter-page__decoration-column:
+.decoration-text {
+
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.6px;
+	line-height: 25px;
+	margin-bottom: 16px;
+}
+
+.decoration-author {
+	display: flex;
+	background: url(../images/icons/login-cit-author.png) left/32px 32px no-repeat;
+	padding-left: 50px;
+
+	&__name {
+		font-size: 17px;
+		letter-spacing: -0.05px;
+	}
+
+	&__post {
+		padding-top: 3px;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+	}
+}
+
+
+
+//activate step
+.active__step {
+	display: flex;
+}

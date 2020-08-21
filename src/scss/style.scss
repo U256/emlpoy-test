@@ -1,0 +1,66 @@
+$enter-accent: #3f51b5;
+$prim-highlight-text: #1665d8;
+$sec-highlight-text: #1070ca;
+$small-title-text: #3a3b3f;
+$pale-text: #9ea0a5;
+$inv-text: #fff;
+$clean-bg: #fff;
+$soft-background:#f9fafb;
+
+
+@import 'reset';
+
+@import 'header';
+@import 'left-panel';
+@import 'notifications-bar';
+
+@import 'prim-blocks'; // base for all blocks
+
+@import 'common-styles';
+
+@import 'dashboard/dashboard-block';
+@import 'users-block';
+@import 'products-block';
+@import 'authentication/authentication-block';
+
+@import 'enter-page';
+@import 'bottom-about';
+
+
+@media (min-width: 1999.98px) {
+   
+}
+
+@media (max-width: 1199.98px) {
+  
+}
+
+@media (max-width: 991.98px) {
+   
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (max-width: 575.98px) {
+  
+}
+
+
+// .icons-images-block {
+   
+// }
+// .typography-block {
+   
+// }
+
+
+// 1999.98px - 4к
+// 1199.98px - xl
+//991.98px - lg
+//767.98px - md
+//575.98px - sm
+//<575 - xs
+//USE SNIPPETS!!
+
