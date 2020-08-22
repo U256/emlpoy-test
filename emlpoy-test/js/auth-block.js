@@ -1,12 +1,13 @@
 'use strict'
 
+//////// TAB SWITCH
 let toTabButtonsArray = document.querySelectorAll('.to-tab-btn');
 let toTabButtonsContainer = document.querySelector('.auth-top-row');
 let tabsArray = document.querySelectorAll('.auth-tabs');
 
 toTabButtonsContainer.addEventListener('click', function (e) {
 
-	toTabButtonsArray.forEach((toTabBtn) => {
+	toTabButtonsArray.forEach(toTabBtn => {
 		toTabBtn.classList.remove("to-tab-btn__active");
 	});
 	tabsArray.forEach((tab) => {
@@ -21,77 +22,132 @@ toTabButtonsContainer.addEventListener('click', function (e) {
 
 
 
-//button activates only on change in form
-
+//////// FORMS
 let personSettingsForm = document.querySelector('.person-settings-form');
-let personSettingsFieldsArr = document.querySelectorAll('.settings-change-field');
-let submitPersonSettings = document.querySelector('.submit-profile-settings');
+let submitPersonSettings = personSettingsForm.submitSettings;
+let persSettingsFields = document.querySelectorAll('.settings-change-field');
+let persSettingsFieldWrappers = document.querySelectorAll('.settings-field-wrapper');
 
 let notifSettingsForm = document.querySelector('.notif-settings-form');
 let notifSettingsCheckboxesArr = document.querySelectorAll('.settings-checkbox');
-let submitNotifSettings = document.querySelector('.submit-notif-settings');
+let submitNotifSettings = notifSettingsForm.submitNotifications;
+
+function showNotice(className, innerHTML) {
+	let notice = document.createElement('div');
+	notice.className = className;
+	notice.innerHTML = innerHTML;
+	document.body.append(notice)
+
+	setTimeout(() => notice.remove(), 5000);
+}
+//showNotice("error-notice", "Error. Try again")
+
+function showHint(innerHTML, place) {
+	let hint = document.createElement('div');
+	hint.className = 'fill-required';
+	hint.innerHTML = innerHTML;
+	place.append(hint)
+
+	setTimeout(() => hint.remove(), 4000);
+}
 
 
+///// Person settings form
 function areRequiredFieldsFill() {
 	if (
-		personSettingsFieldsArr[0].value == '' ||
-		personSettingsFieldsArr[1].value == '' ||
-		personSettingsFieldsArr[2].value == '' ||
-		!personSettingsFieldsArr[2].value.includes("@")
+		persSettingsFields[0].value == '' ||
+		persSettingsFields[1].value == '' ||
+		persSettingsFields[2].value == '' ||
+		!persSettingsFields[2].value.includes("@") ||
+		!persSettingsFields[2].value.includes(".")
 	) return false;
 	else return true;
 }
 
-// onkeypress
-personSettingsFieldsArr.forEach(field => {
-	field.addEventListener('blur', e => {
 
-		areRequiredFieldsFill() ?
-			(submitPersonSettings.classList.add("active-submit-btn")
-				//, submitPersonSettings.removeAttribute("disabled")
-			) :
-			(submitPersonSettings.classList.remove("active-submit-btn")
-				//, submitPersonSettings.setAttribute("disabled", "true")
-			)
-	})
+personSettingsForm.addEventListener('input', e => {
 
-	field.addEventListener('focus', e => {
-		// отключить крансую подсказку
-	})
+	if (areRequiredFieldsFill()) {
+		submitPersonSettings.classList.add("active-submit-btn")
+		// submitPersonSettings.removeAttribute("disabled")
+	} else {
+		submitPersonSettings.classList.remove("active-submit-btn")
+		// submitPersonSettings.setAttribute("disabled", "true")
+	}
 })
 
 
-//disabled="disabled"
-//Обязательные поля name 0, Last name 1, email 2 — без их заполнения кнопка Save settings не активна, и форму нельзя отправить. Поле e-mail должно удовлетворять формату e-mail — при неправильном заполнении форму отправить нельзя. Когда поле теряет фокус — вывести сообщение с ошибкой под этим полем, если таковые имеются. Отправить форму на сервер (любой). В случае ошибки вывести текст «Error. Try again» красного цвета. В случае успешной отправки — вывести текст зеленого цвета «Saved», удалить это сообщение через 5 секунд, кнопку Save Settings сделать неактивной.
+personSettingsForm.addEventListener('submit', e => {
+
+	//active-class avaliability from prev logic block uses as check for submit-btn action
+	if (submitPersonSettings.classList.contains("active-submit-btn")) {
+		showNotice("submit-notice", "Saved");
+	}
+	else {
+		e.preventDefault()
+
+		if (persSettingsFields[0].value == '') {
+			showHint("Please write name", persSettingsFieldWrappers[0])
+		}
+		if (persSettingsFields[1].value == '') {
+			showHint("Please fill", persSettingsFieldWrappers[1])
+		}
+		if (persSettingsFields[2].value == '') {
+			showHint("Email is required", persSettingsFieldWrappers[2])
+		}
+		else if (!persSettingsFields[2].value.includes("@") ||
+			!persSettingsFields[2].value.includes(".")) {
+			showHint("...@example.com", persSettingsFieldWrappers[2])
+		}
+	}
+})
 
 
+
+
+///// Notifications settings form
+function currentCheckboxesPositions(checksArr) {
+	//Array with binary cells of every checkbox values
+
+	let checksPositions = [];
+	checksArr.forEach(checkbox => {
+		checksPositions.push(checkbox.checked)
+	});
+	return checksPositions;
+} // Вообще это с бэка приходит, но без такого костыля не будет нормально выглядеть
+
+function areArraysTheSame(arr1, arr2) {
+	for (let i = 0; i < arr1.length; i++) {
+		if (arr1[i] != arr2[i]) return false;
+	}
+	return true;
+}
+
+
+let checksPositionsOnLoad = currentCheckboxesPositions(notifSettingsCheckboxesArr);
 
 
 notifSettingsForm.addEventListener("click", e => {
-	сonsole.log(event.target) //input.checked
-	// if (input.checked == true){}
+
+
+	let checksPositionsNow = currentCheckboxesPositions(notifSettingsCheckboxesArr);
+
+	if (areArraysTheSame(checksPositionsNow, checksPositionsOnLoad)) {
+		submitNotifSettings.setAttribute("disabled", "true")
+		submitNotifSettings.classList.remove("active-submit-btn")
+	} else {
+		submitNotifSettings.removeAttribute("disabled")
+		submitNotifSettings.classList.add("active-submit-btn")
+	}
 })
-//кнопка Save становится активной если изменились значения полей. В случае ошибки вывести текст «Error. Try again» красного цвета. В случае успешной отправки — вывести текст зеленого цвета «Saved», удалить это сообщение через 5 секунд, кнопку Save сделать неактивной.
-
-
-// alert(form.elements.login); // <input name="login">
-
-// let fieldset = form.elements.userFields;
-
-//Для любого элемента форма доступна через element.form и наоборот form.element[index/name]
 
 
 
 
-//*checkbox* onchange="document.getElementById('submit').disabled = !this.checked;"
 
 
 
-//.active-submit-btn  - активный вид кнопочки
 
-// function check() {
-// 	if ($('#input').val() != '')
-// 	$('#button').removeAttr();
-//     else
-// 	$('#button').attr();
-// }
+
+
+

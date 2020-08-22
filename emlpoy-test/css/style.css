@@ -451,15 +451,15 @@ template {
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.6px;
-  top: 6px;
-  right: -140px;
+  top: 7px;
+  right: -130px;
   z-index: 19;
-  width: 140px;
-  height: 43px;
+  width: 130px;
+  height: 38px;
   background-color: white;
-  border: 2px solid #8f8c8c;
+  border: 1px solid #8f8c8c;
   border-left: none;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 18px 18px 0;
   opacity: 0.7;
   cursor: pointer;
 }
@@ -762,7 +762,7 @@ template {
   position: absolute;
   z-index: -1;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
 }
 
 .active-prim-block {
@@ -948,6 +948,36 @@ main {
   .forward-btn {
     cursor: pointer;
   }
+}
+
+.submit-notice {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  top: 75px;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  background-color: #fff;
+  color: green;
+  border: 2px solid green;
+  border-right: none;
+  border-radius: 11px 0px 0px 11px;
+  padding: 10px 20px;
+}
+
+.error-notice {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  top: 145px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  background-color: #fff;
+  color: red;
+  border: 2px solid red;
+  border-right: none;
+  border-radius: 11px 0px 0px 11px;
+  padding: 10px 20px;
 }
 
 .dashboard-block {
@@ -1580,7 +1610,7 @@ main {
   }
 }
 
-@media (max-width: 757.98px) {
+@media (max-width: 991.98px) {
   .ava-change {
     align-self: center;
   }
@@ -1758,8 +1788,9 @@ main {
   }
 }
 
-.settings-field-wrapper .settings-change-field {
+.settings-change-field {
   width: 100%;
+  min-width: 240px;
   height: 5.6rem;
 }
 
@@ -1778,6 +1809,7 @@ main {
   display: block;
   padding: 8px;
   margin-bottom: 16px;
+  outline: none;
 }
 
 .submit-profile-settings {
@@ -1821,6 +1853,25 @@ main {
 .active-submit-btn {
   background-color: #1665d8;
   color: #fff;
+}
+
+.fill-required {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 57%;
+  width: 40%;
+  margin: 4px;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5rem;
+  color: red;
+  border: 1px solid rgba(255, 0, 0, 0.548);
+  border-radius: 6px;
 }
 
 .enter-page {
