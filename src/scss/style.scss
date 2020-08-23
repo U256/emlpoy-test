@@ -1,0 +1,34 @@
+$enter-accent: #3f51b5;
+$prim-highlight-text: #1665d8;
+$sec-highlight-text: #1070ca;
+$small-title-text: #3a3b3f;
+
+$dark-title-text: #212529;
+$footnote: #66788a;
+$soft-border:#e4e7eb;
+
+$pale-text: #9ea0a5;
+$inv-text: #fff;
+$clean-bg: #fff;
+$soft-background:#f9fafb;
+
+
+@import 'reset';
+
+@import 'header';
+@import 'left-panel';
+@import 'notifications-bar';
+
+@import 'prim-blocks'; // base for all blocks
+
+@import 'common-styles'; //common
+
+@import 'dashboard/dashboard-block';
+@import 'users-block';
+@import 'products-block';
+@import 'authentication/authentication-block';
+
+@import 'enter-page';
+@import 'bottom-about';
+
+

@@ -1,0 +1,199 @@
+html {
+   font-family: Roboto, sans-serif;
+   font-size: 10px;
+   //300 400 500 700
+
+   @media (max-width: 575.98px) {
+      font-size: 9px; 
+   }
+}  
+
+main {
+   position: relative;
+   z-index: 1;
+   min-height: calc(100vh - 64px);
+   background-color: $soft-background; 
+   display: flex;
+}
+
+.clean-btn {
+   outline: none;
+   border: none;
+   background-color: $clean-bg;
+   color: inherit;
+}
+
+.soft-bd {
+   background-color: $clean-bg;
+	box-shadow: 0 1px 3px rgba(63, 63, 68, 0.15), 0 1px 0 rgba(63, 63, 68, 0.05);
+	border: 1px solid rgba(63, 63, 68, 0);
+	border-radius: 4px;
+}
+
+.flex-col {
+   display: flex;
+	flex-direction: column;
+   justify-content: space-between;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+//padding for elements in containers
+.fr-padding {
+	padding: 4px 24px 4px 24px;
+
+	@media (max-width: 1199px) {
+		padding: 4px 12px 4px 12px;
+	}
+}
+
+
+//Primary forms
+.prim-forms {
+	width: 100%;
+}
+
+.field-wrappers {
+	position: relative;
+}
+
+.prim-fields {
+   //margin-bottom: ;
+   padding: 13px 16px;
+   width: 50%;
+   height: 50px;
+   border: 2px solid #adadad;
+   border-radius: 5px;
+   outline: none;
+   font-size: 16px;
+   letter-spacing: 0.15px;
+   
+   @media (max-width: 991.98px) {	
+		height: 42px;
+		//margin-bottom: 20px;
+   }
+   @media (max-width: 575.98px) {	
+		height: 36px;
+		//margin-bottom: 15px;
+	}
+}
+.prim-fields:hover {
+	border: 3px solid $enter-accent;
+}
+
+.prim-checkboxes {
+   width: 18px;
+	height: 18px;
+	position: relative;
+	top: 3px;
+	left: 0;
+	vertical-align: top;
+	background-color: $prim-highlight-text;
+	margin-right: 10px;
+}
+
+.prim-checkbox-texts {
+	display: inline-block;
+  font-size: 16px;
+	line-height: 20px;
+}
+
+.field-wrappers:hover:before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 10px;
+	z-index: 10;
+	padding: 0 6px;
+	height: 20px;
+	color: $enter-accent;
+	background-color: $clean-bg;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.7px;
+}
+
+.wrapper-name:hover:before {
+	content: 'Name';
+}
+.wrapper-last-name:hover:before {
+	content: 'Last name';
+}
+.wrapper-email:hover:before {
+	content: 'Email';
+}
+.wrapper-password:hover:before {
+	content: 'Password';
+}
+.wrapper-number:hover:before {
+	content: 'Phone number';
+}
+.wrapper-country:hover:before {
+	content: 'Country';
+}
+.wrapper-city:hover:before {
+	content: 'City';
+}
+.wrapper-checkbox {
+	//display: flex;
+	margin-bottom: 24px;
+}
+
+// "submit", to-login, to-signin, to-registration buttons
+.forward-btn {
+	width: 100%;
+	height: 40px;
+	border-radius: 6px;
+	background-color: $clean-bg;
+	border: 3px solid $enter-accent;
+	color: $enter-accent;
+
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 2.25px;
+	line-height: 16px;
+	margin-bottom: 20px;
+
+	@media (min-width: 767.98px) {
+		//pointer on big screens
+		cursor: pointer;
+	}
+}
+
+//when form sent
+.submit-notice {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  top: 75px;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  background-color: $clean-bg;
+  color: green;
+  border: 2px solid green;
+  border-right: none;
+  border-radius: 11px 0px 0px 11px;
+  padding: 10px 20px;
+}
+
+//when form sent wrong
+.error-notice {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  top: 145px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  background-color: $clean-bg;
+  color: red;
+  border: 2px solid red;
+  border-right: none;
+  border-radius: 11px 0px 0px 11px;
+  padding: 10px 20px;
+}
+
+
