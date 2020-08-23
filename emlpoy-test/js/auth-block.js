@@ -1,27 +1,23 @@
 'use strict'
 
-//////// TABs SWITCH
+//////// TAB SWITCH
 let toTabButtonsArray = document.querySelectorAll('.to-tab-btn');
 let toTabButtonsContainer = document.querySelector('.auth-top-row');
 let tabsArray = document.querySelectorAll('.auth-tabs');
 
 toTabButtonsContainer.addEventListener('click', function (e) {
 
-	// sift buttons, separate background clicks
-	if (e.target.hasAttribute('rel')) {
+	toTabButtonsArray.forEach(toTabBtn => {
+		toTabBtn.classList.remove("to-tab-btn__active");
+	});
+	tabsArray.forEach((tab) => {
+		tab.classList.remove("active-auth-tab");
+	});
 
-		toTabButtonsArray.forEach(toTabBtn => {
-			toTabBtn.classList.remove("to-tab-btn__active");
-		});
-		tabsArray.forEach((tab) => {
-			tab.classList.remove("active-auth-tab");
-		});
+	e.target.classList.add("to-tab-btn__active");
 
-		e.target.classList.add("to-tab-btn__active");
-
-		//e.target.getAttribute('rel') - button number
-		tabsArray[e.target.getAttribute('rel')].classList.add("active-auth-tab");
-	}
+	//e.target.getAttribute('rel') - button number
+	tabsArray[e.target.getAttribute('rel')].classList.add("active-auth-tab");
 })
 
 
@@ -33,9 +29,8 @@ let persSettingsFields = document.querySelectorAll('.settings-change-field');
 let persSettingsFieldWrappers = document.querySelectorAll('.settings-field-wrapper');
 
 let notifSettingsForm = document.querySelector('.notif-settings-form');
-let notifCheckboxesArr = document.querySelectorAll('.settings-checkbox');
+let notifSettingsCheckboxesArr = document.querySelectorAll('.settings-checkbox');
 let submitNotifSettings = notifSettingsForm.submitNotifications;
-
 
 function showNotice(className, innerHTML) {
 	let notice = document.createElement('div');
@@ -53,7 +48,7 @@ function showHint(innerHTML, place) {
 	hint.innerHTML = innerHTML;
 	place.append(hint)
 
-	setTimeout(() => hint.remove(), 3000);
+	setTimeout(() => hint.remove(), 4000);
 }
 
 
@@ -69,32 +64,27 @@ function areRequiredFieldsFill() {
 	else return true;
 }
 
+
 personSettingsForm.addEventListener('input', e => {
 
-	areRequiredFieldsFill() ?
-		submitPersonSettings.classList.add("active-submit-btn") :
+	if (areRequiredFieldsFill()) {
+		submitPersonSettings.classList.add("active-submit-btn")
+		// submitPersonSettings.removeAttribute("disabled")
+	} else {
 		submitPersonSettings.classList.remove("active-submit-btn")
-	
-	// submitPersonSettings.removeAttribute("disabled")
 		// submitPersonSettings.setAttribute("disabled", "true")
-
+	}
 })
 
 
 personSettingsForm.addEventListener('submit', e => {
 
-	//active-class avaliability (from prev logic block) uses as check for submit-btn activation
+	//active-class avaliability from prev logic block uses as check for submit-btn action
 	if (submitPersonSettings.classList.contains("active-submit-btn")) {
-
-		e.preventDefault()
-		persSettingsFields.forEach(input => input.value = "")
-		submitPersonSettings.classList.remove("active-submit-btn")
-		//prev 3 lines is nonsence/ just for imitaiton
-
 		showNotice("submit-notice", "Saved");
 	}
 	else {
-		e.preventDefault()	//stops form submit
+		e.preventDefault()
 
 		if (persSettingsFields[0].value == '') {
 			showHint("Please write name", persSettingsFieldWrappers[0])
@@ -111,41 +101,6 @@ personSettingsForm.addEventListener('submit', e => {
 		}
 	}
 })
-
-
-///// Phone number mask
-let numberField = document.querySelector('input[name="number"]');
-numberField.addEventListener("input", mask);
-numberField.addEventListener("focus", mask);
-numberField.addEventListener("blur", mask);
-
-function setCursorPosition(pos, elem) {
-	elem.focus();
-	if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
-	else if (elem.createTextRange) {
-		let range = elem.createTextRange();
-		range.collapse(true);
-		range.moveEnd("character", pos);
-		range.moveStart("character", pos);
-		range.select()
-	}
-}
-function mask(event) {
-	let matrix = "+_ (___) ___ ____",
-		i = 0,
-		def = matrix.replace(/\D/g, ""),
-		val = this.value.replace(/\D/g, "");
-
-	if (def.length >= val.length) val = def;
-	this.value = matrix.replace(/./g, function (a) {
-		return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
-	});
-	if (event.type == "blur") {
-		if (this.value.length == 2) this.value = ""
-	} else setCursorPosition(this.value.length, this)
-};
-
-
 
 
 
@@ -169,38 +124,13 @@ function areArraysTheSame(arr1, arr2) {
 }
 
 
-let checksPositionsOnLoad = currentCheckboxesPositions(notifCheckboxesArr);
+let checksPositionsOnLoad = currentCheckboxesPositions(notifSettingsCheckboxesArr);
 
-let isSteer1Set = false;
-let isSteer3Set = false;
-let isSteer5Set = false;
 
 notifSettingsForm.addEventListener("click", e => {
 
-	//checkboxes hints
-	if (event.target.checked) {
-		let steer = document.createElement('div');
-		steer.className = 'steer-for-checkbox';
 
-		if ((event.target == notifCheckboxesArr[1]) && !isSteer1Set) {
-			steer.innerHTML = 'For your mobile or tablet device';
-			event.target.parentNode.after(steer);
-			isSteer1Set = true;
-		}
-		if ((event.target == notifCheckboxesArr[3]) && !isSteer3Set) {
-			steer.innerHTML = 'Customer calls only';
-			event.target.parentNode.after(steer);
-			isSteer3Set = true;
-		}
-		if ((event.target == notifCheckboxesArr[5]) && !isSteer5Set) {
-			steer.innerHTML = 'For your mobile or tablet device';
-			event.target.parentNode.after(steer);
-			isSteer5Set = true;
-		}
-	}
-
-	//comparing checkboxes positions to activate submit btn
-	let checksPositionsNow = currentCheckboxesPositions(notifCheckboxesArr);
+	let checksPositionsNow = currentCheckboxesPositions(notifSettingsCheckboxesArr);
 
 	if (areArraysTheSame(checksPositionsNow, checksPositionsOnLoad)) {
 		submitNotifSettings.setAttribute("disabled", "true")
@@ -211,14 +141,7 @@ notifSettingsForm.addEventListener("click", e => {
 	}
 })
 
-//NONSENCE / just 4 imitaiton
-notifSettingsForm.addEventListener("submit", e => {
 
-	e.preventDefault() //stops form submit
-	if (!submitNotifSettings.hasAttribute("disabled")) {
-		showNotice("submit-notice", "Saved");
-	}
-})
 
 
 
