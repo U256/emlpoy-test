@@ -2,6 +2,8 @@ node_modules
 src
 .vscode
 
+src
+
 gulpfile.js
 package.json
 package-lock.json

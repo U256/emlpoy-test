@@ -456,8 +456,8 @@ template {
   z-index: 19;
   width: 130px;
   height: 38px;
-  background-color: white;
-  border: 1px solid #8f8c8c;
+  background-color: #fff;
+  border: 1px solid #1070ca;
   border-left: none;
   border-radius: 0 18px 18px 0;
   opacity: 0.7;
@@ -506,7 +506,7 @@ template {
 .user-block__logo {
   width: 100px;
   height: 100px;
-  background-color: #ccc;
+  background-color: #3a3b3f;
   border-radius: 50%;
   margin-bottom: 15px;
 }
@@ -581,7 +581,7 @@ template {
 
 .support-title {
   margin-left: 16px;
-  color: #b1b1b1;
+  color: #9ea0a5;
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -589,7 +589,7 @@ template {
 .notifications-bar {
   padding-top: 4px;
   position: fixed;
-  z-index: 15;
+  z-index: -3;
   right: 0;
   bottom: 0;
   width: 342px;
@@ -609,6 +609,7 @@ template {
 .notifications-bar__active {
   opacity: 1;
   overflow: visible;
+  z-index: 21;
 }
 
 @media (max-width: 767.98px) {
@@ -651,15 +652,16 @@ template {
 
 .close-bar {
   position: absolute;
-  top: -60px;
+  top: -50px;
   right: 10px;
+  height: 52px;
 }
 
 .close-bar__btn {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0);
-  color: #535353;
-  font-size: 55px;
+  background-color: transparent !important;
+  color: #9ea0a5;
+  font-size: 50px;
 }
 
 .bar-text {
@@ -762,7 +764,7 @@ template {
   position: absolute;
   z-index: -1;
   left: 0;
-  bottom: 0;
+  bottom: 0px;
 }
 
 .active-prim-block {
@@ -872,9 +874,9 @@ main {
   position: relative;
   top: 3px;
   left: 0;
-  background-color: #425a70;
-  margin-right: 10px;
+  vertical-align: top;
   background-color: #1665d8;
+  margin-right: 10px;
 }
 
 .prim-checkbox-texts {
@@ -1278,7 +1280,7 @@ main {
 
 .prod-item__toevent {
   position: absolute;
-  right: 0;
+  left: 95%;
   top: 30%;
   padding: 8px;
   width: 24px;
@@ -1611,7 +1613,7 @@ main {
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 757.98px) {
   .ava-change {
     align-self: center;
   }
@@ -1795,13 +1797,6 @@ main {
   height: 5.6rem;
 }
 
-.settings-checkbox-text {
-  display: inline-block;
-  position: relative;
-  left: 0;
-  top: -3px;
-}
-
 .submit-setings-btns {
   color: #1665d8;
   border: 2px solid #1070ca;
@@ -1823,7 +1818,7 @@ main {
   margin: 0;
 }
 
-.notif-settings-form h4 {
+.notif-settings-form .settings-column-title {
   font-size: 16px;
   font-weight: 500;
   line-height: 2rem;
@@ -1860,8 +1855,8 @@ main {
   position: absolute;
   z-index: 20;
   top: 0;
-  left: 57%;
-  width: 40%;
+  left: 50%;
+  width: 47%;
   margin: 4px;
   padding: 0 10px;
   font-size: 1.4rem;
@@ -1871,8 +1866,19 @@ main {
   text-align: center;
   line-height: 1.5rem;
   color: red;
+  background-color: #fff;
   border: 1px solid rgba(255, 0, 0, 0.548);
-  border-radius: 6px;
+  border-radius: 4px;
+}
+
+.steer-for-checkbox {
+  position: relative;
+  top: -20px;
+  left: 31px;
+  width: 100%;
+  height: 16px;
+  font-size: 1.2rem;
+  color: #66788a;
 }
 
 .enter-page {
