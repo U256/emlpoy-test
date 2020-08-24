@@ -2057,6 +2057,10 @@ main {
   }
 }
 
+.terms-check-text {
+  max-width:75%;
+}
+
 .terms-check-text a {
   color: #5b5c5d;
 }
