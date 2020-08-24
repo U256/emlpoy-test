@@ -14,14 +14,13 @@ $soft-background:#f9fafb;
 
 
 @import 'reset';
+@import 'common-styles'; //common
 
 @import 'header';
 @import 'left-panel';
 @import 'notifications-bar';
 
 @import 'prim-blocks'; // base for all blocks
-
-@import 'common-styles'; //common
 
 @import 'dashboard/dashboard-block';
 @import 'users-block';

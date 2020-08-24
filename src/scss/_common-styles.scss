@@ -93,12 +93,14 @@ main {
 	vertical-align: top;
 	background-color: $prim-highlight-text;
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 .prim-checkbox-texts {
 	display: inline-block;
   font-size: 16px;
 	line-height: 20px;
+	cursor: pointer;
 }
 
 .field-wrappers:hover:before {

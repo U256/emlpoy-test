@@ -182,9 +182,13 @@
 }
 
 // Check of agree with terms and policy when register 
-// .terms-check {}
+.terms-check {
+	vertical-align: top;
+}
 
 .terms-check-text {
+	max-width: 75%;
+
 	a {
 		//terms and conditions
 		color: #5b5c5d;

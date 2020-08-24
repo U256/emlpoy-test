@@ -74,9 +74,9 @@ personSettingsForm.addEventListener('input', e => {
 	areRequiredFieldsFill() ?
 		submitPersonSettings.classList.add("active-submit-btn") :
 		submitPersonSettings.classList.remove("active-submit-btn")
-	
+
 	// submitPersonSettings.removeAttribute("disabled")
-		// submitPersonSettings.setAttribute("disabled", "true")
+	// submitPersonSettings.setAttribute("disabled", "true")
 
 })
 
@@ -211,13 +211,16 @@ notifSettingsForm.addEventListener("click", e => {
 	}
 })
 
-//NONSENCE / just 4 imitaiton
+//NONSENCE / just for imitaiton
 notifSettingsForm.addEventListener("submit", e => {
 
 	e.preventDefault() //stops form submit
 	if (!submitNotifSettings.hasAttribute("disabled")) {
 		showNotice("submit-notice", "Saved");
 	}
+	submitNotifSettings.setAttribute("disabled", "true")
+	submitNotifSettings.classList.remove("active-submit-btn")
+	checksPositionsOnLoad = currentCheckboxesPositions(notifCheckboxesArr);
 })
 
 
