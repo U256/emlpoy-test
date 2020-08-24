@@ -1,10 +1,6 @@
-node_modules
-src
 .vscode
-
 src
 
-gulpfile.js
 
 # Logs
 logs
