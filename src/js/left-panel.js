@@ -11,9 +11,7 @@ let toBlockButtonsContainer = document.querySelector('.left-panel__toblock-links
 
 toBlockButtonsContainer.addEventListener('click', function (e) {
 
-
-
-	if (e.target.getAttribute('rel') != null) {
+	if (e.target.hasAttribute('rel')) {
 		//avoid click between btns (clicking on background)
 
 		toBlockButtonsArray.forEach((toBlockBtn) => {
@@ -26,6 +24,7 @@ toBlockButtonsContainer.addEventListener('click', function (e) {
 		e.target.classList.add("toblock-btn_active");
 		//e.target.getAttribute('rel') - button number
 		blocksArray[e.target.getAttribute('rel')].classList.add("active-prim-block");
+
 	}
 
 	//wrap left panel to the left after block switching
