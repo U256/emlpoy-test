@@ -1,76 +1,82 @@
 .dashboard-block {
-	//flex - column - cen 
-	color: $small-title-text;
+  color: $small-title-text;
 
-	.dashboard-rows {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-	}
+  .dashboard-rows {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-	&__info-row {
-		@media (max-width: 575.98px) {
-			flex-wrap: nowrap;
-			flex-direction: column;
-		}
-	}
+  // &__info-row {}
 
-	&__schedules-row {
+  // &__schedules-row {}
 
-		@media (max-width: 1199.98px) {
-			flex-wrap: wrap;
-		}
-	}
-
-	&__bottom-row {
-		display: flex;
-		border-bottom: 2px solid #dfe3e8;
-	}
+  &__bottom-row {
+    display: flex;
+    border-bottom: 2px solid #dfe3e8;
+  }
 }
-
-@import 'dashboard__info-row';
-
-@import 'dashboard__schedules-row';
-
-@import 'dashboard__bottom-row';
 
 //line before bottom of blocks
 .softline {
-	height: 2px;
-	width: 100%;
-	background-color: #dfe3e8;
-	color: transparent;
+  width: 100%;
+  height: 2px;
+  color: transparent;
+  background-color: #dfe3e8;
 }
 
 //top and bottom rows of schedules & latest-products
 .db-top-row {
-	height: 62px;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	color: $small-title-text;
-	font-size: 16px;
-}
-.db-bottom-row {
-	height: 37px;
-	width: 100%;
-	color: $sec-highlight-text;
-	padding: 4px;
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 62px;
+  color: $small-title-text;
+  font-size: 16px;
 }
 
-// blue button with arrow at the right bottom of blocks 
+.db-bottom-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 37px;
+  padding: 4px;
+  color: $sec-highlight-text;
+}
+
+// blue button with arrow at the right bottom of blocks
 .bt-row-btn {
-	height: 100%;
-	padding: 6px 20px 6px 6px;
-	margin-right: 12px;
-	margin-left: auto;
-	font-size: 14px;
-	line-height: 18px;
-	font-weight: 500;
-	color: $sec-highlight-text ;
-	background: url(../images/icons/to-right.svg) center right/13px no-repeat;
+  height: 100%;
+  margin-right: 12px;
+  margin-left: auto;
+  padding: 6px 20px 6px 6px;
+  color: $sec-highlight-text;
+  background: url(../images/icons/to-right.svg) center right/13px no-repeat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@import "dashboard__info-row";
+
+@import "dashboard__schedules-row";
+
+@import "dashboard__bottom-row";
+
+/*
+	media
+*/
+@media (max-width: 1199.98px) {
+  .dashboard-block .dashboard-block__schedules-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dashboard-block .dashboard-block__info-row {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }

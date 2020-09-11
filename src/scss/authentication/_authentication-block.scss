@@ -1,86 +1,69 @@
 .authentication-block {
-	//flex - column - cen - space-between
-	color: $small-title-text;
-	padding-top: 0;
-
-	@media (max-width: 991.98px) {
-  	padding-top: 40px;
-	}
+  padding-top: 0;
+  color: $small-title-text;
 }
 
 .auth-top-row {
-	background-color: $soft-background;
-	width: 100%;
-	flex: 0 0 57px;
-	position: relative;
-	z-index: 1;
-	display: flex;
-	align-items: flex-start;
-	align-items: center;
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 24px;
-
-	@media (max-width: 991.98px) {
-   margin-bottom: 12px;
-	}
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  flex: 0 0 57px;
+  width: 100%;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  background-color: $soft-background;
 }
 
 .to-tab-btn {
-	height: 100%;
-	font-size: 1.6rem;
-	font-weight: 500;
-	line-height: 2rem;
-	border-bottom: 3px solid transparent;
-	background-color: inherit;
-	margin-right: 30px;
-	padding: 5px 12px;
+  height: 100%;
+  margin-right: 30px;
+  padding: 5px 12px;
+  border-bottom: 3px solid transparent;
+  background-color: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
 
-	@media (max-width: 991.98px) {
-   margin-right: 10px;
-	}
-
-	&__active{
-		border-bottom: 3px solid $prim-highlight-text;
-	}
+  &__active {
+    border-bottom: 3px solid $prim-highlight-text;
+  }
 }
 
 //all 3 tabs
 .auth-tabs {
-	width: 100%;
-	flex: 1 0 auto;
-	position: absolute;
-	z-index: -4;
-	transition: opacity 0.4s;
-	visibility: hidden;
-	opacity: 0;
+  position: absolute;
+  z-index: -4;
+  visibility: hidden;
+  flex: 1 0 auto;
+  width: 100%;
+  transition: opacity 0.4s;
+  opacity: 0;
 
-	* {
-		position: absolute;
-		top: 0px;
-		left: 0;
-		opacity: 0;
-	}
+  * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
 }
 
 .active-auth-tab {
-	position: relative;
-	z-index: 5;
-	visibility: visible;
-	opacity: 1;
+  position: relative;
+  z-index: 5;
+  visibility: visible;
+  opacity: 1;
 
-	* {
-		position: static;
-		opacity: 1;
-	}
+  * {
+    position: static;
+    opacity: 1;
+  }
 }
 
 .tab-profile {
-	display: flex;
-	flex-wrap: wrap;
-
-	@media (max-width: 1500px) {
-		flex-direction: column;
-	}
+  display: flex;
+  flex-wrap: wrap;
 }
 
 // .tab-account {
@@ -88,6 +71,29 @@
 // .tab-price-plans {
 // }
 
-@import 'tab-profile';
-@import 'tab-account';
-@import 'tab-plans';
+/*
+	media
+*/
+@media (max-width: 1500px) {
+  .tab-profile {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .authentication-block {
+    padding-top: 40px;
+  }
+
+  .auth-top-row {
+    margin-bottom: 12px;
+  }
+
+  .to-tab-btn {
+    margin-right: 10px;
+  }
+}
+
+@import "tab-profile";
+@import "tab-account";
+@import "tab-plans";

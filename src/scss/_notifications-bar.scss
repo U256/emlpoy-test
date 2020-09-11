@@ -1,143 +1,147 @@
 .notifications-bar {
-	padding-top: 4px;
-	position: fixed;
-	z-index: -3;
-	right: 0;
-	bottom: 0;
-	width: 342px;
-	height: 395px;
-	background-color: $clean-bg;
-	border-left: 1px solid $sec-highlight-text;
-	border-top: 1px solid $sec-highlight-text;
-	border-radius: 8px 0 0 0;
-	color: $small-title-text;
+  position: fixed;
+  z-index: -3;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 342px;
+  height: 395px;
+  padding-top: 4px;
+  transition: 0.3s;
+  opacity: 0;
+  color: $small-title-text;
+  border-top: 1px solid $sec-highlight-text;
+  border-left: 1px solid $sec-highlight-text;
+  border-radius: 8px 0 0 0;
+  background-color: $clean-bg;
 
-	opacity: 0;
-	overflow: hidden;
-	transition: 0.3s;
+  &__active {
+    z-index: 21;
+    overflow: visible;
+    opacity: 1;
+  }
 
-	&__active {
-		opacity: 1;
-		overflow: visible;
-		z-index: 21;
-	}
+  ::-webkit-scrollbar {
+    width: 8px;
+    /* width of vertical scroll */
+  }
 
-	@media (max-width: 767.98px) {
-		width: 270px;
-		height: 280px;
-	}
+  /* scrollbar roller */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background-color: #c7ced4;
+  }
 
-	/* полоса прокрутки (скроллбар) */
-	::-webkit-scrollbar {
-		width: 8px; /* ширина для вертикального скролла */
-	}
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a2a6aa;
+  }
 
-	/* ползунок скроллбара */
-	::-webkit-scrollbar-thumb {
-		background-color: #c7ced4;
-		border-radius: 1em;
-	}
+  &__top {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 24.5%;
+    margin: 0 7px 10px 7px;
+    background-color: $soft-background;
+  }
 
-	::-webkit-scrollbar-thumb:hover {
-		background-color: #a2a6aa;
-	}
+  &__alerts-block {
+    overflow-y: auto;
+    height: 69.6%;
+    margin: 0 7px 5px;
 
-	&__top {
-		display: flex;
-		align-items: center;
-		width: 95%;
-		height: 24.5%;
-		margin: 0 7px 10px 7px;
-		background-color: $soft-background;
-
-	}
-
-	&__alerts-block {
-		margin: 0 7px 5px;
-		height: 69.6%;
-		overflow-y: auto;
-
-		scrollbar-width: thin;
-		scrollbar-color: #c7ced4 $clean-bg;
-	}
+    scrollbar-color: #c7ced4 $clean-bg;
+    scrollbar-width: thin;
+  }
 }
 
 .close-bar {
-	position: absolute;
-	top: -50px;
-	right: 10px;
-	height: 52px;
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  height: 52px;
 
-	&__btn {
-		cursor: pointer;
-		background-color: transparent !important;
-		color: $pale-text;
-		font-size: 50px;
-	}
+  &__btn {
+    cursor: pointer;
+    color: $pale-text;
+    background-color: transparent !important;
+    font-size: 50px;
+  }
 }
 
-
 .bar-text {
-	margin: 0 8px 0 20px;
+  margin: 0 8px 0 20px;
 
-	.bar-title {
-		margin-bottom: 3px;
-		font-size: 14px;
-		font-weight: 500;
-		letter-spacing: -0.04px;
-		line-height: 20px;
-	}
+  .bar-title {
+    margin-bottom: 3px;
+    letter-spacing: -0.04px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
 
-	.bar-count {
-		color: $pale-text;
-		font-size: 12px;
-	}
+  .bar-count {
+    color: $pale-text;
+    font-size: 12px;
+  }
 }
 
 .bar-logo {
-	background: url(../images/icons/ntfs-logo.svg) center/contain no-repeat;
-	width: 46%; 
-	height: 95%; 
+  width: 46%;
+  height: 95%;
+  background: url(../images/icons/ntfs-logo.svg) center/contain no-repeat;
 }
 
 //notifications-bar__alerts-block
 .alert-item {
-	width: 90%;
-	height: 64px;
-	display: flex;
-	align-items: center;
-	border-bottom: 2px solid #f0f1f4;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 64px;
+  border-bottom: 2px solid #f0f1f4;
 
-	&__logo {
-		margin: 0 8px 0 22px;
-		width: 36px;
-		height: 36px;
-		background: url(../images/icons/users-operation.svg) center/contain no-repeat;
+  &__logo {
+    width: 36px;
+    height: 36px;
+    margin: 0 8px 0 22px;
+    background: url(../images/icons/users-operation.svg) center/contain
+      no-repeat;
+  }
 
-		@media (max-width: 767.98px) {
-			margin-left: 0;
-		}
-	}
+  &__message {
+    display: flex;
+    flex-direction: column;
+  }
 
-	&__message {
-		display: flex;
-		flex-direction: column;
-	}
+  &__toevent {
+    margin-left: auto;
+    color: $pale-text;
+    font-size: 2.6rem;
+    font-weight: 500;
 
-	&__toevent {
-		justify-self: flex-end;
-		margin-left: auto;
-		font-size: 2.6rem;
-		font-weight: 500;
-		color: $pale-text;
-	}
+    justify-self: flex-end;
+  }
 }
 
 .message-name {
-		font-size: 1.4rem;
-}
-.message-time {
-	color: $pale-text;
-	font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
+.message-time {
+  color: $pale-text;
+  font-size: 1.2rem;
+}
+
+/*
+	media
+*/
+@media (max-width: 767.98px) {
+  .notifications-bar {
+    width: 270px;
+    height: 280px;
+  }
+
+  .alert-item__logo {
+    margin-left: 0;
+  }
+}

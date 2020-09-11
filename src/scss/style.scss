@@ -12,15 +12,17 @@ $inv-text: #fff;
 $clean-bg: #fff;
 $soft-background:#f9fafb;
 
-
 @import 'reset';
-@import 'common-styles'; //common
+
+//common
+@import 'common-styles'; 
 
 @import 'header';
 @import 'left-panel';
 @import 'notifications-bar';
 
-@import 'prim-blocks'; // base for all blocks
+// base for all blocks
+@import 'prim-blocks'; 
 
 @import 'dashboard/dashboard-block';
 @import 'users-block';

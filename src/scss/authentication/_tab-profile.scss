@@ -1,253 +1,196 @@
 //.tab-profile itself in _authentification-block
-
 .ava-change {
-	width: 375px;
-	height: 249px;
-	display: flex;
-	position: relative;
-	z-index: 1;
-	flex-direction: column;
-	justify-content: space-between;
-	margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 375px;
+  height: 249px;
+  margin-bottom: 12px;
 
-	@media (min-width: 1500px) {
-		margin-right: 24px;
-	}
-	@media (max-width: 757.98px) {
-		align-self: center;
-	}
+  //contains info & new-ava
+  &__top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px;
+  }
 
-	@media (max-width: 575.98px) {
-		width: 290px;
-		height: 220px;
-	}
-
-	&__top-row {
-		//contains info & new-ava
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		padding: 24px;
-	}
-
-	&__bt-row {
-		//buttons
-		border-top: 1px solid $pale-text;
-		height: 60px;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
+  &__bt-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    border-top: 1px solid $pale-text;
+  }
 }
 
 //.ava-change__top-row
 .ava-change__info {
-	flex: 0 0 50%;
-	height: 100%;
+  flex: 0 0 50%;
+  height: 100%;
 }
+
 .ava-person-name {
-	color: $dark-title-text;
-	font-size: 2.4rem;
-	font-weight: 500;
-	line-height: 2.8rem;
+  color: $dark-title-text;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.8rem;
 }
+
 .ava-location {
-	color: $pale-text;
-	font-size: 1.4rem;
-	line-height: 2rem;
-	text-transform: uppercase;
+  text-transform: uppercase;
+  color: $pale-text;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
+
 .ava-change__new-ava {
-	flex: 0 0 50%;
-	height: 100%;
-	img {
-		width: 95%;
-		height: 95%;
-	}
+  flex: 0 0 50%;
+  height: 100%;
+
+  img {
+    width: 95%;
+    height: 95%;
+  }
 }
 
 // .ava-change__bt-row - 2buttons
 .ava-buttons {
-	height: 4rem;
-	text-transform: uppercase;
-	font-size: 1.4rem;
-	font-weight: 500;
-	line-height: 1.6rem;
-	border-radius: 5px;
-	padding: 0 16px;
-	min-width: 120px;
-
-	
-	@media (max-width: 991.98px) {
-		min-width: 90px;
-		padding: 0 10px;
-	}
+  min-width: 120px;
+  height: 4rem;
+  padding: 0 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
 }
+
 .ava-upload {
-	color: $prim-highlight-text;
+  color: $prim-highlight-text;
 }
+
 // .ava-remove {}
-
-
 
 //column with person & notif settings
 .data-change {
-	flex: 1 1 auto;
-	max-width: 910px;
+  flex: 1 1 auto;
+  max-width: 910px;
 }
 
 //person-settings & notif-settings blocks
 .settings-blocks {
-	margin-bottom: 12px;
-	position: relative;
+  position: relative;
+  margin-bottom: 12px;
 
-	&::after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 1px;
-		background-color: $soft-border;
-		position: absolute;
-		left: 0;
-		bottom: 70px;
-	}
+  &::after {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background-color: $soft-border;
+  }
 }
 
 .settings-top-rows {
-	display: flex;
-	align-items: center;
-	position: relative;
-	z-index: 5;
-	padding: 20px 0;
-	border-bottom: 1px solid $soft-border;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid $soft-border;
 
-	@media (max-width: 991.98px) {
-		padding: 12px 0;
-	}
+  .settings-title {
+    margin: 0 16px 0 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
 
-	.settings-title {
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 20px;
-		margin: 0 16px 0 24px;
-
-		@media (max-width: 991.98px) {
-			margin-left: 12px;
-		}
-	}
-
-	.settings-top-info {
-		color: $footnote;
-		font-size: 16px;
-		font-weight: 300;
-
-		@media (max-width: 575.98px) {
-      display: none;
-   	}
-	}
+  .settings-top-info {
+    color: $footnote;
+    font-size: 16px;
+    font-weight: 300;
+  }
 }
 
 .settings-forms {
-	padding: 24px 24px 0 24px;
-	max-width: 730px;
-	width: 65vw;
-
-	@media (max-width: 991px) {
-		padding: 18px 12px 0 12px;
-		min-width: 90vw;
-	}
-
-	@media (max-width: 620px) {
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+  width: 65vw;
+  max-width: 730px;
+  padding: 24px 24px 0 24px;
 }
+
 .settings-field-wrapper {
-	display: inline-block;
-	width: 44%;
-	min-width: 250px;
-	position: relative;
-	z-index: 1;
-	margin: 0 24px 24px 0;
-
-	@media (max-width: 1199.98px) {
-		margin: 0 12px 17px 0;
-		// width: 47%;
-	}
-}	
-.settings-change-field {
-	width: 100%;
-	min-width: 240px;
-	height: 5.6rem;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 44%;
+  min-width: 250px;
+  margin: 0 24px 24px 0;
 }
 
-
+.settings-change-field {
+  width: 100%;
+  min-width: 240px;
+  height: 5.6rem;
+}
 
 //"submit" in both settings blocks
 .submit-setings-btns {
-	color: $prim-highlight-text;
-	border: 2px solid $sec-highlight-text;
-	position: relative;
-	z-index: 5;
-	display: block;
-	padding: 8px;
-	margin-bottom: 16px;
-	outline: none;
+  position: relative;
+  z-index: 5;
+  display: block;
+  margin-bottom: 16px;
+  padding: 8px;
+  color: $prim-highlight-text;
+  border: 2px solid $sec-highlight-text;
+  outline: none;
 }
 
-
-
-/////////////////////////
 // .person-settings {}
 .submit-profile-settings {
-	margin-top: 20px;
-	width: 152px;
+  width: 152px;
+  margin-top: 20px;
 }
 
-
-///////////////////////////////
 // .notif-settings {}
 .notif-settings-form {
-	display: block;
-	margin: 0;
+  display: block;
+  margin: 0;
 
-	.settings-column-title {
-		//titles of columns
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 2rem;
-		margin-bottom: 20px;
+  //titles of columns
+  .settings-column-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2rem;
+  }
 
-	}
+  &__notifications {
+    display: inline-block;
+    margin-right: 7vw;
+    margin-bottom: 15px;
+  }
 
-	&__notifications {
-		//column
-		margin-right: 7vw;
-		display: inline-block;
-		margin-bottom: 15px;
-	}
-
-	&__messages {
-		display: inline-block;
-		vertical-align: top;
-	}
+  &__messages {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 .submit-notif-settings {
-	width: 120px;
-
-	@media (max-width: 620px) {
-		margin: 0 auto 20px;
-	}
+  width: 120px;
 }
 
-///activated submit button on change
+///activate submit button on change
 .active-submit-btn {
-	background-color: $prim-highlight-text;
-	color: $inv-text;
+  color: $inv-text;
+  background-color: $prim-highlight-text;
 }
 
 //hint in input form
@@ -256,19 +199,19 @@
   z-index: 20;
   top: 0;
   left: 50%;
-  width: 47%;
-  margin: 4px;
-  padding: 0 10px;
-  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 47%;
+  margin: 4px;
+  padding: 0 10px;
   text-align: center;
-  line-height: 1.5rem;
   color: red;
-  background-color: $clean-bg;
   border: 1px solid rgba(255, 0, 0, 0.548);
   border-radius: 4px;
+  background-color: $clean-bg;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 //little hint on activation
@@ -278,6 +221,71 @@
   left: 31px;
   width: 100%;
   height: 16px;
-  font-size: 1.2rem;
   color: $footnote;
+  font-size: 1.2rem;
+}
+
+/*
+	media
+*/
+@media (min-width: 1500px) {
+  .ava-change {
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .settings-field-wrapper {
+    margin: 0 12px 17px 0;
+    // width: 47%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ava-buttons {
+    min-width: 90px;
+    padding: 0 10px;
+  }
+
+  .settings-top-rows {
+    padding: 12px 0;
+  }
+
+  .settings-top-rows .settings-title {
+    margin-left: 12px;
+  }
+
+  .settings-top-rows .settings-top-info {
+    display: none;
+  }
+
+  .settings-forms {
+    min-width: 90vw;
+    padding: 18px 12px 0 12px;
+  }
+}
+
+@media (max-width: 757.98px) {
+  .ava-change {
+    align-self: center;
+  }
+
+  .settings-forms {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .submit-notif-settings {
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ava-change {
+    width: 290px;
+    height: 220px;
+  }
 }

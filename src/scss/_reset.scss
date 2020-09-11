@@ -1,9 +1,15 @@
-ul, li {
+ul,
+li {
     margin: 0;
     padding: 0;
 }
 /*to fix a chrome margins */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -85,13 +91,16 @@ abbr[title] {
 }
 
 /*Add the correct font weight in Chrome, Edge, and Safari.*/
-b, strong {
+b,
+strong {
     font-weight: bolder;
 }
 
 /* 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.*/
-code,kbd,samp {
+code,
+kbd,
+samp {
     font-family: monospace, monospace;
     /* 1 */
     font-size: 1em;

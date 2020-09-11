@@ -1,164 +1,115 @@
 .left-panel {
-	padding: 24px 16px;
-	flex: 0 0 270px;
-	min-height: calc(100vh - 64px);
-	max-height: 1016px;
-	background-color: $clean-bg;
-	transition: 0.3s;
+  flex: 0 0 270px;
+  min-height: calc(100vh - 64px);
+  max-height: 1016px;
+  padding: 24px 16px;
+  transition: 0.3s;
+  background-color: $clean-bg;
 
-	@media (max-width: 1199.98px) {
-		flex: 0 0 230px;
-	}
+  &_active {
+    transform: translate(0, 0) !important;
+  }
 
-	@media (max-width: 991.98px) {
-		position: absolute;
-		z-index: 10;
-		padding: 12px 9px;
-		width: 230px;
-		top: 0; left: 0;
-		transform: translate(-100%, 0);
-		transition: 0.3s;
-	}
+  &__switcher {
+    position: absolute;
+    z-index: 19;
+    top: 7px;
+    right: -130px;
+    width: 130px;
+    height: 38px;
+    padding: 6px;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.6px;
+    opacity: 0.7;
+    border: 1px solid $sec-highlight-text;
+    border-left: none;
+    border-radius: 0 18px 18px 0;
+    background-color: $clean-bg;
+    font-size: 22px;
+    font-weight: 500;
+  }
 
-	&_active {
-		transform: translate(0, 0) !important;
-	}
+  &__user-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $soft-border;
+  }
 
+  &__toblock-links {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $soft-border;
+  }
 
-	&__switcher {
-		position: absolute;
-		text-align: center;
-		padding: 6px;
-		font-size: 22px;
-		font-weight: 500;
-		letter-spacing: 0.6px;
-		top: 7px;
-		right: -130px;
-		z-index: 19;
-		width: 130px;
-		height: 38px;
-		background-color: $clean-bg;
-		border: 1px solid $sec-highlight-text;
-		border-left: none;
-		border-radius: 0 18px 18px 0;
-
-		opacity: 0.7;
-		cursor: pointer;
-
-		//remove switcher on big screens
-		@media (min-width: 991.98px) {
-			display: none;
-		}
-
-		@media (max-width: 575.98px) {
-			font-size: 17px;
-			padding-top: 9px;
-			width: 80px;
-			right: -80px;
-		}
-	}
-
-	&__user-block {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border-bottom: 2px solid $soft-border;
-		margin-bottom: 20px;
-		padding-bottom: 10px;
-
-		@media (max-width: 757.98px) {
-			flex-direction: row;
-			justify-content: space-around;
-			margin-bottom: 10px;
-			padding-bottom: 0;
-		}
-	}
-
-	&__toblock-links {
-		padding-bottom: 5px;
-		margin-bottom: 15px;
-		border-bottom: 2px solid $soft-border;
-	}
-
-	// &__support {
-	// }
+  // &__support { }
 }
-
-
 
 //left-panel__user-block:
 .user-block__logo {
-	width: 100px;
-	height: 100px;
-	background-color: $small-title-text;
-	border-radius: 50%;
-	margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  background-color: $small-title-text;
 }
 
 .user-block__text {
-	text-align: center;
+  text-align: center;
 
-	.user-name {
-		color: $small-title-text;
-		font-size: 1.6rem;
-		letter-spacing: -0.005rem;
-		line-height: 2rem;
-		margin-bottom: 4px;
-	}
+  .user-name {
+    margin-bottom: 4px;
+    letter-spacing: -0.005rem;
+    color: $small-title-text;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 
-	.user-post {
-		color: $pale-text;
-		font-size: 1.2rem;
-		line-height: 1.6rem;
-		padding-bottom: 13px;
-	}
+  .user-post {
+    padding-bottom: 13px;
+    color: $pale-text;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
 }
-
-
 
 //left-panel__toblock-links:
 .toblock-btn {
-	display: block;
-	margin: 6px 0 6px 6px;
-	padding: 0 0 6px 15px;
-	border: none;
-	background-color: $clean-bg;
-	height: 46px;
-	width: 94%;
-	color: $footnote;
-	font-size: 1.4rem;
-	font-weight: 500;
-	letter-spacing: -0.005rem;
-	line-height: 2rem;
-	text-align: left;
-	cursor: pointer;
+  display: block;
+  width: 94%;
+  height: 46px;
+  margin: 6px 0 6px 6px;
+  padding: 0 0 6px 15px;
+  cursor: pointer;
+  text-align: left;
+  letter-spacing: -0.005rem;
+  color: $footnote;
+  border: none;
+  background-color: $clean-bg;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2rem;
 
-	@media (max-width: 757.98px) {
-		margin: 3px 0 3px 3px;
-		height: 41px;
-	}
+  &_active {
+    color: $small-title-text;
+    border-top: 1px solid #d9e6f8;
+    border-bottom: 1px solid #d9e6f8;
+    border-left: 3px solid $sec-highlight-text;
+    border-radius: 6px 0 0 6px;
+    background-color: #f9fafc;
+  }
 
-	&_active {
-		border-radius: 6px 0 0 6px;
-		border-left: 3px solid $sec-highlight-text;
-		border-bottom: 1px solid #d9e6f8;
-		border-top: 1px solid #d9e6f8;
-		background-color: #f9fafc;
-		color: $small-title-text;
-	}
-
-	img {
-		width: 24px;
-		height: 24px;
-		margin-right: 6px;
-		position: relative;
-		left: 0; top: 6px;
-
-		@media (max-width: 757.98px) {
-			width: 20px;
-			height: 20px;
-		}
-	}
+  img {
+    position: relative;
+    top: 6px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
 }
 
 // .dashboard-toblock-btn {}
@@ -170,11 +121,67 @@
 
 //left-panel__support:
 .support-title {
-	margin-left: 16px;
-	color: $pale-text;
-	font-size: 1.3rem;
-	font-weight: 500;
-	
+  margin-left: 16px;
+  color: $pale-text;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
+
 // .open-support {}
 
+/*
+	media
+*/
+@media (max-width: 1199.98px) {
+  .left-panel {
+    flex: 0 0 230px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .left-panel {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 230px;
+    padding: 12px 9px;
+    transition: 0.3s;
+    transform: translate(-100%, 0);
+  }
+}
+
+@media (min-width: 991.98px) {
+  //remove switcher on big screens
+  .left-panel__switcher {
+    display: none;
+  }
+}
+
+@media (max-width: 757.98px) {
+  .left-panel__user-block {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+
+  .toblock-btn {
+    height: 41px;
+    margin: 3px 0 3px 3px;
+  }
+
+  .toblock-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .left-panel__switcher {
+    right: -80px;
+    width: 80px;
+    padding-top: 9px;
+    font-size: 17px;
+  }
+}
