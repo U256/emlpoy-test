@@ -72,6 +72,7 @@
 
   // back to start section
   .enter-back-btn {
+    cursor: pointer;
     padding: 10px 10px 10px 26px;
     background: url(../images/icons/toleft-arrow.png) left/18px 14px no-repeat;
     font-size: 1.4rem;
@@ -105,10 +106,12 @@
 
 //forward-buttons in start block:
 .to-login {
+  cursor: pointer;
   margin-bottom: 20px;
 }
 
 .to-registration {
+  cursor: pointer;
   color: $inv-text;
   border: none;
   background-color: $enter-accent;
@@ -128,7 +131,7 @@
 
 // Check of agree with terms and policy when register
 .terms-check {
-  vertical-align: top;
+  vertical-align: baseline;
 }
 
 .terms-check-text {
@@ -138,6 +141,14 @@
   a {
     color: #5b5c5d;
   }
+}
+
+.submit-sign-in {
+  cursor: pointer;
+}
+
+.submit-sign-up {
+  cursor: pointer;
 }
 
 //.enter-page__decoration-column:

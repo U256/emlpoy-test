@@ -61,6 +61,7 @@
   min-width: 120px;
   height: 4rem;
   padding: 0 16px;
+  cursor: pointer;
   text-transform: uppercase;
   border-radius: 5px;
   font-size: 1.4rem;
@@ -76,6 +77,7 @@
 
 //column with person & notif settings
 .data-change {
+  cursor: default;
   flex: 1 1 auto;
   max-width: 910px;
 }
@@ -183,12 +185,17 @@
   }
 }
 
+.settings-checkbox-text {
+  cursor: pointer;
+}
+
 .submit-notif-settings {
   width: 120px;
 }
 
 ///activate submit button on change
 .active-submit-btn {
+  cursor: pointer;
   color: $inv-text;
   background-color: $prim-highlight-text;
 }
