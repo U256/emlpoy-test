@@ -34,6 +34,13 @@ button {
   box-sizing: border-box;
 }
 
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 /*1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS. */
 html {
@@ -348,65 +355,74 @@ main {
   border: 3px solid #3f51b5;
 }
 
+.prim-fields:focus {
+  background-color: #f1f7ff;
+}
+
 .prim-checkboxes {
-  position: relative;
-  top: 3px;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  cursor: pointer;
-  vertical-align: top;
-  background-color: #1665d8;
+  position: absolute !important;
+  z-index: -100;
+  opacity: 0 !important;
 }
 
 .prim-checkbox-texts {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-size: 16px;
   line-height: 20px;
+  user-select: none;
 }
 
-.field-wrappers:hover:before {
-  position: absolute;
-  z-index: 10;
-  top: -10px;
-  left: 10px;
-  height: 20px;
-  padding: 0 6px;
+.prim-checkbox-texts:before {
   content: "";
-  letter-spacing: 0.7px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #425a70;
+  padding: 2px;
+  border-radius: 2px;
+  margin-right: 10px;
+  transition: background-image 0.4s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.prim-checkboxes:checked + label:before {
+  border: none;
+  background-image: url(../images/icons/checkbox-checked.png);
+}
+
+.prim-checkboxes:focus + label {
   color: #3f51b5;
-  background-color: #fff;
-  font-size: 14px;
-  font-weight: 500;
 }
 
-.wrapper-name:hover:before {
-  content: "Name";
+.prim-checkboxes:focus + label:before {
+  margin-right: 6px;
+  width: 22px;
+  height: 22px;
+  border: 3px solid lightskyblue;
 }
 
-.wrapper-last-name:hover:before {
-  content: "Last name";
+.prim-checkboxes:hover + label {
+  color: #3f51b5;
 }
 
-.wrapper-email:hover:before {
-  content: "Email";
+.prim-checkboxes + label:hover:before {
+  margin-right: 6px;
+  width: 23px;
+  height: 23px;
+  border: 4px solid lightskyblue;
 }
 
-.wrapper-password:hover:before {
-  content: "Password";
+.prim-checkboxes:disabled + label {
+  cursor: not-allowed;
 }
 
-.wrapper-number:hover:before {
-  content: "Phone number";
-}
-
-.wrapper-country:hover:before {
-  content: "Country";
-}
-
-.wrapper-city:hover:before {
-  content: "City";
+.prim-checkboxes:disabled + label:before {
+  border: none;
+  background: #9ea0a5;
+  cursor: not-allowed;
 }
 
 .wrapper-checkbox {
@@ -425,7 +441,14 @@ main {
   background-color: #fff;
   font-size: 14px;
   font-weight: 500;
-  line-height: 16px;
+}
+
+.forward-btn:active {
+  color: #000;
+}
+
+.forward-btn:focus, .forward-btn:hover {
+  border: 3px solid #3f51b5;
 }
 
 .submit-notice {
@@ -492,105 +515,125 @@ main {
 }
 
 .header__logo {
-  display: flex;
-  align-items: center;
-  height: 36px;
-  background: url(../images/icons/header-logo.svg) left center/36px no-repeat;
+  margin-right: 34px;
 }
 
-.header__app-version {
+.header__version {
   display: flex;
   align-items: center;
   width: 70%;
   max-width: 842px;
   min-height: 3rem;
-  margin: 0 15px 0 34px;
+  margin: 0 15px 0 0;
   padding: 5px;
   text-align: center;
   border-radius: 4px;
   background-color: #3c4a97;
 }
 
-.header__account-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 55px;
-  margin-left: auto;
-}
-
-.logo-name-text {
-  margin-left: 40px;
-  white-space: nowrap;
-  letter-spacing: -0.06px;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 24px;
-}
-
-.app-version-logo {
+.header__version-logo {
   height: 19px;
   margin: 0 14px 0 6px;
   padding: 4px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
   border-radius: 0.4rem;
-  background-color: #26a69a;
+  background-color: #39817a;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.app-version-upgrade {
+.header__version-upgrade {
   color: #cdd1ea;
   font-size: 1.4rem;
   line-height: 2rem;
 }
 
-.app-version-upgrade-shorted {
+.header__version-upgrade_tablet-size {
   display: none;
 }
 
-.app-version-upgrade-small {
+.header__version-upgrade_phone-size {
   display: none;
 }
 
-.app-version-upgrade a {
+.header__discover-pro-version-link {
   display: inline;
   white-space: nowrap;
   text-decoration: none;
   color: #fff;
+  outline: none;
+  padding: 2px;
 }
 
-.account-button {
+.header__discover-pro-version-link:hover {
+  text-decoration: underline;
+}
+
+.header__discover-pro-version-link:focus {
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.header__buttons-group {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.header__button {
   width: 2.2rem;
   height: 2.2rem;
   cursor: pointer;
   border: none;
   outline: none;
+  outline-offset: 3px;
 }
 
-.notifications-btn {
+.header__button:hover {
+  outline: 1px solid #f9fafb;
+}
+
+.header__button:focus {
+  outline: 3px solid #f9fafb;
+}
+
+.header__notifications-btn {
   background: url(../images/icons/notification-bell-icon.svg) center/contain no-repeat;
 }
 
-.logout-btn {
+.header__logout-btn {
   margin-left: 14px;
   background: url(../images/icons/logout-icon.svg) center/contain no-repeat;
+}
+
+.main-logo {
+  padding-left: 43px;
+  white-space: nowrap;
+  letter-spacing: -0.06px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  background: url(../images/icons/header-logo.svg) left center/36px no-repeat;
 }
 
 /*
 	media
 */
 @media (max-width: 991.98px) {
-  .header__app-version {
-    margin-left: 10px;
+  .header__logo {
+    margin-right: 10px;
   }
-  .app-version-upgrade {
+  .header__version-upgrade {
     display: none;
   }
 }
 
 @media (max-width: 991.98px) and (min-width: 575.98px) {
-  .app-version-upgrade-shorted {
+  .header__version-upgrade_tablet-size {
     display: block;
   }
 }
@@ -598,16 +641,28 @@ main {
 @media (max-width: 575.98px) {
   .header {
     padding: 0 15px;
+    justify-content: space-between;
   }
-  .header__app-version {
+  .header__buttons-group {
+    margin-left: 0;
+  }
+  .main-logo {
+    white-space: break-spaces;
+    font-size: 0;
+  }
+  .header__version {
     justify-content: center;
   }
-  .app-version-logo {
+  .header__version-logo {
     display: none;
   }
-  .app-version-upgrade-small {
+  .header__version-upgrade_phone-size {
     display: block;
     text-decoration: underline;
+  }
+  .header__button {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
@@ -665,7 +720,11 @@ main {
   height: 100px;
   margin-bottom: 15px;
   border-radius: 50%;
-  background-color: #3a3b3f;
+  background-color: #3f51b5;
+}
+
+.user-block__logo:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 }
 
 .user-block__text {
@@ -702,15 +761,32 @@ main {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2rem;
+  transition: font-size 0.2s;
+}
+
+.toblock-btn:hover, .toblock-btn:focus {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #d9e6f8;
+  border-top: 1px solid #d9e6f8;
+}
+
+.toblock-btn:active {
+  font-size: 1.5rem;
+}
+
+.toblock-btn:disabled {
+  background-color: #e6e6e6;
+  border-radius: 6px 0 0 6px;
+  cursor: not-allowed;
 }
 
 .toblock-btn_active {
   color: #3a3b3f;
+  border-radius: 6px 0 0 6px;
   border-top: 1px solid #d9e6f8;
   border-bottom: 1px solid #d9e6f8;
   border-left: 3px solid #1070ca;
-  border-radius: 6px 0 0 6px;
-  background-color: #f9fafc;
+  background-color: #f9fafb;
 }
 
 .toblock-btn img {
@@ -1477,20 +1553,17 @@ main {
 
 .authentication-block {
   padding-top: 0;
-  color: #3a3b3f;
 }
 
 .auth-top-row {
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: flex-start;
   align-items: center;
   flex: 0 0 57px;
   width: 100%;
   margin-bottom: 24px;
   border-bottom: 1px solid #ddd;
-  background-color: #f9fafb;
 }
 
 .to-tab-btn {
@@ -1505,7 +1578,16 @@ main {
   line-height: 2rem;
 }
 
-.to-tab-btn__active {
+.to-tab-btn:active {
+  font-size: 1.7rem;
+  padding: 5px 10px;
+}
+
+.to-tab-btn:focus, .to-tab-btn:hover {
+  background-color: #e9e8e8;
+}
+
+.to-tab-btn_active {
   border-bottom: 3px solid #1665d8;
 }
 
@@ -1707,7 +1789,7 @@ main {
   margin-bottom: 16px;
   padding: 8px;
   color: #1665d8;
-  border: 2px solid #1070ca;
+  border: 1px solid #9ea0a5;
   outline: none;
 }
 
@@ -1751,6 +1833,7 @@ main {
   cursor: pointer;
   color: #fff;
   background-color: #1665d8;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .fill-required {
@@ -1828,6 +1911,9 @@ main {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+  }
+  .notif-settings-form__notifications {
+    margin-right: 0;
   }
   .submit-notif-settings {
     margin: 0 auto 20px;
@@ -2037,21 +2123,21 @@ main {
   }
 }
 
-.about {
+.footer {
   width: 60vw;
   margin-right: auto;
   text-align: left;
   word-wrap: initial;
 }
 
-.about__title {
+.footer__title {
   padding: 16px 0 4px 0;
   color: #616161;
   font-size: 14px;
   line-height: 22px;
 }
 
-.about__info {
+.footer__info {
   padding-bottom: 20px;
   color: #6b6c6f;
   font-size: 12px;
@@ -2062,7 +2148,7 @@ main {
 	media
 */
 @media (max-width: 575.98px) {
-  .about {
+  .footer {
     width: 70vw;
   }
 }

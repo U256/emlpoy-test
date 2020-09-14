@@ -1,70 +1,78 @@
 .authentication-block {
-	padding-top: 0;
-	color: $small-title-text;
+  padding-top: 0;
 }
 
 .auth-top-row {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	align-items: flex-start;
-	align-items: center;
-	flex: 0 0 57px;
-	width: 100%;
-	margin-bottom: 24px;
-	border-bottom: 1px solid #ddd;
-	background-color: $soft-background;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex: 0 0 57px;
+  width: 100%;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  //background-color: $soft-background;
 }
 
 .to-tab-btn {
-	height: 100%;
-	margin-right: 30px;
-	padding: 5px 12px;
-	cursor: pointer;
-	border-bottom: 3px solid transparent;
-	background-color: inherit;
-	font-size: 1.6rem;
-	font-weight: 500;
-	line-height: 2rem;
+  height: 100%;
+  margin-right: 30px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  background-color: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
 
-	&__active {
-		border-bottom: 3px solid $prim-highlight-text;
-	}
+  &:active {
+    font-size: 1.7rem;
+    padding: 5px 10px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $mouse-focus;
+  }
+
+  &_active {
+    border-bottom: 3px solid $prim-highlight-text;
+  }
 }
 
 //all 3 tabs
 .auth-tabs {
-	position: absolute;
-	z-index: -4;
-	visibility: hidden;
-	flex: 1 0 auto;
-	width: 100%;
-	transition: opacity 0.4s;
-	opacity: 0;
+  position: absolute;
+  z-index: -4;
+  visibility: hidden;
+  flex: 1 0 auto;
+  width: 100%;
+  transition: opacity 0.4s;
+  opacity: 0;
 
-	* {
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0;
-	}
+  * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
 }
 
 .active-auth-tab {
-	position: relative;
-	z-index: 5;
-	visibility: visible;
-	opacity: 1;
+  position: relative;
+  z-index: 5;
+  visibility: visible;
+  opacity: 1;
 
-	* {
-		position: static;
-		opacity: 1;
-	}
+  * {
+    position: static;
+    opacity: 1;
+  }
 }
 
 .tab-profile {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 // .tab-account {
@@ -76,23 +84,23 @@
 	media
 */
 @media (max-width: 1500px) {
-	.tab-profile {
-		flex-direction: column;
-	}
+  .tab-profile {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 991.98px) {
-	.authentication-block {
-		padding-top: 40px;
-	}
+  .authentication-block {
+    padding-top: 40px;
+  }
 
-	.auth-top-row {
-		margin-bottom: 12px;
-	}
+  .auth-top-row {
+    margin-bottom: 12px;
+  }
 
-	.to-tab-btn {
-		margin-right: 10px;
-	}
+  .to-tab-btn {
+    margin-right: 10px;
+  }
 }
 
 @import "tab-profile";

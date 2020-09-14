@@ -7,108 +7,136 @@
   background-color: $enter-accent;
 
   &__logo {
-    display: flex;
-    align-items: center;
-    height: 36px;
-    background: url(../images/icons/header-logo.svg) left center/36px no-repeat;
+    // contains main-logo
+    margin-right: 34px;
   }
 
-  &__app-version {
+  &__version {
     display: flex;
     align-items: center;
     width: 70%;
     max-width: 842px;
     min-height: 3rem;
-    margin: 0 15px 0 34px;
+    margin: 0 15px 0 0;
     padding: 5px;
     text-align: center;
     border-radius: 4px;
     background-color: #3c4a97;
   }
 
-  &__account-buttons {
+  &__version-logo {
+    height: 19px;
+    margin: 0 14px 0 6px;
+    padding: 4px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    background-color: #39817a;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__version-upgrade {
+    color: #cdd1ea;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    &_tablet-size {
+      display: none;
+    }
+
+    &_phone-size {
+      display: none;
+    }
+  }
+
+  &__discover-pro-version-link {
+    //.app-version-upgrade a
+    display: inline;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $inv-text;
+    outline: none;
+    padding: 2px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      border: 2px solid $clean-bg;
+      border-radius: 5px;
+    }
+  }
+
+  &__buttons-group {
+    //.header__account-buttons
     display: flex;
     justify-content: space-between;
-    width: 55px;
+    //width: 55px;
     margin-left: auto;
+  }
+
+  &__button {
+    //.account-button
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    outline-offset: 3px;
+
+    &:hover {
+      outline: 1px solid $soft-background;
+    }
+
+    &:focus {
+      outline: 3px solid $soft-background;
+    }
+  }
+
+  &__notifications-btn {
+    //.notifications-btn
+    background: url(../images/icons/notification-bell-icon.svg) center/contain
+      no-repeat;
+  }
+
+  &__logout-btn {
+    //.logout-btn
+    margin-left: 14px;
+    background: url(../images/icons/logout-icon.svg) center/contain no-repeat;
   }
 }
 
-.logo-name-text {
-  margin-left: 40px;
+.main-logo {
+  //.logo-name-text
+  padding-left: 43px;
   white-space: nowrap;
   letter-spacing: -0.06px;
   font-size: 2rem;
   font-weight: 500;
   line-height: 24px;
-}
-
-.app-version-logo {
-  height: 19px;
-  margin: 0 14px 0 6px;
-  padding: 4px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  border-radius: 0.4rem;
-  background-color: #26a69a;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.app-version-upgrade {
-  color: #cdd1ea;
-  font-size: 1.4rem;
-  line-height: 2rem;
-
-  &-shorted {
-    display: none;
-  }
-
-  &-small {
-    display: none;
-  }
-
-  a {
-    display: inline;
-    white-space: nowrap;
-    text-decoration: none;
-    color: $inv-text;
-  }
-}
-
-.account-button {
-  width: 2.2rem;
-  height: 2.2rem;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-.notifications-btn {
-  background: url(../images/icons/notification-bell-icon.svg) center/contain
-    no-repeat;
-}
-
-.logout-btn {
-  margin-left: 14px;
-  background: url(../images/icons/logout-icon.svg) center/contain no-repeat;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  background: url(../images/icons/header-logo.svg) left center/36px no-repeat;
 }
 
 /*
 	media
 */
 @media (max-width: 991.98px) {
-  .header__app-version {
-    margin-left: 10px;
+  .header__logo {
+    margin-right: 10px;
   }
 
-  .app-version-upgrade {
+  .header__version-upgrade {
     display: none;
   }
 }
 
 @media (max-width: 991.98px) and (min-width: 575.98px) {
-  .app-version-upgrade-shorted {
+  .header__version-upgrade_tablet-size {
     display: block;
   }
 }
@@ -116,18 +144,33 @@
 @media (max-width: 575.98px) {
   .header {
     padding: 0 15px;
+    justify-content: space-between;
   }
 
-  .header__app-version {
+  .header__buttons-group {
+    margin-left: 0;
+  }
+
+  .main-logo {
+    white-space: break-spaces;
+    font-size: 0;
+  }
+
+  .header__version {
     justify-content: center;
   }
 
-  .app-version-logo {
+  .header__version-logo {
     display: none;
   }
 
-  .app-version-upgrade-small {
+  .header__version-upgrade_phone-size {
     display: block;
     text-decoration: underline;
+  }
+
+  .header__button {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }

@@ -5,31 +5,33 @@ $small-title-text: #3a3b3f;
 
 $dark-title-text: #212529;
 $footnote: #66788a;
-$soft-border:#e4e7eb;
+$soft-border: #e4e7eb;
+
+$input-focus: #f1f7ff;
+$mouse-focus: #e9e8e8;
+$disabled: #e6e6e6;
 
 $pale-text: #9ea0a5;
 $inv-text: #fff;
 $clean-bg: #fff;
-$soft-background:#f9fafb;
+$soft-background: #f9fafb;
 
-@import 'reset';
+@import "reset";
 
 //common
-@import 'common-styles'; 
+@import "common-styles";
 
-@import 'header';
-@import 'left-panel';
-@import 'notifications-bar';
+@import "header";
+@import "left-panel";
+@import "notifications-bar";
 
 // base for all blocks
-@import 'prim-blocks'; 
+@import "prim-blocks";
 
-@import 'dashboard/dashboard-block';
-@import 'users-block';
-@import 'products-block';
-@import 'authentication/authentication-block';
+@import "dashboard/dashboard-block";
+@import "users-block";
+@import "products-block";
+@import "authentication/authentication-block";
 
-@import 'enter-page';
-@import 'bottom-about';
-
-
+@import "enter-page";
+@import "block-footer";

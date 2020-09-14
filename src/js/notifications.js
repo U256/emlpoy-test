@@ -1,10 +1,10 @@
 'use strict'
 
-let notificationsBell = document.querySelector('.notifications-btn');
+let notificationsBell = document.querySelector('.header__notifications-btn');
 let notificationsX = document.querySelector('.close-bar__btn');
 let notificationsBar = document.querySelector('.notifications-bar');
 
-notificationsBell.addEventListener('click', e => {
+notificationsBell.addEventListener('click', () => {
 	let isNotifBarOn = notificationsBar.classList.toggle('notifications-bar__active')
 
 	if (isNotifBarOn) {
@@ -13,6 +13,6 @@ notificationsBell.addEventListener('click', e => {
 		}, 6000)
 	}
 })
-notificationsX.addEventListener('click', e => {
+notificationsX.addEventListener('click', () => {
 	notificationsBar.classList.remove('notifications-bar__active')
 })
