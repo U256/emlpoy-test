@@ -1,10 +1,6 @@
 <section class="prim-blocks authentication-block active-prim-block">
   <div class="auth-top-row">
-    <button
-      rel="0"
-      type="button"
-      class="clean-btn to-tab-btn to-tab-btn_active"
-    >
+    <button rel="0" type="button" class="clean-btn to-tab-btn to-tab-btn_active">
       Profile
     </button>
     <button rel="1" type="button" class="clean-btn to-tab-btn">Account</button>
@@ -40,216 +36,94 @@
       <div class="soft-bd settings-blocks person-settings">
         <div class="settings-top-rows">
           <span class="settings-title">Basic Profile</span>
-          <span class="settings-top-info"
-            >The information can be edited from your profile page</span
-          >
+          <span class="settings-top-info">The information can be edited from your profile page</span>
         </div>
 
-        <form
-          class="prim-forms settings-forms person-settings-form"
-          method="GET"
-          action="#"
-          method="post"
-        >
-          <div class="field-wrappers settings-field-wrapper wrapper-name">
-            <input
-              class="prim-fields settings-change-field"
-              type="name"
-              name="nameOfPerson"
-              placeholder="First Name"
-              id="setting1"
-            />
+        <form class="prim-form settings-forms person-settings-form" method="GET" action="#" method="post">
+          <div class="field-wrapper settings-field-wrapper wrapper-name">
+            <input class="prim-field settings-change-field" type="name" name="nameOfPerson" placeholder="First Name"
+              id="setting1" />
             <label for="setting1">Name</label>
           </div>
-          <div class="field-wrappers settings-field-wrapper wrapper-last-name">
-            <input
-              class="prim-fields settings-change-field"
-              type="name"
-              name="nameOfPerson"
-              placeholder="Last Name"
-              id="setting2"
-            />
+          <div class="field-wrapper settings-field-wrapper wrapper-last-name">
+            <input class="prim-field settings-change-field" type="name" name="surnameOfPerson" placeholder="Last Name"
+              id="setting2" />
             <label for="setting2">Last Name</label>
           </div>
-          <div class="field-wrappers settings-field-wrapper wrapper-email">
-            <input
-              class="prim-fields settings-change-field"
-              type="text"
-              name="email"
-              value=""
-              placeholder="Email"
-              id="setting3"
-            />
+          <div class="field-wrapper settings-field-wrapper wrapper-email">
+            <input class="prim-field settings-change-field" type="text" name="email" value="" placeholder="Email"
+              id="setting3" />
             <label for="setting3">Email</label>
           </div>
-          <div class="field-wrappers settings-field-wrapper wrapper-number">
-            <input
-              class="prim-fields settings-change-field"
-              type="text"
-              name="number"
-              placeholder="Phone number"
-              id="setting4"
-            />
+          <div class="field-wrapper settings-field-wrapper wrapper-number">
+            <input class="prim-field settings-change-field" type="text" name="number" placeholder="Phone number"
+              id="setting4" />
             <label for="setting4">Phone number</label>
           </div>
-          <div class="field-wrappers settings-field-wrapper wrapper-country">
-            <input
-              class="prim-fields settings-change-field"
-              type="text"
-              name="country"
-              maxlength="38"
-              placeholder="Country"
-              id="setting5"
-            />
+          <div class="field-wrapper settings-field-wrapper wrapper-country">
+            <input class="prim-field settings-change-field" type="text" name="country" maxlength="38"
+              placeholder="Country" id="setting5" />
             <label for="setting5">Country</label>
           </div>
-          <div class="field-wrappers settings-field-wrapper wrapper-city">
-            <input
-              class="prim-fields settings-change-field"
-              type="text"
-              name="city"
-              maxlength="38"
-              placeholder="City"
-              id="setting6"
-            />
+          <div class="field-wrapper settings-field-wrapper wrapper-city">
+            <input class="prim-field settings-change-field" type="text" name="city" maxlength="38" placeholder="City"
+              id="setting6" />
             <label for="setting6">City</label>
           </div>
-          <input
-            class="forward-btn submit-setings-btns submit-profile-settings"
-            type="submit"
-            name="submitSettings"
-            value="SAVE SETTINGS"
-          />
+          <input class="forward-btn submit-setings-btns submit-profile-settings" type="submit" name="submitSettings"
+            value="SAVE SETTINGS" />
         </form>
       </div>
       <div class="soft-bd settings-blocks notif-settings">
         <div class="settings-top-rows">
           <span class="settings-title">Notifications</span>
-          <span class="settings-top-info"
-            >Mange the notifications emailing page</span
-          >
+          <span class="settings-top-info">Mange the notifications emailing page</span>
         </div>
 
-        <form
-          class="prim-forms settings-forms notif-settings-form"
-          action="#"
-          method="post"
-        >
+        <form class="prim-form settings-forms notif-settings-form" action="#" method="post">
           <div class="notif-settings-form__notifications">
             <div class="settings-column-title">Notifications</div>
-            <div class="field-wrappers wrapper-checkbox">
-              <input
-                id="check0"
-                class="prim-checkboxes settings-checkbox"
-                type="checkbox"
-                name="checkbox1"
-                value="email-setting-checkbox"
-              />
-              <label
-                class="prim-checkbox-texts settings-checkbox-text"
-                for="check0"
-                >Email</label
-              >
+            <div class="field-wrapper prim-checkbox-wrapper">
+              <input id="check0" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox1"
+                value="email-setting-checkbox" />
+              <label class="prim-checkbox-label settings-checkbox-text" for="check0">Email</label>
             </div>
-            <div class="field-wrappers wrapper-checkbox">
-              <input
-                id="check1"
-                checked
-                class="prim-checkboxes settings-checkbox"
-                type="checkbox"
-                name="checkbox2"
-                value="pushes-setting-checkbox"
-              />
-              <label
-                class="prim-checkbox-texts settings-checkbox-text"
-                for="check1"
-                >Push notifications</label
-              >
+            <div class="field-wrapper prim-checkbox-wrapper">
+              <input id="check1" checked class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox2"
+                value="pushes-setting-checkbox" />
+              <label class="prim-checkbox-label settings-checkbox-text" for="check1">Push notifications</label>
             </div>
-            <div class="field-wrappers wrapper-checkbox">
-              <input
-                id="check2"
-                checked
-                class="prim-checkboxes settings-checkbox"
-                type="checkbox"
-                name="checkbox3"
-                value="messages-setting-checkbox"
-              />
-              <label
-                class="prim-checkbox-texts settings-checkbox-text"
-                for="check2"
-                >Text messages</label
-              >
+            <div class="field-wrapper prim-checkbox-wrapper">
+              <input id="check2" checked class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox3"
+                value="messages-setting-checkbox" />
+              <label class="prim-checkbox-label settings-checkbox-text" for="check2">Text messages</label>
             </div>
-            <div class="field-wrappers wrapper-checkbox">
-              <input
-                id="check3"
-                checked
-                class="prim-checkboxes settings-checkbox"
-                type="checkbox"
-                name="checkbox4"
-                value="calls-setting-checkbox"
-              />
-              <label
-                class="prim-checkbox-texts settings-checkbox-text"
-                for="check3"
-                >Phone Calls</label
-              >
+            <div class="field-wrapper prim-checkbox-wrapper">
+              <input id="check3" checked class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox4"
+                value="calls-setting-checkbox" />
+              <label class="prim-checkbox-label settings-checkbox-text" for="check3">Phone Calls</label>
             </div>
           </div>
           <div class="notif-settings-form__messages">
             <div class="settings-column-title">Messages</div>
-            <div class="field-wrappers wrapper-checkbox">
-              <input
-                id="check4"
-                class="prim-checkboxes settings-checkbox"
-                type="checkbox"
-                name="checkbox5"
-                value="email-setting-checkbox"
-              />
-              <label
-                class="prim-checkbox-texts settings-checkbox-text"
-                for="check4"
-                >Email</label
-              >
+            <div class="field-wrapper prim-checkbox-wrapper">
+              <input id="check4" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox5"
+                value="email-setting-checkbox" />
+              <label class="prim-checkbox-label settings-checkbox-text" for="check4">Email</label>
             </div>
-            <div class="field-wrappers wrapper-checkbox">
-              <input
-                id="check5"
-                class="prim-checkboxes settings-checkbox"
-                type="checkbox"
-                name="checkbox6"
-                value="pushes-setting-checkbox"
-              />
-              <label
-                class="prim-checkbox-texts settings-checkbox-text"
-                for="check5"
-                >Push notifications</label
-              >
+            <div class="field-wrapper prim-checkbox-wrapper">
+              <input id="check5" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox6"
+                value="pushes-setting-checkbox" />
+              <label class="prim-checkbox-label settings-checkbox-text" for="check5">Push notifications</label>
             </div>
-            <div class="field-wrappers wrapper-checkbox">
-              <input
-                id="check6"
-                class="prim-checkboxes settings-checkbox"
-                type="checkbox"
-                name="checkbox7"
-                value="messages-setting-checkbox"
-                disabled
-              />
-              <label
-                class="prim-checkbox-texts settings-checkbox-text"
-                for="check6"
-                >Text messages</label
-              >
+            <div class="field-wrapper prim-checkbox-wrapper">
+              <input id="check6" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox7"
+                value="messages-setting-checkbox" disabled />
+              <label class="prim-checkbox-label settings-checkbox-text" for="check6">Text messages</label>
             </div>
           </div>
-          <input
-            disabled
-            class="forward-btn submit-setings-btns submit-notif-settings"
-            type="submit"
-            name="submitNotifications"
-            value="SAVE"
-          />
+          <input disabled class="forward-btn submit-setings-btns submit-notif-settings" type="submit"
+            name="submitNotifications" value="SAVE" />
         </form>
       </div>
     </div>

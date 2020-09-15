@@ -29,7 +29,7 @@
     font-weight: 500;
   }
 
-  &__user-block {
+  &__user-chunk {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -62,38 +62,38 @@
     line-height: 1.6rem;
   }
 
-  &__toblock-links {
+  &__toblock-btns-chunk {
     margin-bottom: 15px;
     padding-bottom: 5px;
     border-bottom: 2px solid $soft-border;
   }
 
   &__button {
-    //toblock-btn
     display: block;
-    width: 94%;
+    width: 97%;
     height: 46px;
-    margin: 6px 0 6px 6px;
-    padding: 0 0 6px 45px;
+    margin: 6px 0;
+    padding: 0 0 6px 48px;
     cursor: pointer;
     text-align: left;
-    letter-spacing: -0.005rem;
     color: $footnote;
-    border: none;
-    background-color: $clean-bg;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-left-width: 4px;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 4.5rem;
     transition: font-size 0.2s;
-    background-position: left 7px center !important;
-    background-size: 24px 24px !important;
-    background-repeat: no-repeat !important;
+    background-color: $clean-bg;
+    background-position: left 9px center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
 
     &:hover,
     &:focus {
       background-color: $soft-background;
-      border-bottom: 1px solid #d9e6f8;
-      border-top: 1px solid #d9e6f8;
+      border-bottom-color: #a6b2c3;
+      border-top-color: #a6b2c3;
+      color: $small-title-text;
     }
 
     &:active {
@@ -107,16 +107,17 @@
     }
 
     &_active {
+      //activate class (JS)
       color: $small-title-text;
       border-radius: 6px 0 0 6px;
-      border-top: 1px solid #d9e6f8;
-      border-bottom: 1px solid #d9e6f8;
-      border-left: 3px solid $sec-highlight-text;
+      border-top-color: #d9e6f8;
+      border-bottom-color: #d9e6f8;
+      border-left-color: $sec-highlight-text;
       background-color: $soft-background;
     }
   }
 
-  //&__support {}
+  //&__support-chunk {}
 
   &__support-title {
     margin-left: 16px;
@@ -126,8 +127,62 @@
   }
 
   &__open-support-btn {
-    background: url("../images/icons/left-panel/toblock-btn-icon-7.svg");
+    background-image: url("../images/icons/left-panel/support-btn-icon.svg");
   }
+}
+
+.left-panel__button-0 {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-0.svg");
+}
+
+.left-panel__button-0:not(:disabled):hover,
+.left-panel__button_active[rel="0"] {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-0_active.svg");
+}
+
+.left-panel__button-1 {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-1.svg");
+}
+
+.left-panel__button-1:not(:disabled):hover,
+.left-panel__button_active[rel="1"] {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-1_active.svg");
+}
+
+.left-panel__button-2 {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-2.svg");
+}
+
+.left-panel__button-2:not(:disabled):hover,
+.left-panel__button_active[rel="2"] {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-2_active.svg");
+}
+
+.left-panel__button-3 {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-3.svg");
+}
+
+.left-panel__button-3:not(:disabled):hover,
+.left-panel__button_active[rel="3"] {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-3_active.svg");
+}
+
+.left-panel__button-4 {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-4.svg");
+}
+
+.left-panel__button-4:not(:disabled):hover,
+.left-panel__button_active[rel="4"] {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-4_active.svg");
+}
+
+.left-panel__button-5 {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-5.svg");
+}
+
+.left-panel__button-5:not(:disabled):hover,
+.left-panel__button_active[rel="5"] {
+  background-image: url("../images/icons/left-panel/toblock-btn-icon-5_active.svg");
 }
 
 .user-logo {
@@ -140,25 +195,6 @@
   &:hover {
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
   }
-}
-
-.dashboard-toblock-btn {
-  background: url("../images/icons/left-panel/toblock-btn-icon-1.svg");
-}
-.users-toblock-btn {
-  background: url("../images/icons/left-panel/toblock-btn-icon-2.svg");
-}
-.products-toblock-btn {
-  background: url("../images/icons/left-panel/toblock-btn-icon-3.svg");
-}
-.authentication-toblock-btn {
-  background: url("../images/icons/left-panel/toblock-btn-icon-4.svg");
-}
-.typography-toblock-btn {
-  background: url("../images/icons/left-panel/toblock-btn-icon-5.svg");
-}
-.icons-images-toblock-btn {
-  background: url("../images/icons/left-panel/toblock-btn-icon-6.svg");
 }
 
 /*

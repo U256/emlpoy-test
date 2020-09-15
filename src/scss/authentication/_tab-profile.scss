@@ -171,8 +171,8 @@
 
 // .notif-settings {}
 .notif-settings-form {
-  display: block;
-  margin: 0;
+  // display: block;
+  // margin: 0;
 
   //titles of columns
   .settings-column-title {
@@ -183,6 +183,8 @@
   }
 
   &__notifications {
+    position: relative;
+    z-index: 100;
     display: inline-block;
     margin-right: 7vw;
     margin-bottom: 15px;
@@ -198,6 +200,7 @@
 
 .settings-checkbox-text {
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
 .submit-notif-settings {

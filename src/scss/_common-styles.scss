@@ -191,11 +191,11 @@ main {
 }
 
 // checkbox on hover
-.prim-checkbox:hover + label {
+.prim-checkbox:not(:disabled):hover + label {
   color: $enter-accent;
 }
 
-.prim-checkbox + label:hover:before {
+.prim-checkbox:not(:disabled) + label:hover:before {
   margin-right: 6px;
   width: 22px;
   height: 22px;
@@ -214,9 +214,9 @@ main {
   cursor: not-allowed;
 }
 
-.wrapper-checkbox {
-  //display: flex;
-  margin-bottom: 24px;
+.prim-checkbox-wrapper {
+  // display: flex;
+  // align-items: center;
 }
 
 // "submit", to-login, to-signin, to-registration buttons
