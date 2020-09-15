@@ -1,62 +1,53 @@
-'use strict'
+"use strict";
 
 function toggleVisibility(context) {
-	context.classList.toggle('active__step')
+  context.classList.toggle("enter-page__step_active");
 }
 function hideVisibility(context) {
-	context.classList.remove('active__step')
+  context.classList.remove("enter-page__step_active");
 }
 
-let startStep = document.querySelector('.enter-start');
-let registrationStep = document.querySelector('.enter-registration');
-let loginStep = document.querySelector('.enter-login');
+let startStep = document.querySelector(".enter-page__start-step");
+let registrationStep = document.querySelector(".enter-page__registration-step");
+let loginStep = document.querySelector(".enter-page__login-step");
 
-// без реализации
-let submitSignUp = document.querySelector('.submit-sign-up');
-
-
+//let submitSignUp = document.querySelector('.submit-sign-up');
 
 //toLoginBtn
-document.querySelector('.to-login').addEventListener('click', e => {
-	toggleVisibility(startStep);
-	toggleVisibility(loginStep);
+document.querySelector(".enter-page__to-login-step-btn").addEventListener("click", () => {
+  toggleVisibility(startStep);
+  toggleVisibility(loginStep);
 });
+
 //toRegistrationBtn
-document.querySelector('.to-registration').addEventListener('click', e => {
-	toggleVisibility(startStep);
-	toggleVisibility(registrationStep);
+document.querySelector(".enter-page__to-registration-step-btn").addEventListener("click", () => {
+  toggleVisibility(startStep);
+  toggleVisibility(registrationStep);
 });
-
-
 
 // back from registration/login  to start step buttons
 function backToStartStep() {
-	toggleVisibility(startStep);
-	hideVisibility(registrationStep);
-	hideVisibility(loginStep);
+  toggleVisibility(startStep);
+  hideVisibility(registrationStep);
+  hideVisibility(loginStep);
 }
-document.querySelectorAll('.enter-back-btn').forEach(backBtn =>
-	backBtn.addEventListener('click', backToStartStep)
-);
-
+document
+  .querySelectorAll(".enter-page__back-btn")
+  .forEach((backBtn) => backBtn.addEventListener("click", backToStartStep));
 
 // from 'in' to 'up' & vice versa
-let switchStepButtons = document.querySelectorAll('.switch-btn');
+let switchStepButtons = document.querySelectorAll(".enter-page__switch-step-btn");
 
-switchStepButtons.forEach(element => {
-
-	element.addEventListener('click', e => {
-		e.preventDefault;
-		toggleVisibility(registrationStep);
-		toggleVisibility(loginStep);
-	});
+switchStepButtons.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    e.preventDefault;
+    toggleVisibility(registrationStep);
+    toggleVisibility(loginStep);
+  });
 });
-
 
 // sighIn teleport to main site
-document.querySelector('.submit-sign-in').addEventListener('click', e => {
-	e.preventDefault()
-	location.assign("index.html")
+document.querySelector(".enter-page__submit-sign-in").addEventListener("click", (e) => {
+  e.preventDefault();
+  location.assign("index.html");
 });
-
-

@@ -18,15 +18,11 @@ $soft-background: #f9fafb;
 
 @import "reset";
 
-//common
 @import "common-styles";
 
 @import "header";
 @import "left-panel";
 @import "notifications-bar";
-
-// base for all blocks
-@import "prim-blocks";
 
 @import "dashboard/dashboard-block";
 @import "users-block";

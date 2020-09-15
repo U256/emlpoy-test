@@ -7,7 +7,7 @@
   color: $pale-text;
   background-color: $soft-background;
 
-  &__block-container {
+  &__container {
     display: flex;
     width: 960px;
     height: 640px;
@@ -17,11 +17,169 @@
     box-shadow: 0 1px 3px rgba(63, 63, 68, 0.595), 0 0 0 rgba(63, 63, 68, 0.465);
   }
 
-  // contains start, login and  blocks
+  // contains start, login and registration steps
   &__main-column {
     flex: 0 0 487px;
     height: 100%;
     padding: 55px 63px;
+  }
+
+  //unactive by default
+  &__step {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__top-row {
+    //.enter-top-row
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+  }
+
+  &__top-row button {
+    border-radius: 8px;
+    transition: 0.1s;
+    border: 2px solid transparent;
+    //back & switch buttons
+    &:active {
+      font-weight: 600;
+      color: #000;
+      margin-left: -2px;
+    }
+
+    &:focus {
+      border: 1px solid $dark-title-text;
+      color: #000;
+    }
+
+    &:hover {
+      border: 2px solid $dark-title-text;
+      color: #000;
+    }
+  }
+
+  // back to start section
+  &__back-btn {
+    //.enter-back-btn
+    cursor: pointer;
+    padding: 6px 10px 6px 30px;
+    background: url(../images/icons/toleft-arrow.png) left 4px center/18px 14px
+      no-repeat;
+    font-size: 1.4rem;
+  }
+  //contains switcher text & button
+  &__switch-step-chunk {
+    //.switch-step
+    font-size: 1.4rem;
+  }
+
+  // from 'in' to 'up' & vice versa
+  &__switch-step-btn {
+    //.switch-btn
+    padding: 6px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &__title {
+    //.enter-title
+    margin-bottom: 5px;
+    color: $dark-title-text;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  &__subtitle {
+    //.enter-subtitle
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+
+  //forward-buttons in start block:
+  &__to-login-step-btn {
+    //.to-login
+    cursor: pointer;
+  }
+
+  &__to-registration-step-btn {
+    //.to-registration
+    cursor: pointer;
+    color: $inv-text;
+    border: none;
+    background-color: $enter-accent;
+
+    &:focus {
+      border: 2px solid $dark-title-text;
+      background-color: #3b4eb9;
+    }
+
+    &:hover {
+      border: 4px solid $dark-title-text;
+      background-color: #3b4eb9;
+    }
+  }
+
+  &__form {
+    margin-bottom: auto;
+  }
+
+  // .enter-page__field-wrapper{}
+
+  &__field {
+    //.enter-page-field
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  &__wrapper-checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  //&__terms-check {} //hidden
+
+  &__terms-check-label {
+    //.terms-check-text
+    max-width: 75%;
+    margin-right: 4px;
+  }
+
+  //terms and conditions
+  &__to-terms-link {
+    color: #5b5c5d;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: top;
+
+    &:focus,
+    &:hover {
+      border: 2px solid $enter-accent;
+    }
+  }
+
+  &__submit-sign-in {
+    //.submit-sign-in
+    cursor: pointer;
+  }
+
+  &__submit-sign-up {
+    //.submit-sign-up
+    cursor: pointer;
   }
 
   //// contains image and citation
@@ -38,155 +196,46 @@
     border-radius: 0 8px 8px 0;
     background: url(../images/login-bg.svg) center right no-repeat;
   }
-}
 
-//.enter-block__main:
-//unactive by default
-.enter-steps {
-  display: none;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-// // start step
-// .enter-start {}
-
-// // login step
-// .enter-login {}
-
-// // registration step
-// .enter-registration {}
-
-// enter-steps:
-.enter-top-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 30px;
-  margin-bottom: auto;
-  padding-bottom: 10px;
-
-  // back to start section
-  .enter-back-btn {
-    cursor: pointer;
-    padding: 10px 10px 10px 26px;
-    background: url(../images/icons/toleft-arrow.png) left/18px 14px no-repeat;
-    font-size: 1.4rem;
+  &__decoration-cit {
+    //.decoration-text
+    margin-bottom: 16px;
+    letter-spacing: 0.6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
   }
 
-  // from 'in' to 'up' & vice versa
-  .switch-step {
-    font-size: 1.4rem;
-
-    .switch-btn {
-      padding: 6px;
-      cursor: pointer;
-      text-decoration: underline;
-    }
+  &__cit-author-chunk {
+    //.decoration-author
+    display: flex;
+    padding-left: 50px;
+    background: url(../images/icons/login-cit-author.png) left/32px 32px
+      no-repeat;
   }
-}
 
-.enter-title {
-  margin-bottom: 5px;
-  color: $dark-title-text;
-  font-size: 2.4rem;
-  font-weight: 500;
-  line-height: 28px;
-}
-
-.enter-subtitle {
-  margin-bottom: 40px;
-  font-size: 1.4rem;
-  line-height: 20px;
-}
-
-//forward-buttons in start block:
-.to-login {
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.to-registration {
-  cursor: pointer;
-  color: $inv-text;
-  border: none;
-  background-color: $enter-accent;
-}
-
-//form:
-.enter-page-form {
-  margin-bottom: auto;
-}
-
-// .enter-page-field-wrapper{}
-
-.enter-page-field {
-  width: 100%;
-  margin-bottom: 26px;
-}
-
-// Check of agree with terms and policy when register
-.terms-check {
-  vertical-align: baseline;
-}
-
-.terms-check-text {
-  max-width: 75%;
-
-  //terms and conditions
-  a {
-    color: #5b5c5d;
-  }
-}
-
-.submit-sign-in {
-  cursor: pointer;
-}
-
-.submit-sign-up {
-  cursor: pointer;
-}
-
-//.enter-page__decoration-column:
-.decoration-text {
-  margin-bottom: 16px;
-  letter-spacing: 0.6px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 25px;
-}
-
-.decoration-author {
-  display: flex;
-  padding-left: 50px;
-  background: url(../images/icons/login-cit-author.png) left/32px 32px no-repeat;
-
-  &__name {
+  &__cit-author-name {
     letter-spacing: -0.05px;
     font-size: 17px;
   }
 
-  &__post {
+  &__cit-author-post {
     padding-top: 3px;
     letter-spacing: 0.5px;
     font-size: 13px;
   }
 }
 
-//activate step
-.active__step {
-  display: flex;
-}
-
 /*
 	media
 */
 @media (max-width: 991.98px) {
-  .enter-page__block-container {
+  // .enter-page__title {  }
+  .enter-page__subtitle {
+    margin-bottom: 15px;
+  }
+
+  .enter-page__container {
     width: 530px;
     height: 550px;
   }
@@ -199,17 +248,13 @@
     display: none;
   }
 
-  .enter-subtitle {
-    margin-bottom: 15px;
-  }
-
   .enter-page-field {
     margin-bottom: 15px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .enter-page__block-container {
+  .enter-page__container {
     width: 300px;
     height: 520px;
   }
@@ -219,7 +264,9 @@
     padding: 20px;
   }
 
-  .enter-top-row .enter-back-btn {
-    padding: 6px 22px;
+  .enter-page__back-btn {
+    padding: 6px 10px 6px 23px;
+    background: url(../images/icons/toleft-arrow.png) left 4px center/14px 10px
+      no-repeat;
   }
 }

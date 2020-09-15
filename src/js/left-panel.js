@@ -1,32 +1,48 @@
-'use strict'
+"use strict";
 
-document.querySelector('.left-panel__switcher').addEventListener('click', e => {
-	document.querySelector('.left-panel').classList.toggle('left-panel_active')
-})
+document
+  .querySelector(".left-panel__switcher")
+  .addEventListener("click", () => {
+    document.querySelector(".left-panel").classList.toggle("left-panel_active");
+  });
 
+let toBlockButtonsArray = document.querySelectorAll(".left-panel__button");
+let blocksArray = document.querySelectorAll(".prim-blocks");
+let toBlockButtonsContainer = document.querySelector(
+  ".left-panel__toblock-links"
+);
 
-let toBlockButtonsArray = document.querySelectorAll('.toblock-btn');;
-let blocksArray = document.querySelectorAll('.prim-blocks')
-let toBlockButtonsContainer = document.querySelector('.left-panel__toblock-links')
+toBlockButtonsContainer.addEventListener("click", function (e) {
+  if (e.target.hasAttribute("rel")) {
+    //avoid click between btns (clicking on background)
 
-toBlockButtonsContainer.addEventListener('click', function (e) {
+    toBlockButtonsArray.forEach((toBlockBtn) => {
+      toBlockBtn.classList.remove("left-panel__button_active");
+    });
+    
+    for (let i = 0; i < blocksArray.length; i++) { 
+      toBlockButtonsArray[i].classList.remove("left-panel__button_active");
+      toBlockButtonsArray[i].style.backgroundImage = `url("../images/icons/left-panel/toblock-btn-icon-${i + 1}.svg")`;
+    }
 
-	if (e.target.hasAttribute('rel')) {
-		//avoid click between btns (clicking on background)
+    blocksArray.forEach((block) => {
+      block.classList.remove("active-prim-block");
+    });
 
-		toBlockButtonsArray.forEach((toBlockBtn) => {
-			toBlockBtn.classList.remove("toblock-btn_active");
-		});
-		blocksArray.forEach((block) => {
-			block.classList.remove("active-prim-block");
-		});
+    let buttonNumber = e.target.getAttribute("rel");
+    e.target.classList.add("left-panel__button_active");
+    blocksArray[buttonNumber].classList.add("active-prim-block");
+    e.target.style.backgroundImage = `url("../images/icons/left-panel/toblock-btn-icon-${ +buttonNumber + 1}_active.svg")`;
+  }
 
-		e.target.classList.add("toblock-btn_active");
-		//e.target.getAttribute('rel') - button number
-		blocksArray[e.target.getAttribute('rel')].classList.add("active-prim-block");
+  //wrap left panel to the left after block switching
+  document.querySelector(".left-panel").classList.remove("left-panel_active");
+});
 
-	}
+toBlockButtonsArray.forEach((toBlockButton) => {
+  toBlockButton.addEventListener("hover", () => {
+    //toBlockButton.style.background:
+  });
+});
 
-	//wrap left panel to the left after block switching
-	document.querySelector('.left-panel').classList.remove('left-panel_active')
-})
+//function fillIcon() { }

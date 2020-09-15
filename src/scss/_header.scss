@@ -51,26 +51,10 @@
   }
 
   &__discover-pro-version-link {
-    //.app-version-upgrade a
-    display: inline;
-    white-space: nowrap;
-    text-decoration: none;
-    color: $inv-text;
-    outline: none;
-    padding: 2px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:focus {
-      border: 2px solid $clean-bg;
-      border-radius: 5px;
-    }
+    padding: 0 2px;
   }
 
   &__buttons-group {
-    //.header__account-buttons
     display: flex;
     justify-content: space-between;
     //width: 55px;
@@ -78,7 +62,6 @@
   }
 
   &__button {
-    //.account-button
     width: 2.2rem;
     height: 2.2rem;
     cursor: pointer;
@@ -96,20 +79,17 @@
   }
 
   &__notifications-btn {
-    //.notifications-btn
     background: url(../images/icons/notification-bell-icon.svg) center/contain
       no-repeat;
   }
 
   &__logout-btn {
-    //.logout-btn
     margin-left: 14px;
     background: url(../images/icons/logout-icon.svg) center/contain no-repeat;
   }
 }
 
 .main-logo {
-  //.logo-name-text
   padding-left: 43px;
   white-space: nowrap;
   letter-spacing: -0.06px;
@@ -145,32 +125,32 @@
   .header {
     padding: 0 15px;
     justify-content: space-between;
-  }
 
-  .header__buttons-group {
-    margin-left: 0;
+    &__buttons-group {
+      margin-left: 0;
+    }
+
+    &__version {
+      justify-content: center;
+    }
+
+    &__version-logo {
+      display: none;
+    }
+
+    &__version-upgrade_phone-size {
+      display: block;
+      text-decoration: underline;
+    }
+
+    &__button {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
   .main-logo {
     white-space: break-spaces;
     font-size: 0;
-  }
-
-  .header__version {
-    justify-content: center;
-  }
-
-  .header__version-logo {
-    display: none;
-  }
-
-  .header__version-upgrade_phone-size {
-    display: block;
-    text-decoration: underline;
-  }
-
-  .header__button {
-    width: 2.5rem;
-    height: 2.5rem;
   }
 }
