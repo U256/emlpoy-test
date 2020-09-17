@@ -1,7 +1,7 @@
 .enter-page {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
   color: $pale-text;
@@ -37,7 +37,9 @@
     }
   }
 
-  //&__start-step {}
+  &__start-step {
+    align-items: center;
+  }
 
   //&__registration-step { }
 
@@ -56,42 +58,42 @@
 
   &__top-row button {
     //back & switch buttons
-    border-radius: 8px;
     transition: 0.1s;
     border: 2px solid transparent;
+    border-radius: 8px;
+
     &:active {
-      font-weight: 600;
-      color: #000;
       margin-left: -2px;
+      color: #000;
+      font-weight: 600;
     }
 
     &:focus {
-      border: 1px solid $dark-title-text;
       color: #000;
+      border: 1px solid $dark-title-text;
     }
 
     &:hover {
-      border: 2px solid $dark-title-text;
       color: #000;
+      border: 2px solid $dark-title-text;
     }
   }
 
-  // back to start section
   &__back-btn {
-    //.enter-back-btn
-    cursor: pointer;
+    // back to start section
     padding: 6px 10px 6px 30px;
-    background: url(../images/icons/toleft-arrow.png) left 4px center/18px 14px
-      no-repeat;
-    font-size: 1.4rem;
-  }
-  //contains switcher text & button
-  &__switch-step-chunk {
+    cursor: pointer;
+    background: url(../images/icons/toleft-arrow.png) left 4px center/18px 14px no-repeat;
     font-size: 1.4rem;
   }
 
-  // from 'in' to 'up' & vice versa
+  &__switch-step-chunk {
+    //contains switcher text & button
+    font-size: 1.4rem;
+  }
+
   &__switch-step-btn {
+    // from 'in' to 'up' & vice versa
     padding: 6px;
     cursor: pointer;
     text-decoration: underline;
@@ -99,11 +101,11 @@
 
   &__title {
     margin-bottom: 5px;
+    padding-top: 10px;
     color: $dark-title-text;
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 28px;
-    padding-top: 10px;
   }
 
   &__subtitle {
@@ -112,8 +114,10 @@
     line-height: 20px;
   }
 
-  //forward-buttons in start block:
+  &__
+
   &__to-login-step-btn {
+    //forward-buttons in start block:
     cursor: pointer;
   }
 
@@ -159,11 +163,11 @@
 
   &__to-terms-link {
     //terms and conditions
+    padding: 2px 2px 0 2px;
+    vertical-align: top;
     color: #5b5c5d;
     font-size: 16px;
-    padding: 2px 2px 0 2px;
     line-height: 20px;
-    vertical-align: top;
 
     &:focus,
     &:hover {
@@ -209,8 +213,7 @@
     //.decoration-author
     display: flex;
     padding-left: 50px;
-    background: url(../images/icons/login-cit-author.png) left/32px 32px
-      no-repeat;
+    background: url(../images/icons/login-cit-author.png) left/32px 32px no-repeat;
   }
 
   &__cit-author-name {
@@ -268,8 +271,7 @@
 
   .enter-page__back-btn {
     padding: 6px 10px 6px 23px;
-    background: url(../images/icons/toleft-arrow.png) left 4px center/14px 10px
-      no-repeat;
+    background: url(../images/icons/toleft-arrow.png) left 4px center/14px 10px no-repeat;
   }
 
   .enter-page__terms-check-label {

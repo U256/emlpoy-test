@@ -46,21 +46,22 @@ let submitNotifSettings = notifSettingsForm.submitNotifications;
 
 function showNotice(className, innerHTML) {
   let notice = document.createElement("div");
-  notice.className = className;
+  notice.className = `steer-notice ${className}`;
   notice.innerHTML = innerHTML;
   document.body.append(notice);
 
   setTimeout(() => notice.remove(), 5000);
 }
+
 //showNotice("error-notice", "Error. Try again")
 
-function showHint(innerHTML, place) {
-  let hint = document.createElement("div");
+function showInputHint(inputNumber, innerHTML) {
+  let hint = document.createElement("span");
   hint.className = "fill-required";
   hint.innerHTML = innerHTML;
-  place.append(hint);
+  persSettingsFieldWrappers[inputNumber].append(hint);
 
-  setTimeout(() => hint.remove(), 3000);
+  setTimeout(() => hint.remove(), 500000);
 }
 
 ///// Person settings form
@@ -87,6 +88,12 @@ personSettingsForm.addEventListener("input", () => {
   // submitPersonSettings.setAttribute("disabled", "true")
 });
 
+function isHintAlreadyDisplayed(fieldNumber) {
+  return persSettingsFieldWrappers[
+    fieldNumber
+  ].lastElementChild.classList.contains("fill-required");
+}
+
 //active-class avaliability (from prev logic block) uses as check for submit-btn activation
 personSettingsForm.addEventListener("submit", (e) => {
   if (
@@ -101,19 +108,24 @@ personSettingsForm.addEventListener("submit", (e) => {
   } else {
     e.preventDefault(); //stops form submit
 
-    if (persSettingsFields[0].value == "") {
-      showHint("Please write name", persSettingsFieldWrappers[0]);
+    if (persSettingsFields[0].value == "" && !isHintAlreadyDisplayed(0)) {
+      showInputHint(0, "Please specify the first name");
     }
-    if (persSettingsFields[1].value == "") {
-      showHint("Please fill", persSettingsFieldWrappers[1]);
+    if (persSettingsFields[1].value == "" && !isHintAlreadyDisplayed(1)) {
+      showInputHint(1, "Please specify the last name");
     }
-    if (persSettingsFields[2].value == "") {
-      showHint("Email is required", persSettingsFieldWrappers[2]);
+    if (persSettingsFields[2].value == "" && !isHintAlreadyDisplayed(2)) {
+      showInputHint(2, "Please specify the email");
     } else if (
-      !persSettingsFields[2].value.includes("@") ||
-      !persSettingsFields[2].value.includes(".")
+      !isHintAlreadyDisplayed(2) &&
+      (!persSettingsFields[2].value.includes("@") ||
+        !persSettingsFields[2].value.includes("."))
     ) {
-      showHint("...@example.com", persSettingsFieldWrappers[2]);
+      showInputHint(2, "...@example.com");
+    } else {
+      //delete previous hint and show new one
+      persSettingsFieldWrappers[2].lastElementChild.remove();
+      showInputHint(2, "...@example.com");
     }
   }
 });

@@ -56,7 +56,6 @@
   &__buttons-group {
     display: flex;
     justify-content: space-between;
-    //width: 55px;
     margin-left: auto;
   }
 
@@ -86,8 +85,7 @@
   }
 
   &__notifications-btn {
-    background: url(../images/icons/notification-bell-icon.svg) center/contain
-      no-repeat;
+    background: url(../images/icons/notification-bell-icon.svg) center/contain no-repeat;
   }
 
   &__logout-btn {
@@ -97,16 +95,16 @@
 }
 
 .main-logo {
-  padding-left: 43px;
-  white-space: nowrap;
-  letter-spacing: -0.06px;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 24px;
   display: flex;
   align-items: center;
   height: 36px;
+  padding-left: 43px;
+  white-space: nowrap;
+  letter-spacing: -0.06px;
   background: url(../images/icons/header-logo.svg) left center/36px no-repeat;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 /*
@@ -125,7 +123,6 @@
 
 @media (min-width: 991.98px) {
   .header__version {
-    
     width: fit-content;
   }
 }
@@ -138,8 +135,8 @@
 
 @media (max-width: 575.98px) {
   .header {
-    padding: 0 15px;
     justify-content: space-between;
+    padding: 0 15px;
 
     &__buttons-group {
       margin-left: 0;
@@ -165,7 +162,6 @@
   }
 
   .main-logo {
-    white-space: break-spaces;
     font-size: 0;
   }
 }

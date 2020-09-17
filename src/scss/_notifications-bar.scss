@@ -1,12 +1,11 @@
 .notifications-bar {
   position: fixed;
-  z-index: -3;
+  z-index: -6;
   right: 0;
   bottom: 0;
   overflow: hidden;
   width: 342px;
   height: 395px;
-  padding-top: 4px;
   transition: 0.3s;
   opacity: 0;
   color: $small-title-text;
@@ -15,19 +14,19 @@
   border-radius: 8px 0 0 0;
   background-color: $clean-bg;
 
-  &__active {
+  &_active {
     z-index: 21;
     overflow: visible;
     opacity: 1;
   }
 
   ::-webkit-scrollbar {
+    // width of vertical scroll
     width: 8px;
-    /* width of vertical scroll */
   }
 
-  /* scrollbar roller */
   ::-webkit-scrollbar-thumb {
+    // scrollbar roller 
     border-radius: 1em;
     background-color: #c7ced4;
   }
@@ -36,43 +35,28 @@
     background-color: #a2a6aa;
   }
 
-  &__top {
-    display: flex;
-    align-items: center;
-    width: 95%;
-    height: 24.5%;
-    margin: 0 7px 10px 7px;
-    background-color: $soft-background;
+  &__close-btn-wrapper {
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    height: 52px;
   }
 
-  &__alerts-block {
-    overflow-y: auto;
-    height: 69.6%;
-    margin: 0 7px 5px;
-
-    scrollbar-color: #c7ced4 $clean-bg;
-    scrollbar-width: thin;
-  }
-}
-
-.close-bar {
-  position: absolute;
-  top: -50px;
-  right: 10px;
-  height: 52px;
-
-  &__btn {
+  &__close-btn {
     cursor: pointer;
     color: $pale-text;
     background-color: transparent !important;
     font-size: 50px;
   }
-}
 
-.bar-text {
-  margin: 0 8px 0 20px;
+  &__top-row {
+    height: 24.5%;
+    margin: 4px 6px;
+    padding: 24px;
+    background: $soft-background url(../images/icons/ntfs-logo.svg) right center/180px 87px no-repeat;
+  }
 
-  .bar-title {
+  &__title {
     margin-bottom: 3px;
     letter-spacing: -0.04px;
     font-size: 14px;
@@ -80,20 +64,21 @@
     line-height: 20px;
   }
 
-  .bar-count {
+  &__count {
     color: $pale-text;
     font-size: 12px;
   }
+
+  &__alerts-block {
+    overflow-y: auto;
+    height: 69.6%;
+    margin: 0 7px 5px;
+    scrollbar-color: #c7ced4 $clean-bg;
+    scrollbar-width: thin;
+  }
 }
 
-.bar-logo {
-  width: 46%;
-  height: 95%;
-  background: url(../images/icons/ntfs-logo.svg) center/contain no-repeat;
-}
-
-//notifications-bar__alerts-block
-.alert-item {
+.notification-item {
   display: flex;
   align-items: center;
   width: 90%;
@@ -104,8 +89,7 @@
     width: 36px;
     height: 36px;
     margin: 0 8px 0 22px;
-    background: url(../images/icons/users-operation.svg) center/contain
-      no-repeat;
+    background: url(../images/icons/users-operation.svg) center/contain no-repeat;
   }
 
   &__message {
@@ -113,23 +97,22 @@
     flex-direction: column;
   }
 
-  &__toevent {
+  &__message-name {
+    font-size: 1.4rem;
+  }
+
+  &__message-time {
+    color: $pale-text;
+    font-size: 1.2rem;
+  }
+
+  &__toevent-btn {
     margin-left: auto;
     color: $pale-text;
     font-size: 2.6rem;
     font-weight: 500;
-
     justify-self: flex-end;
   }
-}
-
-.message-name {
-  font-size: 1.4rem;
-}
-
-.message-time {
-  color: $pale-text;
-  font-size: 1.2rem;
 }
 
 /*
@@ -141,7 +124,7 @@
     height: 280px;
   }
 
-  .alert-item__logo {
+  .notification-item__logo {
     margin-left: 0;
   }
 }

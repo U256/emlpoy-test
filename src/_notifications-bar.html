@@ -1,26 +1,37 @@
 <section class="notifications-bar">
-	<div class="close-bar">
-		<div class="clean-btn close-bar__btn">&times</div>
-	</div>
-	<div class="notifications-bar__top">
-		<div class="bar-text">
-			<div class="bar-title">User Notifications</div>
-			<div class="bar-count">new notifications</div>
+	<div class="notifications-bar__close-btn-wrapper">
+		<div class="clean-btn notifications-bar__close-btn">
+			&times
 		</div>
-		<div class="bar-logo"></div>
+	</div>
+	<div class="notifications-bar__top-row">
+			<h1 class="notifications-bar__title">User Notifications</h1>
+			<h1 class="notifications-bar__count">new notifications</h1>
 	</div>
 	<div class="notifications-bar__alerts-block">
-		<div class="alert-item">
-			<div class="alert-item__logo"></div>
-			<div class="alert-item__message">
-				<div class="message-name">
+		<div class="notification-item">
+			<div class="notification-item__logo"></div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
 					New order has been received
 				</div>
-				<div class="message-time">
+				<div class="notification-item__message-time">
 					hours ago
 				</div>
 			</div>
-			<button type="submit" class="clean-btn alert-item__toevent" aria-label="show details of event">&gt</button>
+			<button type="submit" class="clean-btn notification-item__toevent-btn" aria-label="show details of event">&gt</button>
+		</div>
+		<div class="notification-item">
+			<div class="notification-item__logo">1</div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
+					New order has been received
+				</div>
+				<div class="notification-item__message-time">
+					hours ago
+				</div>
+			</div>
+			<button type="submit" class="clean-btn notification-item__toevent-btn" aria-label="show details of event">&gt</button>
 		</div>
 	</div>
 </section>

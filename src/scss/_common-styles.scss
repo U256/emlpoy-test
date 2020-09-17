@@ -1,364 +1,350 @@
 html {
-  font-family: Roboto, sans-serif;
-  font-size: 10px;
-  cursor: default;
-  //fw: 300 400 500 700
+	cursor: default;
+	font-family: Roboto, sans-serif;
+	font-size: 10px;
+	//fw: 300 400 500 700
 }
 
 main {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  min-height: calc(100vh - 64px);
-  background-color: $soft-background;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	min-height: calc(100vh - 64px);
+	background-color: $soft-background;
 }
 
 .clean-btn {
-  color: inherit;
-  border: none;
-  outline: none;
-  background-color: $clean-bg;
+	color: inherit;
+	border: none;
+	outline: none;
+	background-color: $clean-bg;
 }
 
 .soft-bd {
-  border: 1px solid rgba(63, 63, 68, 0);
-  border-radius: 4px;
-  background-color: $clean-bg;
-  box-shadow: 0 1px 3px rgba(63, 63, 68, 0.45);
+	border: 1px solid rgba(63, 63, 68, 0);
+	border-radius: 4px;
+	background-color: $clean-bg;
+	box-shadow: 0 1px 3px rgba(63, 63, 68, 0.45);
 }
 
 .flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .flex {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-//padding for elements in containers
 .fr-padding {
-  padding: 4px 24px 4px 24px;
+	//padding for elements in containers
+	padding: 4px 24px 4px 24px;
 }
 
 .prim-blocks-wrapper {
-  position: relative;
-  flex: 1 0 auto;
-  background-color: $soft-background;
+	position: relative;
+	flex: 1 0 auto;
+	background-color: $soft-background;
 }
 
 .prim-block {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  display: flex;
-  visibility: hidden;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  padding: 24px 16px;
-  transition: 0.4s;
-  opacity: 0;
-  color: $small-title-text;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	display: flex;
+	visibility: hidden;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	padding: 24px 16px;
+	transition: 0.4s;
+	opacity: 0;
+	color: $small-title-text;
 
-  * {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-  }
+	* {
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		left: 0;
+	}
 }
 
 .prim-block_active {
-  position: relative;
-  z-index: 1;
-  visibility: visible;
-  transition: 0.4s;
-  opacity: 1;
+	position: relative;
+	z-index: 1;
+	visibility: visible;
+	transition: 0.4s;
+	opacity: 1;
 
-  * {
-    position: static;
-    z-index: 1;
-  }
+	* {
+		position: static;
+		z-index: 1;
+	}
 }
 
 .user-logo {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: $enter-accent;
-  transition: 0.1s;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	transition: 0.1s;
+	border-radius: 50%;
+	background-color: $enter-accent;
 
-  &:active {
-    width: 104px;
-    height: 104px;
-  }
+	&:active {
+		width: 104px;
+		height: 104px;
+	}
 
-  &:focus {
-    border: 2px solid $sec-highlight-text;
-  }
-  &:hover {
-    border: 2px solid $sec-highlight-text;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-  }
+	&:hover {
+		border: 2px solid $sec-highlight-text;
+		box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.75);
+	}
 }
 
 .prim-link {
-  display: inline;
-  white-space: nowrap;
-  color: $inv-text;
-  outline: none;
-  border-radius: 5px;
-  border: 2px solid transparent;
-  cursor: pointer;
+	display: inline;
+	cursor: pointer;
+	white-space: nowrap;
+	color: $inv-text;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	outline: none;
 
-  &:active {
-    font-weight: 600;
-    border: 2px solid $clean-bg;
-  }
+	&:active {
+		border: 2px solid $clean-bg;
+		font-weight: 600;
+	}
 
-  &:focus,
-  &:hover {
-    border: 2px solid $clean-bg;
-  }
+	&:focus, &:hover {
+		border: 2px solid $clean-bg;
+	}
 }
 
 .prim-form {
-  width: 100%;
+	width: 100%;
 }
 
 .prim-field-wrapper {
-  position: relative;
+	position: relative;
+	vertical-align: top;
 }
 
 .prim-field {
-  //prim-fields
-  width: 50%;
-  height: 50px;
-  padding: 13px 16px;
-  border: 2px solid #adadad;
-  border-radius: 5px;
-  outline: none;
-  font-size: 16px;
+	width: 50%;
+	height: 50px;
+	margin-bottom: 4px;
+	padding: 13px 16px;
+	border: 2px solid #adadad;
+	border-radius: 5px;
+	outline: none;
+	font-size: 16px;
 
-  &:focus {
-    border: 2px solid $enter-accent;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    background-color: $input-focus;
-  }
+	&:focus {
+		border: 2px solid $enter-accent;
+		background-color: $input-focus;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
 
-  &:hover {
-    border: 3px solid $enter-accent;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    background-color: $input-focus;
-  }
+	&:hover {
+		border: 3px solid $enter-accent;
+		background-color: $input-focus;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	}
 }
 
 .prim-field-label {
-  display: none;
-  position: absolute;
-  outline: none;
-  padding: 0 5px;
-  height: 16px;
-  background-color: $clean-bg;
-  letter-spacing: 0.08rem;
-  z-index: 5;
-  height: fit-content;
-  font-size: 1.3rem;
-  line-height: 1.4rem;
-  color: #0a4db3;
-  left: 10px !important;
-  top: -7px !important;
+	position: absolute;
+	z-index: 5;
+	top: -7px !important;
+	left: 10px !important;
+	display: none;
+	height: 16px;
+	padding: 0 5px;
+	letter-spacing: 0.08rem;
+	color: #0a4db3;
+	outline: none;
+	background-color: $clean-bg;
+	font-size: 1.3rem;
+	line-height: 1.4rem;
 }
 
-.prim-field:hover + label,
+.prim-field:hover + label, 
 .prim-field:focus + label {
-  display: block;
-}
-
-//checkboxes isn't customisible so it's hidden
-.prim-checkbox {
-  position: absolute !important;
-  z-index: -100;
-  opacity: 0 !important;
-  // top: 0;
-  // left: 0;
-  // height: 0;
-  // width: 0;
-}
-
-.prim-checkbox-label {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  user-select: none;
-}
-
-.prim-checkbox-label:before {
-  //fake checkbox
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #425a70;
-  padding: 2px;
-  border-radius: 2px;
-  margin-right: 10px;
-  transition: background-image 0.4s;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px 18px;
-}
-
-//checkbox checked
-.prim-checkbox:checked + label:before {
-  border: none;
-  background-image: url(../images/icons/checkbox-checked.png);
-}
-
-// checkbox on focus
-.prim-checkbox:focus + label {
-  color: $enter-accent;
-}
-
-.prim-checkbox:focus + label:before {
-  outline: 2px dotted $enter-accent;
-  outline-offset: 1px;
-}
-
-// checkbox on hover
-.prim-checkbox:not(:disabled):hover + label {
-  color: $enter-accent;
-}
-
-.prim-checkbox:not(:disabled) + label:hover:before {
-  border: 2px solid lightskyblue;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-// checkbox disabled
-.prim-checkbox:disabled + label {
-  cursor: not-allowed;
-}
-
-.prim-checkbox:disabled + label:before {
-  border: none;
-  background: $pale-text;
-  cursor: not-allowed;
+	display: block;
 }
 
 .prim-checkbox-wrapper {
-  position: relative;
-  // display: flex;
-  // align-items: center;
+	position: relative;
 }
 
-// "submit", to-login, to-signin, to-registration buttons
+.prim-checkbox {
+	position: absolute !important;
+	z-index: -10;
+	top: 0;
+	left: 0;
+	opacity: 0 !important;
+}
+
+.prim-checkbox-label {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.prim-checkbox-label::before {
+	//fake checkbox
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	padding: 2px;
+	content: "";
+	transition: background-image 0.4s;
+	border: 2px solid #425a70;
+	border-radius: 2px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 18px 18px;
+}
+
+.prim-checkbox:checked + label::before {
+  //checkbox checked
+	border: none;
+	background-image: url(../images/icons/checkbox-checked.png);
+}
+
+.prim-checkbox:focus + label {
+  // checkbox on focus
+	color: $enter-accent;
+}
+
+.prim-checkbox:focus + label::before {
+	outline: 2px dotted $enter-accent;
+	outline-offset: 1px;
+}
+
+.prim-checkbox:not(:disabled):hover + label {
+  // checkbox on hover
+	color: $enter-accent;
+}
+
+.prim-checkbox:not(:disabled) + label:hover::before {
+	border: 2px solid lightskyblue;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.prim-checkbox:disabled + label {
+  // checkbox disabled
+	cursor: not-allowed;
+}
+
+.prim-checkbox:disabled + label::before {
+	cursor: not-allowed;
+	border: none;
+	background: $pale-text;
+}
+
 .prim-submit {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 20px;
-  letter-spacing: 2.25px;
-  text-transform: uppercase;
-  outline: none;
-  color: $enter-accent;
-  border: 2px solid $enter-accent;
-  border-radius: 6px;
-  background-color: $clean-bg;
-  font-size: 14px;
-  font-weight: 500;
-  transition: 0.1s;
+  // "save", to-login, to-signin, to-registration buttons
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	transition: 0.1s;
+	letter-spacing: 2.25px;
+	text-transform: uppercase;
+	color: $enter-accent;
+	border: 2px solid $enter-accent;
+	border-radius: 6px;
+	outline: none;
+	background-color: $clean-bg;
+	font-size: 14px;
+	font-weight: 500;
 
-  &:active {
-    top: 2px;
-    left: 1px;
-    font-size: 15px;
-  }
+	&:active {
+		top: 2px;
+		left: 1px;
+		font-size: 15px;
+	}
 
-  &:focus {
-    border: 2px solid $enter-accent;
-    background-color: $input-focus;
-    outline: 2px dotted $enter-accent;
-    outline-offset: 1px;
-  }
+	&:focus {
+		border: 2px solid $enter-accent;
+		outline: 2px dotted $enter-accent;
+		outline-offset: 1px;
+		background-color: $input-focus;
+	}
 
-  &:hover {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    border: 2px solid $enter-accent;
-    background-color: $input-focus;
-  }
+	&:hover {
+		border: 2px solid $enter-accent;
+		background-color: $input-focus;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	}
 }
 
-//when form sent
+.steer-notice {
+	//base for all tooltips
+	position: fixed;
+	z-index: 20;
+	right: 0;
+	padding: 14px 20px;
+	transition: 0.3s;
+	border: 2px solid;
+	border-right: none;
+	border-radius: 11px 0 0 11px;
+	background-color: $input-focus;
+	font-size: 2.5rem;
+	line-height: 3rem;
+}
+
 .submit-notice {
-  position: fixed;
-  z-index: 20;
-  top: 75px;
-  right: 0;
-  padding: 14px 24px;
-  color: green;
-  border: 2px solid green;
-  border-right: none;
-  border-radius: 11px 0 0 11px;
-  background-color: $input-focus;
-  font-size: 2.5rem;
-  line-height: 3rem;
+	//when form sent
+	top: 75px;
+	color: green;
+	border-color: green;
 }
 
-//when form sent wrong
 .error-notice {
-  position: fixed;
-  z-index: 20;
-  top: 145px;
-  right: 0;
-  padding: 10px 20px;
-  color: red;
-  border: 2px solid red;
-  border-right: none;
-  border-radius: 11px 0 0 11px;
-  background-color: $input-focus;
-  font-size: 2.2rem;
-  line-height: 2.6rem;
+	//when form sent wrong
+	top: 150px;
+	color: red;
+	border-color: red;
 }
 
 /*
 	media
 */
 @media (max-width: 1199.98px) {
-  .fr-padding {
-    padding: 4px 12px 4px 12px;
-  }
+	.fr-padding {
+		padding: 4px 12px 4px 12px;
+	}
 }
 
 @media (max-width: 991.98px) {
-  .prim-block {
-    padding: 70px 12px 12px 12px;
-  }
+	.prim-block {
+		padding: 70px 12px 12px 12px;
+	}
 
-  .prim-field {
-    height: 42px;
-    //margin-bottom: 20px;
-  }
+	.prim-field {
+		height: 42px;
+	}
 }
 
 @media (max-width: 575.98px) {
-  html {
-    font-size: 9px;
-  }
+	html {
+		font-size: 9px;
+	}
 
-  .prim-field {
-    height: 36px;
-    //margin-bottom: 15px;
-  }
+	.prim-field {
+		height: 36px;
+	}
 }

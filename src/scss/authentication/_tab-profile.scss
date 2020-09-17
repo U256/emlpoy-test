@@ -8,10 +8,10 @@
   }
 
   &__settings-wrapper {
-    //contaions person & notif settings
-    cursor: default;
     flex: 1 1 auto;
     max-width: 910px;
+    //contaions person & notif settings
+    cursor: default;
   }
 
   &__settings-block {
@@ -79,6 +79,24 @@
   }
 }
 
+.tab-profile__submit-button_active {
+  ///activate submit button on change
+  cursor: pointer;
+  color: $inv-text;
+  background-color: $prim-highlight-text;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  &:hover,
+  &:focus {
+    background-color: $sec-highlight-text;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  &:hover {
+    border: 2px solid $enter-accent;
+  }
+}
+
 .avatar-change-block {
   display: flex;
   flex-direction: column;
@@ -99,17 +117,17 @@
   }
 
   &__info-column {
+    flex: 0 0 50%;
+    height: 100%;
     color: $dark-title-text;
     font-size: 2.4rem;
     line-height: 2.8rem;
-    flex: 0 0 50%;
-    height: 100%;
   }
 
   &__person-name {
-    font-weight: 500;
     margin-bottom: 10px;
     font-size: 2rem;
+    font-weight: 500;
   }
 
   &__location,
@@ -120,10 +138,10 @@
   }
 
   &__avatar-column {
-    flex: 0 0 50%;
-    height: 100%;
     display: flex;
+    flex: 0 0 50%;
     justify-content: center;
+    height: 100%;
   }
 
   //&__new-image {}
@@ -141,13 +159,13 @@
     height: 4rem;
     padding: 0 16px;
     cursor: pointer;
-    outline: none;
+    transition: font-size 0.2s;
     text-transform: uppercase;
     border-radius: 5px;
+    outline: none;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.6rem;
-    transition: font-size 0.2s;
 
     &:active {
       font-size: 1.5rem;
@@ -158,8 +176,8 @@
     }
 
     &:hover {
-      border: 2px solid $prim-highlight-text;
       text-decoration: underline;
+      border: 2px solid $prim-highlight-text;
     }
   }
 
@@ -219,10 +237,11 @@
   &__form-right-column {
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 10px;
   }
 
   &__form-column-title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 16px;
     font-weight: 500;
     line-height: 2rem;
@@ -239,47 +258,27 @@
   width: 120px;
 }
 
-///activate submit button on change
-.tab-profile__submit-button_active {
-  cursor: pointer;
-  color: $inv-text;
-  background-color: $prim-highlight-text;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-
-  &:hover,
-  &:focus {
-    background-color: $sec-highlight-text;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
-
-  &:hover {
-    border: 2px solid $enter-accent;
-  }
-}
-
-//hint in input form
 .fill-required {
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 47%;
-  margin: 4px;
-  padding: 0 10px;
-  text-align: center;
-  color: red;
-  border: 1px solid rgba(255, 0, 0, 0.548);
+  //hint in input form
+  position: relative;
+  z-index: 19;
+  bottom: -30px;
+  left: 15px;
+  width: 90%;
+  padding: 4px;
   border-radius: 4px;
-  background-color: $clean-bg;
+  background-color: transparent;
   font-size: 1.4rem;
   line-height: 1.5rem;
 }
 
-//little hint on activation
+.person-settings-block__field:hover ~ span,
+.person-settings-block__field:focus ~ span {
+  color: $enter-accent;
+}
+
 .steer-for-checkbox {
+  //little hint on activation
   position: relative;
   top: -20px;
   left: 31px;
@@ -298,7 +297,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .tab-profile__avatar-change-block {
     margin-right: 24px;
   }
@@ -340,20 +339,12 @@
     align-self: center;
   }
 
-  .tab-profile__settings-form {
+  .person-settings-block__form {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-  }
-
-  .notif-settings-block__form-left-column {
-    margin-right: 0;
-  }
-
-  .submit-notif-settings {
-    margin: 0 auto 20px;
   }
 }
 
@@ -370,5 +361,17 @@
 
   .avatar-change-block__top-row {
     padding: 18px 12px;
+  }
+
+  .notif-settings-block__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .notif-settings-block__form-left-column {
+    margin-right: 0;
   }
 }
