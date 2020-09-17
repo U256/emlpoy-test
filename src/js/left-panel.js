@@ -7,7 +7,7 @@ document
   });
 
 let toBlockButtonsArray = document.querySelectorAll(".left-panel__button");
-let blocksArray = document.querySelectorAll(".prim-blocks");
+let blocksArray = document.querySelectorAll(".prim-block");
 let toBlockButtonsContainer = document.querySelector(
   ".left-panel__toblock-btns-chunk"
 );
@@ -21,7 +21,7 @@ toBlockButtonsContainer.addEventListener("click", function (e) {
     });
 
     blocksArray.forEach((block) => {
-      block.classList.remove("active-prim-block");
+      block.classList.remove("prim-block_active");
     });
 
     //e.target.getAttribute("rel") - button and block number
@@ -29,9 +29,16 @@ toBlockButtonsContainer.addEventListener("click", function (e) {
 
     toBlockButtonsArray[relNumber].classList.add("left-panel__button_active");
 
-    blocksArray[relNumber].classList.add("active-prim-block");
+    blocksArray[relNumber].classList.add("prim-block_active");
   }
 
   //wrap left panel to the left after block switching
   document.querySelector(".left-panel").classList.remove("left-panel_active");
+});
+
+//wrap left panel to the left when click on main content
+blocksArray.forEach((block) => {
+  block.addEventListener("click", () => {
+    document.querySelector(".left-panel").classList.remove("left-panel_active");
+  });
 });

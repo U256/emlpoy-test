@@ -1,37 +1,47 @@
 "use strict";
 
 //////// TABs SWITCH
-let toTabButtonsArray = document.querySelectorAll(".to-tab-btn");
-let toTabButtonsContainer = document.querySelector(".auth-top-row");
-let tabsArray = document.querySelectorAll(".auth-tabs");
+let toTabButtonsArray = document.querySelectorAll(
+  ".authentication-block__to-tab-btn"
+);
+let toTabButtonsContainer = document.querySelector(
+  ".authentication-block__top-row"
+);
+let tabsArray = document.querySelectorAll(".authentication-tab");
 
 toTabButtonsContainer.addEventListener("click", function (e) {
   // sift buttons, separate background clicks
   if (e.target.hasAttribute("rel")) {
     toTabButtonsArray.forEach((toTabBtn) => {
-      toTabBtn.classList.remove("to-tab-btn_active");
+      toTabBtn.classList.remove("authentication-block__to-tab-btn_active");
     });
     tabsArray.forEach((tab) => {
-      tab.classList.remove("active-auth-tab");
+      tab.classList.remove("authentication-tab_active");
     });
 
-    e.target.classList.add("to-tab-btn_active");
+    e.target.classList.add("authentication-block__to-tab-btn_active");
 
     //e.target.getAttribute('rel') - button number
-    tabsArray[e.target.getAttribute("rel")].classList.add("active-auth-tab");
+    tabsArray[e.target.getAttribute("rel")].classList.add(
+      "authentication-tab_active"
+    );
   }
 });
 
 //////// FORMS
-let personSettingsForm = document.querySelector(".person-settings-form");
+let personSettingsForm = document.querySelector(".person-settings-block__form");
 let submitPersonSettings = personSettingsForm.submitSettings;
-let persSettingsFields = document.querySelectorAll(".settings-change-field");
+let persSettingsFields = document.querySelectorAll(
+  ".person-settings-block__field"
+);
 let persSettingsFieldWrappers = document.querySelectorAll(
-  ".settings-field-wrapper"
+  ".person-settings-block__field-wrapper"
 );
 
-let notifSettingsForm = document.querySelector(".notif-settings-form");
-let notifCheckboxesArr = document.querySelectorAll(".settings-checkbox");
+let notifSettingsForm = document.querySelector(".notif-settings-block__form");
+let notifCheckboxesArr = document.querySelectorAll(
+  ".notif-settings-block__checkbox"
+);
 let submitNotifSettings = notifSettingsForm.submitNotifications;
 
 function showNotice(className, innerHTML) {
@@ -68,8 +78,10 @@ function areRequiredFieldsFill() {
 
 personSettingsForm.addEventListener("input", () => {
   areRequiredFieldsFill()
-    ? submitPersonSettings.classList.add("active-submit-btn")
-    : submitPersonSettings.classList.remove("active-submit-btn");
+    ? submitPersonSettings.classList.add("tab-profile__submit-button_active")
+    : submitPersonSettings.classList.remove(
+        "tab-profile__submit-button_active"
+      );
 
   // submitPersonSettings.removeAttribute("disabled")
   // submitPersonSettings.setAttribute("disabled", "true")
@@ -77,10 +89,12 @@ personSettingsForm.addEventListener("input", () => {
 
 //active-class avaliability (from prev logic block) uses as check for submit-btn activation
 personSettingsForm.addEventListener("submit", (e) => {
-  if (submitPersonSettings.classList.contains("active-submit-btn")) {
+  if (
+    submitPersonSettings.classList.contains("tab-profile__submit-button_active")
+  ) {
     e.preventDefault();
     persSettingsFields.forEach((input) => (input.value = ""));
-    submitPersonSettings.classList.remove("active-submit-btn");
+    submitPersonSettings.classList.remove("tab-profile__submit-button_active");
     //prev 3 lines is nonsence/ just for imitaiton
 
     showNotice("submit-notice", "Saved");
@@ -195,10 +209,10 @@ notifSettingsForm.addEventListener("click", (event) => {
 
   if (areArraysTheSame(checksPositionsNow, checksPositionsOnLoad)) {
     submitNotifSettings.setAttribute("disabled", "true");
-    submitNotifSettings.classList.remove("active-submit-btn");
+    submitNotifSettings.classList.remove("tab-profile__submit-button_active");
   } else {
     submitNotifSettings.removeAttribute("disabled");
-    submitNotifSettings.classList.add("active-submit-btn");
+    submitNotifSettings.classList.add("tab-profile__submit-button_active");
   }
 });
 
@@ -209,6 +223,6 @@ notifSettingsForm.addEventListener("submit", (e) => {
     showNotice("submit-notice", "Saved");
   }
   submitNotifSettings.setAttribute("disabled", "true");
-  submitNotifSettings.classList.remove("active-submit-btn");
+  submitNotifSettings.classList.remove("tab-profile__submit-button_active");
   checksPositionsOnLoad = currentCheckboxesPositions(notifCheckboxesArr);
 });

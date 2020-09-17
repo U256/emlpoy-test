@@ -2,19 +2,16 @@
   padding-top: 0;
 }
 
-.auth-top-row {
-  position: relative;
-  z-index: 1;
+.authentication-block__top-row {
   display: flex;
   align-items: center;
   flex: 0 0 57px;
   width: 100%;
   margin-bottom: 24px;
   border-bottom: 1px solid #ddd;
-  //background-color: $soft-background;
 }
 
-.to-tab-btn {
+.authentication-block__to-tab-btn {
   height: 100%;
   margin-right: 30px;
   padding: 5px 12px;
@@ -40,8 +37,9 @@
   }
 }
 
-//all 3 tabs
-.auth-tabs {
+.authentication-tab {
+  //all 3 tabs
+  //auth-tabs
   position: absolute;
   z-index: -4;
   visibility: hidden;
@@ -58,7 +56,7 @@
   }
 }
 
-.active-auth-tab {
+.authentication-tab_active {
   position: relative;
   z-index: 5;
   visibility: visible;
@@ -67,38 +65,23 @@
   * {
     position: static;
     opacity: 1;
+    z-index: 1;
   }
 }
-
-.tab-profile {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-// .tab-account {
-// }
-// .tab-price-plans {
-// }
 
 /*
 	media
 */
-@media (max-width: 1500px) {
-  .tab-profile {
-    flex-direction: column;
-  }
-}
-
 @media (max-width: 991.98px) {
   .authentication-block {
-    padding-top: 40px;
+    padding-top: 50px;
   }
 
-  .auth-top-row {
+  .authentication-block__top-row {
     margin-bottom: 12px;
   }
 
-  .to-tab-btn {
+  .authentication-block__to-tab-btn {
     margin-right: 10px;
   }
 }

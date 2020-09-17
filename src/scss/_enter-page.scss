@@ -1,7 +1,7 @@
 .enter-page {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   color: $pale-text;
@@ -17,17 +17,16 @@
     box-shadow: 0 1px 3px rgba(63, 63, 68, 0.595), 0 0 0 rgba(63, 63, 68, 0.465);
   }
 
-  // contains start, login and registration steps
   &__main-column {
+    // contains start, login and registration steps
     flex: 0 0 487px;
     height: 100%;
     padding: 55px 63px;
   }
 
-  //unactive by default
   &__step {
+    //unactive by default
     display: none;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 100%;
@@ -37,6 +36,12 @@
       display: flex;
     }
   }
+
+  //&__start-step {}
+
+  //&__registration-step { }
+
+  //&__login-step {}
 
   &__top-row {
     //.enter-top-row
@@ -50,10 +55,10 @@
   }
 
   &__top-row button {
+    //back & switch buttons
     border-radius: 8px;
     transition: 0.1s;
     border: 2px solid transparent;
-    //back & switch buttons
     &:active {
       font-weight: 600;
       color: #000;
@@ -82,29 +87,26 @@
   }
   //contains switcher text & button
   &__switch-step-chunk {
-    //.switch-step
     font-size: 1.4rem;
   }
 
   // from 'in' to 'up' & vice versa
   &__switch-step-btn {
-    //.switch-btn
     padding: 6px;
     cursor: pointer;
     text-decoration: underline;
   }
 
   &__title {
-    //.enter-title
     margin-bottom: 5px;
     color: $dark-title-text;
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 28px;
+    padding-top: 10px;
   }
 
   &__subtitle {
-    //.enter-subtitle
     margin-bottom: 40px;
     font-size: 1.4rem;
     line-height: 20px;
@@ -112,12 +114,10 @@
 
   //forward-buttons in start block:
   &__to-login-step-btn {
-    //.to-login
     cursor: pointer;
   }
 
   &__to-registration-step-btn {
-    //.to-registration
     cursor: pointer;
     color: $inv-text;
     border: none;
@@ -141,33 +141,33 @@
   // .enter-page__field-wrapper{}
 
   &__field {
-    //.enter-page-field
     width: 100%;
     margin-bottom: 26px;
   }
+
+  //&__field-label {}
 
   &__checkbox-wrapper {
     margin-bottom: 24px;
   }
 
-  //&__terms-check {} //hidden
+  //&__terms-checkbox {} //hidden
 
   &__terms-check-label {
-    //.terms-check-text
     max-width: 75%;
-    margin-right: 4px;
   }
 
-  //terms and conditions
   &__to-terms-link {
+    //terms and conditions
     color: #5b5c5d;
-    font-size: 14px;
+    font-size: 16px;
+    padding: 2px 2px 0 2px;
     line-height: 20px;
     vertical-align: top;
 
     &:focus,
     &:hover {
-      border: 2px solid $enter-accent;
+      border-color: $enter-accent;
     }
   }
 
@@ -181,8 +181,8 @@
     cursor: pointer;
   }
 
-  //// contains image and citation
   &__decoration-column {
+    // contains image and citation
     position: relative;
     z-index: 2;
     display: flex;
@@ -229,7 +229,10 @@
 	media
 */
 @media (max-width: 991.98px) {
-  // .enter-page__title {  }
+  .enter-page__step {
+    align-items: center;
+  }
+
   .enter-page__subtitle {
     margin-bottom: 15px;
   }
@@ -267,5 +270,13 @@
     padding: 6px 10px 6px 23px;
     background: url(../images/icons/toleft-arrow.png) left 4px center/14px 10px
       no-repeat;
+  }
+
+  .enter-page__terms-check-label {
+    margin-bottom: 5px;
+  }
+
+  .enter-page__to-terms-link {
+    margin-left: 22px;
   }
 }

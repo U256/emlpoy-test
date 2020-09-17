@@ -1,139 +1,141 @@
-<section class="prim-blocks authentication-block active-prim-block">
-  <div class="auth-top-row">
-    <button rel="0" type="button" class="clean-btn to-tab-btn to-tab-btn_active">
+<section class="prim-block authentication-block prim-block_active">
+  <div class="authentication-block__top-row">
+    <button rel="0" type="button"
+      class="clean-btn authentication-block__to-tab-btn authentication-block__to-tab-btn_active">
       Profile
     </button>
-    <button rel="1" type="button" class="clean-btn to-tab-btn">Account</button>
-    <button rel="2" type="button" class="clean-btn to-tab-btn">
+    <button rel="1" type="button" class="clean-btn authentication-block__to-tab-btn">Account</button>
+    <button rel="2" type="button" class="clean-btn authentication-block__to-tab-btn">
       Price Plans
     </button>
   </div>
 
-  <div class="auth-tabs tab-profile active-auth-tab">
-    <div class="soft-bd ava-change">
-      <div class="ava-change__top-row">
-        <div class="ava-change__info">
-          <div class="ava-person-name">--</div>
-          <div class="ava-location">--</div>
+  <div class="authentication-tab tab-profile authentication-tab_active">
+    <div class="soft-bd avatar-change-block tab-profile__avatar-change-block">
+      <div class="avatar-change-block__top-row">
+        <div class="avatar-change-block__info-column">
+          <h1 class="avatar-change-block__person-name">Person name</h1>
+          <h2 class="avatar-change-block__location">Person location</h2>
+          <h2 class="avatar-change-block__time">Person time</h2>
         </div>
-        <div class="ava-change__new-ava">
+        <div class="avatar-change-block__avatar-column">
           <picture>
             <source srcset="images/nev-ava.webp" type="image/webp" />
-            <img src="images/nev-ava.png" alt="new uploaded avatar" />
+            <img class="avatar-change-block__new-image" src="images/nev-ava.webp" alt="new uploaded avatar" />
           </picture>
         </div>
       </div>
-      <div class="ava-change__bt-row">
-        <button type="submit" class="clean-btn ava-buttons ava-upload">
-          Upload
-        </button>
-        <button type="submit" class="clean-btn ava-buttons ava-remove">
-          Remove
-        </button>
+      <div class="avatar-change-block__bottom-row">
+        <button type="submit"
+          class="clean-btn avatar-change-block__button avatar-change-block__upload-button">Upload</button>
+        <button type="submit"
+          class="clean-btn avatar-change-block__button avatar-change-block__remove-button">Remove</button>
       </div>
     </div>
-    <div class="data-change">
-      <div class="soft-bd settings-blocks person-settings">
-        <div class="settings-top-rows">
-          <span class="settings-title">Basic Profile</span>
-          <span class="settings-top-info">The information can be edited from your profile page</span>
+    <div class="tab-profile__settings-wrapper">
+      <div class="soft-bd tab-profile__settings-block person-settings-block">
+        <div class="tab-profile__settings-top-row">
+          <span class="tab-profile__settings-title">Basic Profile</span>
+          <span class="tab-profile__settings-top-info">The information can be edited from your profile page</span>
         </div>
 
-        <form class="prim-form settings-forms person-settings-form" method="GET" action="#" method="post">
-          <div class="field-wrapper settings-field-wrapper wrapper-name">
-            <input class="prim-field settings-change-field" type="name" name="nameOfPerson" placeholder="First Name"
-              id="setting1" />
-            <label for="setting1">Name</label>
+        <form class="tab-profile__settings-form person-settings-block__form" action="#" method="post">
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="name" name="nameOfPerson"
+              placeholder="First Name" id="setting1" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting1">Name</label>
           </div>
-          <div class="field-wrapper settings-field-wrapper wrapper-last-name">
-            <input class="prim-field settings-change-field" type="name" name="surnameOfPerson" placeholder="Last Name"
-              id="setting2" />
-            <label for="setting2">Last Name</label>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="name" name="nameOfPerson"
+              placeholder="Last Name" id="setting2" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting2">Last Name</label>
           </div>
-          <div class="field-wrapper settings-field-wrapper wrapper-email">
-            <input class="prim-field settings-change-field" type="text" name="email" value="" placeholder="Email"
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="email" value="" placeholder="Email"
               id="setting3" />
-            <label for="setting3">Email</label>
+            <label class="prim-field-label person-settings-block__field-label" for="setting3">Email</label>
           </div>
-          <div class="field-wrapper settings-field-wrapper wrapper-number">
-            <input class="prim-field settings-change-field" type="text" name="number" placeholder="Phone number"
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="number" placeholder="Phone number"
               id="setting4" />
-            <label for="setting4">Phone number</label>
+            <label class="prim-field-label person-settings-block__field-label" for="setting4">Phone number</label>
           </div>
-          <div class="field-wrapper settings-field-wrapper wrapper-country">
-            <input class="prim-field settings-change-field" type="text" name="country" maxlength="38"
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="country" maxlength="38"
               placeholder="Country" id="setting5" />
-            <label for="setting5">Country</label>
+            <label class="prim-field-label person-settings-block__field-label" for="setting5">Country</label>
           </div>
-          <div class="field-wrapper settings-field-wrapper wrapper-city">
-            <input class="prim-field settings-change-field" type="text" name="city" maxlength="38" placeholder="City"
-              id="setting6" />
-            <label for="setting6">City</label>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="city" maxlength="38"
+              placeholder="City" id="setting6" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting6">City</label>
           </div>
-          <input class="forward-btn submit-setings-btns submit-profile-settings" type="submit" name="submitSettings"
-            value="SAVE SETTINGS" />
+          <input class="prim-submit tab-profile__submit-button submit-person-settings" type="submit"
+            name="submitSettings" value="SAVE SETTINGS" />
         </form>
       </div>
-      <div class="soft-bd settings-blocks notif-settings">
-        <div class="settings-top-rows">
-          <span class="settings-title">Notifications</span>
-          <span class="settings-top-info">Mange the notifications emailing page</span>
+      <div class="soft-bd tab-profile__settings-block notif-settings-block">
+        <div class="tab-profile__settings-top-row">
+          <span class="tab-profile__settings-title">Notifications</span>
+          <span class="tab-profile__settings-top-info">Mange the notifications emailing page</span>
         </div>
 
-        <form class="prim-form settings-forms notif-settings-form" action="#" method="post">
-          <div class="notif-settings-form__notifications">
-            <div class="settings-column-title">Notifications</div>
-            <div class="field-wrapper prim-checkbox-wrapper">
-              <input id="check0" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox1"
+        <form class="tab-profile__settings-form notif-settings-block__form" action="#" method="post">
+          <div class="notif-settings-block__form-left-column">
+            <div class="notif-settings-block__form-column-title">Notifications</div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check0" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox1"
                 value="email-setting-checkbox" />
-              <label class="prim-checkbox-label settings-checkbox-text" for="check0">Email</label>
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check0">Email</label>
             </div>
-            <div class="field-wrapper prim-checkbox-wrapper">
-              <input id="check1" checked class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox2"
-                value="pushes-setting-checkbox" />
-              <label class="prim-checkbox-label settings-checkbox-text" for="check1">Push notifications</label>
+            <div class="prim-checkbox-wrapper">
+              <input id="check1" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox2" value="pushes-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check1">Push
+                notifications</label>
             </div>
-            <div class="field-wrapper prim-checkbox-wrapper">
-              <input id="check2" checked class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox3"
-                value="messages-setting-checkbox" />
-              <label class="prim-checkbox-label settings-checkbox-text" for="check2">Text messages</label>
+            <div class="prim-checkbox-wrapper">
+              <input id="check2" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox3" value="messages-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check2">Text messages</label>
             </div>
-            <div class="field-wrapper prim-checkbox-wrapper">
-              <input id="check3" checked class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox4"
-                value="calls-setting-checkbox" />
-              <label class="prim-checkbox-label settings-checkbox-text" for="check3">Phone Calls</label>
+            <div class="prim-checkbox-wrapper">
+              <input id="check3" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox4" value="calls-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check3">Phone Calls</label>
             </div>
           </div>
-          <div class="notif-settings-form__messages">
-            <div class="settings-column-title">Messages</div>
-            <div class="field-wrapper prim-checkbox-wrapper">
-              <input id="check4" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox5"
+          <div class="notif-settings-block__form-right-column">
+            <div class="notif-settings-block__form-column-title">Messages</div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check4" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox5"
                 value="email-setting-checkbox" />
-              <label class="prim-checkbox-label settings-checkbox-text" for="check4">Email</label>
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check4">Email</label>
             </div>
-            <div class="field-wrapper prim-checkbox-wrapper">
-              <input id="check5" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox6"
+            <div class="prim-checkbox-wrapper">
+              <input id="check5" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox6"
                 value="pushes-setting-checkbox" />
-              <label class="prim-checkbox-label settings-checkbox-text" for="check5">Push notifications</label>
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check5">Push
+                notifications</label>
             </div>
-            <div class="field-wrapper prim-checkbox-wrapper">
-              <input id="check6" class="prim-checkbox settings-checkbox" type="checkbox" name="checkbox7"
+            <div class="prim-checkbox-wrapper">
+              <input id="check6" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox7"
                 value="messages-setting-checkbox" disabled />
-              <label class="prim-checkbox-label settings-checkbox-text" for="check6">Text messages</label>
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check6">Text messages</label>
             </div>
           </div>
-          <input disabled class="forward-btn submit-setings-btns submit-notif-settings" type="submit"
+          <input class="prim-submit tab-profile__submit-button submit-notif-settings" type="submit"
             name="submitNotifications" value="SAVE" />
         </form>
       </div>
     </div>
   </div>
-  <div style="font-size: 30px" class="auth-tabs tab-account">
+  <div class="authentication-tab tab-account">
     Account tab
     <br />Lorem ipsum <br />
     dolor sit amet.
   </div>
-  <div style="font-size: 30px" class="auth-tabs tab-price-plans">
+  <div class="authentication-tab tab-price-plans">
     Price Plans
     <br />Lorem ipsum <br />
     dolor sit amet.

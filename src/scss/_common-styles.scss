@@ -24,7 +24,7 @@ main {
   border: 1px solid rgba(63, 63, 68, 0);
   border-radius: 4px;
   background-color: $clean-bg;
-  box-shadow: 0 1px 3px rgba(63, 63, 68, 0.15), 0 1px 0 rgba(63, 63, 68, 0.05);
+  box-shadow: 0 1px 3px rgba(63, 63, 68, 0.45);
 }
 
 .flex-col {
@@ -49,7 +49,7 @@ main {
   background-color: $soft-background;
 }
 
-.prim-blocks {
+.prim-block {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -74,26 +74,49 @@ main {
   }
 }
 
-.active-prim-block {
+.prim-block_active {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   visibility: visible;
   transition: 0.4s;
   opacity: 1;
 
   * {
     position: static;
+    z-index: 1;
+  }
+}
+
+.user-logo {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $enter-accent;
+  transition: 0.1s;
+
+  &:active {
+    width: 104px;
+    height: 104px;
+  }
+
+  &:focus {
+    border: 2px solid $sec-highlight-text;
+  }
+  &:hover {
+    border: 2px solid $sec-highlight-text;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
   }
 }
 
 .prim-link {
   display: inline;
   white-space: nowrap;
-  text-decoration: none;
   color: $inv-text;
   outline: none;
   border-radius: 5px;
   border: 2px solid transparent;
+  cursor: pointer;
 
   &:active {
     font-weight: 600;
@@ -111,7 +134,6 @@ main {
 }
 
 .prim-field-wrapper {
-  //field-wrappers
   position: relative;
 }
 
@@ -120,20 +142,44 @@ main {
   width: 50%;
   height: 50px;
   padding: 13px 16px;
-  letter-spacing: 0.15px;
   border: 2px solid #adadad;
   border-radius: 5px;
   outline: none;
   font-size: 16px;
 
-  &:hover {
-    border: 3px solid $enter-accent;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
   &:focus {
+    border: 2px solid $enter-accent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     background-color: $input-focus;
   }
+
+  &:hover {
+    border: 3px solid $enter-accent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: $input-focus;
+  }
+}
+
+.prim-field-label {
+  display: none;
+  position: absolute;
+  outline: none;
+  padding: 0 5px;
+  height: 16px;
+  background-color: $clean-bg;
+  letter-spacing: 0.08rem;
+  z-index: 5;
+  height: fit-content;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  color: #0a4db3;
+  left: 10px !important;
+  top: -7px !important;
+}
+
+.prim-field:hover + label,
+.prim-field:focus + label {
+  display: block;
 }
 
 //checkboxes isn't customisible so it's hidden
@@ -148,16 +194,16 @@ main {
 }
 
 .prim-checkbox-label {
-  //.prim-checkbox-texts
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
   font-size: 16px;
   line-height: 20px;
   user-select: none;
 }
 
-//fake checkbox
 .prim-checkbox-label:before {
+  //fake checkbox
   content: "";
   display: inline-block;
   width: 18px;
@@ -184,10 +230,8 @@ main {
 }
 
 .prim-checkbox:focus + label:before {
-  margin-right: 6px;
-  width: 22px;
-  height: 22px;
-  border: 3px solid lightskyblue;
+  outline: 2px dotted $enter-accent;
+  outline-offset: 1px;
 }
 
 // checkbox on hover
@@ -196,11 +240,8 @@ main {
 }
 
 .prim-checkbox:not(:disabled) + label:hover:before {
-  margin-right: 6px;
-  width: 22px;
-  height: 22px;
-  border: 4px solid lightskyblue;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid lightskyblue;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 // checkbox disabled
@@ -215,12 +256,13 @@ main {
 }
 
 .prim-checkbox-wrapper {
+  position: relative;
   // display: flex;
   // align-items: center;
 }
 
 // "submit", to-login, to-signin, to-registration buttons
-.forward-btn {
+.prim-submit {
   position: relative;
   top: 0;
   left: 0;
@@ -247,13 +289,14 @@ main {
   &:focus {
     border: 2px solid $enter-accent;
     background-color: $input-focus;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    outline: 2px dotted $enter-accent;
+    outline-offset: 1px;
   }
 
   &:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid $enter-accent;
     background-color: $input-focus;
-    border: 4px solid $enter-accent;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -263,12 +306,12 @@ main {
   z-index: 20;
   top: 75px;
   right: 0;
-  padding: 10px 20px;
+  padding: 14px 24px;
   color: green;
   border: 2px solid green;
   border-right: none;
   border-radius: 11px 0 0 11px;
-  background-color: $clean-bg;
+  background-color: $input-focus;
   font-size: 2.5rem;
   line-height: 3rem;
 }
@@ -284,7 +327,7 @@ main {
   border: 2px solid red;
   border-right: none;
   border-radius: 11px 0 0 11px;
-  background-color: $clean-bg;
+  background-color: $input-focus;
   font-size: 2.2rem;
   line-height: 2.6rem;
 }

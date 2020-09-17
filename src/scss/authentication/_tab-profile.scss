@@ -1,188 +1,214 @@
-//.tab-profile itself in _authentification-block
-.ava-change {
-  position: relative;
-  z-index: 1;
+//part of _authentication-block.scss
+.tab-profile {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 375px;
-  height: 249px;
-  margin-bottom: 12px;
+  flex-wrap: wrap;
 
-  //contains info & new-ava
-  &__top-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 24px;
+  &__avatar-change-block {
+    margin-bottom: 12px;
   }
 
-  &__bt-row {
+  &__settings-wrapper {
+    //contaions person & notif settings
+    cursor: default;
+    flex: 1 1 auto;
+    max-width: 910px;
+  }
+
+  &__settings-block {
+    //person-settings & notif-settings blocks
+    position: relative;
+    margin-bottom: 12px;
+
+    &:hover {
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    &::after {
+      // Линия перед submit. Иначе придётся делать отступ всем элементам ради border
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      content: "";
+      background-color: $soft-border;
+    }
+  }
+
+  &__settings-top-row {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 60px;
-    border-top: 1px solid $pale-text;
-  }
-}
-
-//.ava-change__top-row
-.ava-change__info {
-  flex: 0 0 50%;
-  height: 100%;
-}
-
-.ava-person-name {
-  color: $dark-title-text;
-  font-size: 2.4rem;
-  font-weight: 500;
-  line-height: 2.8rem;
-}
-
-.ava-location {
-  text-transform: uppercase;
-  color: $pale-text;
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-
-.ava-change__new-ava {
-  flex: 0 0 50%;
-  height: 100%;
-
-  img {
-    width: 95%;
-    height: 95%;
-  }
-}
-
-// .ava-change__bt-row - 2buttons
-.ava-buttons {
-  min-width: 120px;
-  height: 4rem;
-  padding: 0 16px;
-  cursor: pointer;
-  text-transform: uppercase;
-  border-radius: 5px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.6rem;
-
-  &:hover {
+    padding: 20px 0;
+    border-bottom: 1px solid $soft-border;
   }
 
-  &:focus {
-  }
-
-  &:active {
-  }
-}
-
-.ava-upload {
-  color: $prim-highlight-text;
-}
-
-// .ava-remove {}
-
-//column with person & notif settings
-.data-change {
-  cursor: default;
-  flex: 1 1 auto;
-  max-width: 910px;
-}
-
-//person-settings & notif-settings blocks
-.settings-blocks {
-  position: relative;
-  margin-bottom: 12px;
-
-  &::after {
-    position: absolute;
-    bottom: 70px;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 1px;
-    content: "";
-    background-color: $soft-border;
-  }
-}
-
-.settings-top-rows {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid $soft-border;
-
-  .settings-title {
+  &__settings-title {
     margin: 0 16px 0 24px;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
   }
 
-  .settings-top-info {
+  &__settings-top-info {
     color: $footnote;
     font-size: 16px;
     font-weight: 300;
   }
+
+  &__settings-form {
+    width: 65vw;
+    max-width: 730px;
+    padding: 24px 24px 0 24px;
+  }
+
+  &__submit-button {
+    display: block;
+    margin-bottom: 16px;
+    padding: 8px;
+    color: $prim-highlight-text;
+    border: 1px solid $pale-text;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      // to prevent "active" look for unactive submit buttons
+      border: 2px solid $pale-text;
+      box-shadow: none;
+    }
+  }
 }
 
-.settings-forms {
-  width: 65vw;
-  max-width: 730px;
-  padding: 24px 24px 0 24px;
-}
+.avatar-change-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 375px;
+  height: 249px;
 
-.settings-field-wrapper {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  width: 44%;
-  min-width: 250px;
-  margin: 0 24px 24px 0;
-}
+  &:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
 
-.settings-change-field {
-  width: 100%;
-  min-width: 240px;
-  height: 5.6rem;
-}
+  &__top-row {
+    //contains info & new-ava
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px;
+  }
 
-//"submit" in both settings blocks
-.submit-setings-btns {
-  position: relative;
-  z-index: 5;
-  display: block;
-  margin-bottom: 16px;
-  padding: 8px;
-  color: $prim-highlight-text;
-  border: 1px solid $pale-text;
-  outline: none;
-}
+  &__info-column {
+    color: $dark-title-text;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    flex: 0 0 50%;
+    height: 100%;
+  }
 
-// .person-settings {}
-.submit-profile-settings {
-  width: 152px;
-  margin-top: 20px;
-}
-
-// .notif-settings {}
-.notif-settings-form {
-  // display: block;
-  // margin: 0;
-
-  //titles of columns
-  .settings-column-title {
-    margin-bottom: 20px;
-    font-size: 16px;
+  &__person-name {
     font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+
+  &__location,
+  &__time {
+    color: $pale-text;
+    font-size: 1.4rem;
     line-height: 2rem;
   }
 
-  &__notifications {
+  &__avatar-column {
+    flex: 0 0 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  //&__new-image {}
+
+  &__bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    border-top: 2px solid #ebedf0;
+  }
+
+  &__button {
+    min-width: 120px;
+    height: 4rem;
+    padding: 0 16px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    transition: font-size 0.2s;
+
+    &:active {
+      font-size: 1.5rem;
+    }
+
+    &:focus {
+      border: 1px solid $prim-highlight-text;
+    }
+
+    &:hover {
+      border: 2px solid $prim-highlight-text;
+      text-decoration: underline;
+    }
+  }
+
+  &__upload-button {
+    color: $prim-highlight-text;
+  }
+
+  // &__remove-button {}
+}
+
+.person-settings-block {
+  //&__form {}
+
+  &__field-wrapper {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 44%;
+    min-width: 250px;
+    margin: 0 24px 24px 0;
+  }
+
+  &__field {
+    width: 100%;
+    min-width: 240px;
+    height: 5.6rem;
+  }
+
+  &__field-label {
+    position: absolute;
+  }
+}
+
+.submit-person-settings {
+  width: 152px;
+  margin-top: 20px;
+
+  &:active {
+    font-size: 14px;
+  }
+}
+
+.notif-settings-block {
+  //&__form {
+  // display: block;
+  // margin: 0;
+  //}
+
+  &__form-left-column {
     position: relative;
     z-index: 100;
     display: inline-block;
@@ -190,17 +216,23 @@
     margin-bottom: 15px;
   }
 
-  &__messages {
+  &__form-right-column {
     display: inline-block;
     vertical-align: top;
   }
-}
 
-//.settings-checkbox {}
+  &__form-column-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2rem;
+  }
 
-.settings-checkbox-text {
-  cursor: pointer;
-  margin-bottom: 24px;
+  //&__checkbox {}
+
+  &__checkbox-label {
+    margin-bottom: 24px;
+  }
 }
 
 .submit-notif-settings {
@@ -208,11 +240,21 @@
 }
 
 ///activate submit button on change
-.active-submit-btn {
+.tab-profile__submit-button_active {
   cursor: pointer;
   color: $inv-text;
   background-color: $prim-highlight-text;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  &:hover,
+  &:focus {
+    background-color: $sec-highlight-text;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  &:hover {
+    border: 2px solid $enter-accent;
+  }
 }
 
 //hint in input form
@@ -250,49 +292,55 @@
 /*
 	media
 */
-@media (min-width: 1500px) {
-  .ava-change {
+@media (max-width: 1500px) {
+  .tab-profile {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tab-profile__avatar-change-block {
     margin-right: 24px;
   }
 }
 
 @media (max-width: 1199.98px) {
-  .settings-field-wrapper {
+  .person-settings-block__field-wrapper {
     margin: 0 12px 17px 0;
     // width: 47%;
   }
 }
 
 @media (max-width: 991.98px) {
-  .ava-buttons {
+  .avatar-change-block__button {
     min-width: 90px;
     padding: 0 10px;
   }
 
-  .settings-top-rows {
+  .tab-profile__settings-top-row {
     padding: 12px 0;
   }
 
-  .settings-top-rows .settings-title {
+  .tab-profile__settings-title {
     margin-left: 12px;
   }
 
-  .settings-top-rows .settings-top-info {
+  .tab-profile__settings-top-info {
     display: none;
   }
 
-  .settings-forms {
+  .tab-profile__settings-form {
     min-width: 90vw;
     padding: 18px 12px 0 12px;
   }
 }
 
 @media (max-width: 757.98px) {
-  .ava-change {
+  .tab-profile__avatar-change-block {
     align-self: center;
   }
 
-  .settings-forms {
+  .tab-profile__settings-form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -300,7 +348,7 @@
     margin: 0 auto;
   }
 
-  .notif-settings-form__notifications {
+  .notif-settings-block__form-left-column {
     margin-right: 0;
   }
 
@@ -310,8 +358,17 @@
 }
 
 @media (max-width: 575.98px) {
-  .ava-change {
+  .avatar-change-block__new-image {
+    width: 95%;
+    height: 95%;
+  }
+
+  .tab-profile__avatar-change-block {
     width: 290px;
     height: 220px;
+  }
+
+  .avatar-change-block__top-row {
+    padding: 18px 12px;
   }
 }

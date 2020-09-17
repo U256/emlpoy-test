@@ -16,17 +16,36 @@
     right: -130px;
     width: 130px;
     height: 38px;
-    padding: 6px;
+    padding: 5px;
     cursor: pointer;
     text-align: center;
-    letter-spacing: 0.6px;
-    opacity: 0.7;
-    border: 1px solid $sec-highlight-text;
+    letter-spacing: 1.3px;
+    border: 1px solid $prim-highlight-text;
     border-left: none;
     border-radius: 0 18px 18px 0;
     background-color: $clean-bg;
     font-size: 22px;
-    font-weight: 500;
+    transition: 0.2s cubic-bezier(0.28, 0.62, 0.65, 1.64) 0s;
+
+    &:active {
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+
+    &:hover {
+      background-color: $input-focus;
+      color: $enter-accent;
+      border-width: 2px;
+      width: 140px;
+      right: -140px;
+    }
+
+    &:focus {
+      color: $enter-accent;
+      background-color: $input-focus;
+      outline: 1px dotted $sec-highlight-text;
+      outline-offset: 2px;
+    }
   }
 
   &__user-chunk {
@@ -40,6 +59,10 @@
 
   &__user-logo {
     margin-bottom: 15px;
+
+    &:active {
+      margin-bottom: 11px;
+    }
   }
 
   &__about-user {
@@ -70,14 +93,14 @@
 
   &__button {
     display: block;
-    width: 97%;
+    width: 100%;
     height: 46px;
-    margin: 6px 0;
-    padding: 0 0 6px 48px;
+    margin: 0 0 6px 0;
+    padding-left: 48px;
     cursor: pointer;
     text-align: left;
     color: $footnote;
-    border: 1px solid rgba(255, 255, 255, 0);
+    border: 1px solid $clean-bg;
     border-left-width: 4px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -85,19 +108,24 @@
     transition: font-size 0.2s;
     background-color: $clean-bg;
     background-position: left 9px center;
-    background-size: 24px 24px;
+    background-size: 24px;
     background-repeat: no-repeat;
 
-    &:hover,
-    &:focus {
+    &:active {
+      font-size: 1.5rem;
+    }
+
+    &:not(:disabled):hover {
       background-color: $soft-background;
       border-bottom-color: #a6b2c3;
       border-top-color: #a6b2c3;
       color: $small-title-text;
     }
 
-    &:active {
-      font-size: 1.5rem;
+    &:focus {
+      background-color: $soft-background;
+      outline: 1px solid #a6b2c3;
+      outline-offset: 2px;
     }
 
     &:disabled {
@@ -185,18 +213,6 @@
   background-image: url("../images/icons/left-panel/toblock-btn-icon-5_active.svg");
 }
 
-.user-logo {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: $enter-accent;
-
-  &:hover {
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-  }
-}
-
 /*
 	media
 */
@@ -238,11 +254,6 @@
     height: 41px;
     margin: 3px 0 3px 3px;
   }
-
-  .toblock-btn img {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -251,5 +262,10 @@
     width: 80px;
     padding-top: 9px;
     font-size: 17px;
+
+    &:hover {
+      width: 90px;
+      right: -90px;
+    }
   }
 }
