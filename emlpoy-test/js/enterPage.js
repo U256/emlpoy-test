@@ -29,22 +29,19 @@ document
     toggleVisibility(registrationStep);
   });
 
-// back from registration/login  to start step buttons
-function backToStartStep() {
-  toggleVisibility(startStep);
-  hideVisibility(registrationStep);
-  hideVisibility(loginStep);
-}
-document
-  .querySelectorAll(".enter-page__back-btn")
-  .forEach((backBtn) => backBtn.addEventListener("click", backToStartStep));
-
-// from 'in' to 'up' & vice versa
-let switchStepButtons = document.querySelectorAll(
-  ".enter-page__switch-step-btn"
+// back from registration/login to start step
+document.
+  querySelectorAll(".enter-page__back-btn").forEach((backBtn) =>
+  backBtn.addEventListener("click", () => {
+    toggleVisibility(startStep);
+    hideVisibility(registrationStep);
+    hideVisibility(loginStep);
+  })
 );
 
-switchStepButtons.forEach((element) => {
+// from 'in' to 'up' & vice versa
+document.
+  querySelectorAll(".enter-page__switch-step-btn").forEach((element) => {
   element.addEventListener("click", (e) => {
     e.preventDefault;
     toggleVisibility(registrationStep);
