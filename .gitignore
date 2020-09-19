@@ -2,7 +2,7 @@
 src
 package.json
 package-lock.json
-gulpfile
+gulpfile.js
 
 # Logs
 logs
