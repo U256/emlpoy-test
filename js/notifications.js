@@ -1,18 +1,20 @@
-'use strict'
+"use strict";
 
-let notificationsBell = document.querySelector('.notifications-btn');
-let notificationsX = document.querySelector('.close-bar__btn');
-let notificationsBar = document.querySelector('.notifications-bar');
+let notificationsBell = document.querySelector(".header__notifications-btn");
+let notificationsX = document.querySelector(".notifications-bar__close-btn");
+let notificationsBar = document.querySelector(".notifications-bar");
 
-notificationsBell.addEventListener('click', e => {
-	let isNotifBarOn = notificationsBar.classList.toggle('notifications-bar__active')
+notificationsBell.addEventListener("click", () => {
+  let isNotifBarOn = notificationsBar.classList.toggle(
+    "notifications-bar_active"
+  );
 
-	if (isNotifBarOn) {
-		setTimeout(() => {
-			notificationsBar.classList.remove('notifications-bar__active')
-		}, 6000)
-	}
-})
-notificationsX.addEventListener('click', e => {
-	notificationsBar.classList.remove('notifications-bar__active')
-})
+  if (isNotifBarOn) {
+    setTimeout(() => {
+      notificationsBar.classList.remove("notifications-bar_active");
+    }, 10000);
+  }
+});
+notificationsX.addEventListener("click", () => {
+  notificationsBar.classList.remove("notifications-bar_active");
+});

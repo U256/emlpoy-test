@@ -1,8 +1,8 @@
-'use strict'
+"use strict";
 
 //logout
-document.querySelector('.logout-btn').addEventListener('click', e => {
-  location.assign("enter-page.html")
+document.querySelector(".header__logout-btn").addEventListener("click", () => {
+  location.assign("enter-page.html");
 });
 
 
