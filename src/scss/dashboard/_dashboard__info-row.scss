@@ -1,4 +1,44 @@
 //all 4 units
+.info-block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  &__budget-unit {
+    background: $clean-bg url(../images/dashboard/info-row-1.svg) right 15px top
+      20px/64px 64px no-repeat;
+  }
+
+  &__users-unit {
+    background: $clean-bg url(../images/dashboard/info-row-2.svg) right 15px top
+      20px/64px 64px no-repeat;
+  }
+
+  &__progress-unit {
+    background: $clean-bg url(../images/dashboard/info-row-3.svg) right 15px top
+      20px/64px 64px no-repeat;
+  }
+
+  &__profit-unit {
+    background: $enter-accent url(../images/dashboard/info-row-4.svg) right 15px top
+      17px/64px 64px no-repeat;
+
+    .info-unit__title {
+      color: $clean-bg;
+    }
+
+    .info-unit__amount {
+      color: $clean-bg;
+    }
+
+    .info-unit__changes-row {
+      color: $clean-bg;
+    }
+  }
+}
+
 .info-unit {
   display: flex;
   flex: 0 1 23.5%;
@@ -30,46 +70,15 @@
     color: $footnote;
     font-size: 13px;
   }
+
+  // &__change-percent {}
+
+  // &__change-period {}
+
+  // &__change-line {
+  //    in progress unit
+  //}
 }
-
-.budget-unit {
-  background: $clean-bg url(../images/icons/info-row-1.svg) right 15px top 20px/64px
-    64px no-repeat;
-}
-
-.users-unit {
-  background: $clean-bg url(../images/icons/info-row-2.svg) right 15px top 20px/64px
-    64px no-repeat;
-}
-
-.progress-unit {
-  background: $clean-bg url(../images/icons/info-row-3.svg) right 15px top 20px/64px
-    64px no-repeat;
-}
-
-.profit-unit {
-  background: $enter-accent url(../images/icons/info-row-4.svg) right 15px top
-    17px/64px 64px no-repeat;
-
-  .info-unit__title {
-    color: $clean-bg;
-  }
-
-  .info-unit__amount {
-    color: $clean-bg;
-  }
-
-  .info-unit__changes-row {
-    color: $clean-bg;
-  }
-}
-
-//.info-unit__changes-row
-// .change-percent {}
-// .change-period {}
-
-//in progress unit
-// .change-line {}
 
 /*
 	media
@@ -79,11 +88,6 @@
     height: 130px;
     padding: 12px;
     background-position: right 10px top 10px !important;
-  }
-}
-
-@media (max-width: 1199.98px) and (min-width: 757.98px) {
-  .info-unit {
     background-size: 35px !important;
   }
 }

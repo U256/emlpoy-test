@@ -1,4 +1,5 @@
 "use strict";
+import { indexOfElem } from "./indexOfElement.js";
 
 document
   .querySelector(".left-panel__switcher")
@@ -13,7 +14,7 @@ let toBlockButtonsContainer = document.querySelector(
 );
 
 toBlockButtonsContainer.addEventListener("click", function (e) {
-  if (e.target.hasAttribute("rel")) {
+  if (e.target.hasAttribute("type")) {
     //avoid click between btns (clicking on background)
 
     toBlockButtonsArray.forEach((toBlockBtn) => {
@@ -24,12 +25,12 @@ toBlockButtonsContainer.addEventListener("click", function (e) {
       block.classList.remove("prim-block_active");
     });
 
-    //e.target.getAttribute("rel") - button and block number
-    let relNumber = e.target.getAttribute("rel");
+    //indexOfElem(e.target) - button and block number
+    let buttonIndex = indexOfElem(e.target);
 
-    toBlockButtonsArray[relNumber].classList.add("left-panel__button_active");
+    toBlockButtonsArray[buttonIndex].classList.add("left-panel__button_active");
 
-    blocksArray[relNumber].classList.add("prim-block_active");
+    blocksArray[buttonIndex].classList.add("prim-block_active");
   }
 
   //wrap left panel to the left after block switching

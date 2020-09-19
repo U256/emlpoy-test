@@ -14,16 +14,20 @@ let loginStep = document.querySelector(".enter-page__login-step");
 //let submitSignUp = document.querySelector('.submit-sign-up');
 
 //toLoginBtn
-document.querySelector(".enter-page__to-login-step-btn").addEventListener("click", () => {
-  toggleVisibility(startStep);
-  toggleVisibility(loginStep);
-});
+document
+  .querySelector(".enter-page__to-login-step-btn")
+  .addEventListener("click", () => {
+    toggleVisibility(startStep);
+    toggleVisibility(loginStep);
+  });
 
 //toRegistrationBtn
-document.querySelector(".enter-page__to-registration-step-btn").addEventListener("click", () => {
-  toggleVisibility(startStep);
-  toggleVisibility(registrationStep);
-});
+document
+  .querySelector(".enter-page__to-registration-step-btn")
+  .addEventListener("click", () => {
+    toggleVisibility(startStep);
+    toggleVisibility(registrationStep);
+  });
 
 // back from registration/login  to start step buttons
 function backToStartStep() {
@@ -36,7 +40,9 @@ document
   .forEach((backBtn) => backBtn.addEventListener("click", backToStartStep));
 
 // from 'in' to 'up' & vice versa
-let switchStepButtons = document.querySelectorAll(".enter-page__switch-step-btn");
+let switchStepButtons = document.querySelectorAll(
+  ".enter-page__switch-step-btn"
+);
 
 switchStepButtons.forEach((element) => {
   element.addEventListener("click", (e) => {
@@ -47,7 +53,9 @@ switchStepButtons.forEach((element) => {
 });
 
 // sighIn teleport to main site
-document.querySelector(".enter-page__submit-sign-in").addEventListener("click", (e) => {
-  e.preventDefault();
-  location.assign("index.html");
-});
+document
+  .querySelector(".enter-page__submit-sign-in")
+  .addEventListener("click", (e) => {
+    e.preventDefault();
+    location.assign("index.html");
+  });

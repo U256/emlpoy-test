@@ -36,7 +36,6 @@
       right: -140px;
       width: 140px;
       color: $enter-accent;
-      border-width: 2px;
       background-color: $input-focus;
     }
 
@@ -154,62 +153,62 @@
   }
 
   &__open-support-btn {
-    background-image: url("../images/icons/left-panel/support-btn-icon.svg");
+    background-image: url("../images/left-panel/support-btn-icon.svg");
   }
 }
 
 .left-panel__button-0 {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-0.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-0.svg");
 }
 
 .left-panel__button-0:not(:disabled):hover,
 .left-panel__button_active[rel="0"] {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-0_active.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-0_active.svg");
 }
 
 .left-panel__button-1 {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-1.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-1.svg");
 }
 
 .left-panel__button-1:not(:disabled):hover,
 .left-panel__button_active[rel="1"] {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-1_active.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-1_active.svg");
 }
 
 .left-panel__button-2 {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-2.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-2.svg");
 }
 
 .left-panel__button-2:not(:disabled):hover,
 .left-panel__button_active[rel="2"] {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-2_active.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-2_active.svg");
 }
 
 .left-panel__button-3 {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-3.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-3.svg");
 }
 
 .left-panel__button-3:not(:disabled):hover,
 .left-panel__button_active[rel="3"] {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-3_active.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-3_active.svg");
 }
 
 .left-panel__button-4 {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-4.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-4.svg");
 }
 
 .left-panel__button-4:not(:disabled):hover,
 .left-panel__button_active[rel="4"] {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-4_active.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-4_active.svg");
 }
 
 .left-panel__button-5 {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-5.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-5.svg");
 }
 
 .left-panel__button-5:not(:disabled):hover,
 .left-panel__button_active[rel="5"] {
-  background-image: url("../images/icons/left-panel/toblock-btn-icon-5_active.svg");
+  background-image: url("../images/left-panel/toblock-btn-icon-5_active.svg");
 }
 
 /*

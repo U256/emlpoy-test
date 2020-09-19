@@ -1,216 +1,215 @@
 <section class="prim-block dashboard-block">
-	<div class="dashboard-rows dashboard-block__info-row">
-		<div class="soft-bd info-unit budget-unit">
-			<div class="info-unit__title">Budget</div>
-			<div class="info-unit__amount">--</div>
-			<div class="info-unit__changes-row">
-				<span class="change-percent">%</span>
-				<span class="change-period">Since last month </span>
+	<h1>Information about Devias kit users, actions and operations</h1>
+	<div class="dashboard-block__row dashboard-block__info-row">
+		<div class="info-block">
+			<div class="soft-bd info-unit info-block__budget-unit">
+				<div class="info-unit__title">Budget</div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month </span>
+				</div>
 			</div>
-		</div>
-		<div class="soft-bd info-unit users-unit">
-			<div class="info-unit__title">Total users </div>
-			<div class="info-unit__amount">--</div>
-			<div class="info-unit__changes-row">
-				<div class="change-line"></div>
+			<div class="soft-bd info-unit info-block__users-unit">
+				<div class="info-unit__title">Total users </div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<div class="info-unit__change-line"></div>
+				</div>
 			</div>
-		</div>
-		<div class="soft-bd info-unit progress-unit">
-			<div class="info-unit__title">Progress</div>
-			<div class="info-unit__amount">--</div>
-			<div class="info-unit__changes-row">
-				<span class="change-percent">%</span>
-				<span class="change-period">Since last month</span>
+			<div class="soft-bd info-unit info-block__progress-unit">
+				<div class="info-unit__title">Progress</div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month</span>
+				</div>
 			</div>
-		</div>
-		<div class="soft-bd info-unit profit-unit">
-			<div class="info-unit__title">Total profit </div>
-			<div class="info-unit__amount">--</div>
-			<div class="info-unit__changes-row">
-				<span class="change-percent">%</span>
-				<span class="change-period">Since last month</span>
+			<div class="soft-bd info-unit info-block__profit-unit">
+				<div class="info-unit__title">Total profit </div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month</span>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="dashboard-rows dashboard-block__schedules-row">
-		<div class="soft-bd scedule-containers users-schedule">
-			<div class="fr-padding db-top-row users-schedule__top">
-				<div class="schedile-title">Users by device</div>
-				<select name="days-resize-selector">
+	<div class="dashboard-block__row dashboard-block__schedules-row">
+		<div class="soft-bd schedule-item users-schedule-item">
+			<div class="dashboard-block__item-top-row schedule-item__top-row">
+				<div class="dashboard-block__item-title">Users by device</div>
+				<select name="schedule-item__days-select">
 					<option>Last 7 days</option>
 					<option>Last 3 days</option>
 				</select>
 			</div>
-			<div class="users-schedule__schedule">
+			<div class="schedule-item__main-row users-schedule-item__schedule-row">
 				<!-- -->
 			</div>
-			<div class="softline">/</div>
-			<div class="db-bottom-row users-schedule__bottom">
-				<button type="submit" class="clean-btn bt-row-btn to-audience-btn">Audience Overview</button>
+			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Audience Overview</button>
 			</div>
 		</div>
-		<div class="soft-bd scedule-containers users-circle-comparer">
-			<div class="fr-padding db-top-row users-circle__top">
-				<div class="circle-title">Users by device</div>
-				<div class="circle-reload">O</div>
+		<div class="soft-bd schedule-item pie-chart-item">
+			<div class="dashboard-block__item-top-row schedule-item__top-row">
+				<div class="dashboard-block__item-title">Users by device</div>
+				<div class="pie-chart-item__pie-reload">O</div>
 			</div>
-			<div class="users-circle__circle">
+			<div class="schedule-item__main-row pie-chart-item__schedule-row">
 				<!-- -->
 			</div>
-			<div class="softline">/</div>
-			<div class="db-bottom-row users-circle__bottom">
-				<select name="days-selector">
+			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">
+				<select name="schedule-item__days-select">
 					<option>7 days</option>
 					<option>3 days</option>
 				</select>
-				<button type="submit" class="clean-btn bt-row-btn to-audience-btn">Audience Overview</button>
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Overview</button>
 			</div>
 		</div>
 	</div>
 
-	<div class="dashboard-rows dashboard-block__bottom-row">
-		<div class="soft-bd flex-col blocks-of-latest latest-products">
-			<div class=" fr-padding db-top-row latest-products__top">
-				<div class="latest-products-top-text">
-					<h4 class="latest-products-top-text__title">Latest Products</h4>
-					<div class="latest-products-top-text__count">5 in total</div>
-				</div>
+	<div class="dashboard-block__row dashboard-block__bottom-row">
+		<div class="soft-bd latest-item latest-products-item">
+			<div class="dashboard-block__item-top-row latest-item__top-row">
+				<h2 class="dashboard-block__item-title">Latest Products</h2>
+				<div class="latest-products-item__products-count">5 in total</div>
 			</div>
-			<div class="fr-padding latest-products__prod-items">
-				<div class="flex prod-item">
+			<div class="latest-item__main-row latest-products-item__main-row">
+				<div class="prod-item">
 					<div class="prod-item__logo prod-item__logo-1"></div>
-					<div class="prod-item__message">
-						<h4 class="prod-item-name">
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
 							Dropbox
-						</h4>
-						<div class="prod-item-update">
+						</h3>
+						<div class="prod-item__last-update">
 							Updated
 						</div>
 					</div>
-					<button type="button" class="clean-btn prod-item__toevent" aria-label="read more about product"></button>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
 				</div>
-				<div class="flex prod-item">
+				<div class="prod-item">
 					<div class="prod-item__logo prod-item__logo-2"></div>
-					<div class="prod-item__message">
-						<h4 class="prod-item-name">
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
 							Medium Corporation
-						</h4>
-						<div class="prod-item-update">
+						</h3>
+						<div class="prod-item__last-update">
 							Updated
 						</div>
 					</div>
-					<button type="button" class="clean-btn prod-item__toevent" aria-label="read more about product"></button>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
 				</div>
-				<div class="flex prod-item">
+				<div class="prod-item">
 					<div class="prod-item__logo prod-item__logo-3"></div>
-					<div class="prod-item__message">
-						<h4 class="prod-item-name">
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
 							GitHub
-						</h4>
-						<div class="prod-item-update">
+						</h3>
+						<div class="prod-item__last-update">
 							Updated
 						</div>
 					</div>
-					<button type="button" class="clean-btn prod-item__toevent" aria-label="read more about product"></button>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
 				</div>
-				<div class="flex prod-item">
+				<div class="prod-item">
 					<div class="prod-item__logo prod-item__logo-4"></div>
-					<div class="prod-item__message">
-						<h4 class="prod-item-name">
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
 							Slac
-						</h4>
-						<div class="prod-item-update">
+						</h3>
+						<div class="prod-item__last-update">
 							Updated
 						</div>
 					</div>
-					<button type="button" class="clean-btn prod-item__toevent" aria-label="read more about product"></button>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
 				</div>
 			</div>
-			<div class="softline">/</div>
-			<div class="db-bottom-row latest-products__bottom">
-				<button type="submit" class="clean-btn bt-row-btn to-products-btn">View all</button>
+			<div class="dashboard-block__item-bottom-row latest-products-item__bottom-row">
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">View all</button>
 			</div>
 		</div>
-		<div class="soft-bd blocks-of-latest latest-orders">
-			<div class=" fr-padding db-top-row latest-orders__top-row">
-				<div class="l-orders-title">Latest Orders</div>
-				<div class="l-orders-total">total</div>
-				<!-- выпадайка -->
-				<button type="submit" class="clean-btn l-orders-create-entry">new entry</button>
+		<div class="soft-bd latest-item latest-orders-item">
+			<div class="dashboard-block__item-top-row latest-item__top-row">
+				<div class="dashboard-block__item-title">Latest Orders</div>
+				<div class="latest-orders-item__total-count">total</div>
+				<!--  -->
+				<button type="submit" class="clean-btn latest-orders-item__create-entry-btn">new entry</button>
 			</div>
-			<div class="latest-orders__table-row">
-				<table class="l-orders-table">
+			<div class="latest-item__main-row latest-orders-item__main-row">
+				<table class="orders-table">
 					<thead>
 						<tr>
-							<th class="order-id">Order ID</th>
-							<th class="order-customer">Customer</th>
+							<th class="orders-table__id-col">Order ID</th>
+							<th class="orders-table__customer-col">Customer</th>
 							<th>Date</th>
 							<th>Status</th>
-							<th class="order-actions">Actions</th>
+							<th class="orders-table__actions-col">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr class="l-orders-tr-0">
-							<th class="order-id">--</th>
-							<th class="order-customer">--</th>
+							<th class="orders-table__id-col">--</th>
+							<th class="orders-table__customer-col">--</th>
 							<th>--</th>
 							<th>-</th>
-							<th class="order-actions">--</th>
+							<th class="orders-table__actions-col">--</th>
 						</tr>
 						<tr class="l-orders-tr-1">
-							<th class="order-id"></th>
-							<th class="order-customer"></th>
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
 							<th></th>
 							<th></th>
-							<th class="order-actions"></th>
+							<th class="orders-table__actions-col"></th>
 						</tr>
 						<tr class="l-orders-tr-2">
-							<th class="order-id"></th>
-							<th class="order-customer"></th>
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
 							<th></th>
 							<th></th>
-							<th class="order-actions"></th>
+							<th class="orders-table__actions-col"></th>
 						</tr>
 						<tr class="l-orders-tr-3">
-							<th class="order-id"></th>
-							<th class="order-customer"></th>
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
 							<th></th>
 							<th></th>
-							<th class="order-actions"></th>
+							<th class="orders-table__actions-col"></th>
 						</tr>
 						<tr class="l-orders-tr-4">
-							<th class="order-id"></th>
-							<th class="order-customer"></th>
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
 							<th></th>
 							<th></th>
-							<th class="order-actions"></th>
+							<th class="orders-table__actions-col"></th>
 						</tr>
 						<tr class="l-orders-tr-5">
-							<th class="order-id"></th>
-							<th class="order-customer"></th>
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
 							<th></th>
 							<th></th>
-							<th class="order-actions"></th>
+							<th class="orders-table__actions-col"></th>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="fr-padding latest-orders__bt-row">
-				<span class="l-orders-content-resize">
+			<div class="latest-orders-item__bottom-row">
+				<span class="latest-orders-item__content-resize">
 					Rows per-page:
-					<select name="rows-resize-selector">
+					<select name="latest-orders-item__resize-select">
 						<option>5</option>
 						<option>10</option>
 					</select>
 				</span>
-				<span class="l-orders-table-page">1-10 of --</span>
-				<button type="submit" class="clean-btn l-orders-switches l-orders-prew-page" aria-label="previous orders"></button>
-				<button type="submit" class="clean-btn l-orders-switches l-orders-next-page" aria-label="next orders"></button>
+				<span class="latest-orders-item__table-page">1-10 of --</span>
+				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-prew-page"
+					aria-label="previous orders"></button>
+				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-next-page"
+					aria-label="next orders"></button>
 			</div>
 		</div>
 	</div>
 
 	@@include("_footer.html")
 </section>
-

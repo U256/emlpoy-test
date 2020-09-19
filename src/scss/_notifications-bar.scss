@@ -26,7 +26,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    // scrollbar roller 
+    // scrollbar roller
     border-radius: 1em;
     background-color: #c7ced4;
   }
@@ -53,7 +53,7 @@
     height: 24.5%;
     margin: 4px 6px;
     padding: 24px;
-    background: $soft-background url(../images/icons/ntfs-logo.svg) right center/180px 87px no-repeat;
+    background: $soft-background url(../images/notifications-bar/ntfs-logo.svg) right center/180px 87px no-repeat;
   }
 
   &__title {
@@ -73,6 +73,7 @@
     overflow-y: auto;
     height: 69.6%;
     margin: 0 7px 5px;
+
     scrollbar-color: #c7ced4 $clean-bg;
     scrollbar-width: thin;
   }
@@ -81,15 +82,16 @@
 .notification-item {
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 64px;
   border-bottom: 2px solid #f0f1f4;
 
   &__logo {
     width: 36px;
     height: 36px;
-    margin: 0 8px 0 22px;
-    background: url(../images/icons/users-operation.svg) center/contain no-repeat;
+    margin: 0 8px 0 10px;
+    background: url(../images/notifications-bar/users-operation.svg) center/contain no-repeat;
+    font-size: 0;
   }
 
   &__message {
@@ -107,10 +109,14 @@
   }
 
   &__toevent-btn {
+    width: 33px;
+    height: 20px;
     margin-left: auto;
     color: $pale-text;
+    background: url(../images/notifications-bar/toevent-btn-arrow.svg) center/12px 18px no-repeat;
     font-size: 2.6rem;
     font-weight: 500;
+
     justify-self: flex-end;
   }
 }
@@ -118,13 +124,13 @@
 /*
 	media
 */
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .notifications-bar {
-    width: 270px;
-    height: 280px;
-  }
+    width: 99%;
+    height: 330px;
 
-  .notification-item__logo {
-    margin-left: 0;
+    &__top-row {
+      padding-left: 10px;
+    }
   }
 }

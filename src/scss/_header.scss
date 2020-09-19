@@ -85,12 +85,12 @@
   }
 
   &__notifications-btn {
-    background: url(../images/icons/notification-bell-icon.svg) center/contain no-repeat;
+    background: url(../images/header/notification-bell-icon.svg) center/contain no-repeat;
   }
 
   &__logout-btn {
     margin-left: 14px;
-    background: url(../images/icons/logout-icon.svg) center/contain no-repeat;
+    background: url(../images/header/logout-icon.svg) center/contain no-repeat;
   }
 }
 
@@ -101,7 +101,7 @@
   padding-left: 43px;
   white-space: nowrap;
   letter-spacing: -0.06px;
-  background: url(../images/icons/header-logo.svg) left center/36px no-repeat;
+  background: url(../images/header/header-logo.svg) left center/36px no-repeat;
   font-size: 2rem;
   font-weight: 500;
   line-height: 24px;

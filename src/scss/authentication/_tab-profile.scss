@@ -272,8 +272,8 @@
   line-height: 1.5rem;
 }
 
-.person-settings-block__field:hover ~ span,
-.person-settings-block__field:focus ~ span {
+.person-settings-block__field:hover ~ .fill-required,
+.person-settings-block__field:focus ~ .fill-required {
   color: $enter-accent;
 }
 

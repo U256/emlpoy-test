@@ -25,24 +25,7 @@ main {
 	border-radius: 4px;
 	background-color: $clean-bg;
 	box-shadow: 0 1px 3px rgba(63, 63, 68, 0.45);
-}
-
-.flex-col {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.flex {
-	display: flex;
-	align-items: center;
-}
-
-.fr-padding {
-	//padding for elements in containers
-	padding: 4px 24px 4px 24px;
-}
-
+}                                                                                                                                        
 .prim-blocks-wrapper {
 	position: relative;
 	flex: 1 0 auto;
@@ -218,7 +201,7 @@ main {
 .prim-checkbox:checked + label::before {
   //checkbox checked
 	border: none;
-	background-image: url(../images/icons/checkbox-checked.png);
+	background-image: url(../images/checkbox-checked.png);
 }
 
 .prim-checkbox:focus + label {
@@ -323,12 +306,6 @@ main {
 /*
 	media
 */
-@media (max-width: 1199.98px) {
-	.fr-padding {
-		padding: 4px 12px 4px 12px;
-	}
-}
-
 @media (max-width: 991.98px) {
 	.prim-block {
 		padding: 70px 12px 12px 12px;

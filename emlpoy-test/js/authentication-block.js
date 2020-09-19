@@ -1,4 +1,5 @@
 "use strict";
+import { indexOfElem } from "./indexOfElement.js";
 
 //////// TABs SWITCH
 let toTabButtonsArray = document.querySelectorAll(
@@ -10,21 +11,21 @@ let toTabButtonsContainer = document.querySelector(
 let tabsArray = document.querySelectorAll(".authentication-tab");
 
 toTabButtonsContainer.addEventListener("click", function (e) {
-  // sift buttons, separate background clicks
-  if (e.target.hasAttribute("rel")) {
+  if (e.target.hasAttribute("type")) {
+    // sift buttons, separate background clicks
+    
     toTabButtonsArray.forEach((toTabBtn) => {
       toTabBtn.classList.remove("authentication-block__to-tab-btn_active");
     });
+
     tabsArray.forEach((tab) => {
       tab.classList.remove("authentication-tab_active");
     });
 
     e.target.classList.add("authentication-block__to-tab-btn_active");
 
-    //e.target.getAttribute('rel') - button number
-    tabsArray[e.target.getAttribute("rel")].classList.add(
-      "authentication-tab_active"
-    );
+    //indexOfElem(e.target) - button & tab number
+    tabsArray[indexOfElem(e.target)].classList.add("authentication-tab_active");
   }
 });
 
@@ -39,10 +40,10 @@ let persSettingsFieldWrappers = document.querySelectorAll(
 );
 
 let notifSettingsForm = document.querySelector(".notif-settings-block__form");
+let submitNotifSettings = notifSettingsForm.submitNotifications;
 let notifCheckboxesArr = document.querySelectorAll(
   ".notif-settings-block__checkbox"
 );
-let submitNotifSettings = notifSettingsForm.submitNotifications;
 
 function showNotice(className, innerHTML) {
   let notice = document.createElement("div");
@@ -61,7 +62,7 @@ function showInputHint(inputNumber, innerHTML) {
   hint.innerHTML = innerHTML;
   persSettingsFieldWrappers[inputNumber].append(hint);
 
-  setTimeout(() => hint.remove(), 500000);
+  setTimeout(() => hint.remove(), 7000);
 }
 
 ///// Person settings form
@@ -96,18 +97,16 @@ function isHintAlreadyDisplayed(fieldNumber) {
 
 //active-class avaliability (from prev logic block) uses as check for submit-btn activation
 personSettingsForm.addEventListener("submit", (e) => {
+  e.preventDefault(); //stops form submit
   if (
     submitPersonSettings.classList.contains("tab-profile__submit-button_active")
   ) {
-    e.preventDefault();
     persSettingsFields.forEach((input) => (input.value = ""));
     submitPersonSettings.classList.remove("tab-profile__submit-button_active");
-    //prev 3 lines is nonsence/ just for imitaiton
+    //prev 2 lines is nonsence/ just for imitaiton
 
     showNotice("submit-notice", "Saved");
   } else {
-    e.preventDefault(); //stops form submit
-
     if (persSettingsFields[0].value == "" && !isHintAlreadyDisplayed(0)) {
       showInputHint(0, "Please specify the first name");
     }

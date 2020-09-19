@@ -5,6 +5,7 @@ document.querySelector(".header__logout-btn").addEventListener("click", () => {
   location.assign("enter-page.html");
 });
 
+
 ////////////////////////////
 // async function showAvatar() {
 

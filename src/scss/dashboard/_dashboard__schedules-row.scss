@@ -1,78 +1,66 @@
-.scedule-containers {
+.schedule-item {
+  //users-schedule & pie-chart
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 545px;
+  min-height: 545px;
   margin-bottom: 24px;
+  vertical-align: top;
   background: $clean-bg;
+
+  //&__top-row {}
+
+  // &__days-select {}
+
+  &__main-row {
+    //users-schedule-item__schedule-row & pie-chart-item__schedule-row
+    height: 450px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #dfe3e8;
+  }
+
+  //&__bottom-row {}
 }
 
-.users-schedule {
+.users-schedule-item {
   flex: 0 0 74.5%;
+
+  //&__scedule-row {}
 }
 
-.users-circle-comparer {
+.pie-chart-item {
   flex: 0 0 23.5%;
+
+  //&__schedule-row {}
+
+  //&__pie-reload {}
 }
-
-.users-schedule__top {
-  justify-content: space-between;
-
-  // .schedile-title {	}
-
-  // .days-resize-selector {	}
-}
-
-.users-schedule__schedule {
-  height: 450px;
-}
-
-// .users-schedule__bottom {}
-
-//users-circle-comparer:
-// .users-circle__top {}
-
-.users-circle__circle {
-  height: 450px;
-}
-
-.users-circle__bottom {
-  justify-content: space-between;
-
-  // .days-selector {
-  // }
-
-  // .to-audience-btn {}
-}
-
-//in both schedule & circle
-// .to-audience-btn {}
 
 /*
 	media
 */
 @media (max-width: 1199.98px) {
-  .users-schedule {
+  .users-schedule-item {
     flex: 0 0 70%;
   }
 
-  .users-circle-comparer {
+  .pie-chart-item {
     flex: 0 0 28%;
   }
 }
 
 @media (max-width: 767.98px) {
-  .scedule-containers {
+  .schedule-item {
     margin-bottom: 12px;
   }
 
-  .users-schedule {
-    flex: 1 1 100%;
+  .users-schedule-item {
+    flex: 1 0 100%;
     height: 400px;
   }
 
-  .users-circle-comparer {
-    flex: 1 1 100%;
+  .pie-chart-item {
+    flex: 1 0 100%;
     height: 220px;
   }
 }
