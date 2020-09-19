@@ -1,6 +1,8 @@
 .vscode
 src
-
+package.json
+package-lock.json
+gulpfile
 
 # Logs
 logs
