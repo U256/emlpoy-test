@@ -1,1 +1,600 @@
-<!DOCTYPE html><html lang="en"><head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1">   <title>Devias Kit</title>   <meta name="description" content="Devias profile page." />   <link rel="icon" href="/images/favicon.ico" />   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">   <link href="css/style.min.css" rel="stylesheet" type="text/css"></head><body>   <!-- blue bar at the top -->   <header class="header">	<div class="header__logo">		<h1 class="main-logo">Devias Kit</h1>	</div>	<div class="header__version">		<div class="header__version-logo">Free</div>		<p class="header__version-upgrade">			See our PRO version for more design components & coded in React follow this link:			<a class="prim-link header__discover-pro-version-link"				href="https://devias.io/products/devias-kit-pro">https://devias.io/products/devias-kit-pro</a>		</p>		<p class="header__version-upgrade header__version-upgrade_tablet-size">			PRO version:			<a class="prim-link header__discover-pro-version-link" href="https://devias.io/products/devias-kit-pro">Devias kit				Pro</a>		</p>		<p class="header__version-upgrade header__version-upgrade_phone-size">			<a class="prim-link header__discover-pro-version-link" href="https://devias.io/products/devias-kit-pro">Become				PRO</a>		</p>	</div>	<div class="header__buttons-group">		<button type="submit" class="header__button header__notifications-btn" aria-label="open notifications bar"></button>		<button type="submit" class="header__button header__logout-btn" aria-label="logout"></button>	</div></header>   <div class="page-wrapper">      <!-- aside left panel -->      <aside class="left-panel">  <button type="button" class="left-panel__switcher">MENU</button>  <div class="left-panel__user-chunk">    <div class="user-logo left-panel__user-logo"></div>    <div class="left-panel__about-user">      <h1 class="left-panel__user-name">User name</h1>      <h2 class="left-panel__user-post">User post</h2>    </div>  </div>  <nav class="left-panel__toblock-btns-chunk">    <button type="button" class="left-panel__button left-panel__button-0">      Dashboard    </button>    <button type="button" class="left-panel__button left-panel__button-1">      Users    </button>    <button type="button" class="left-panel__button left-panel__button-2">      Products    </button>    <button type="button" class="left-panel__button left-panel__button-3 left-panel__button_active">      Authentication    </button>    <button type="button" class="left-panel__button left-panel__button-4">      Typography    </button>    <button disabled type="button" class="left-panel__button left-panel__button-5">      Icons & Images    </button>  </nav>  <div class="left-panel__support-chunk">    <div class="left-panel__support-title">Support</div>    <button type="button" class="left-panel__button left-panel__open-support-btn">Support</button>  </div></aside>      <main class="main">         <!-- primary blocks -->         <section class="prim-block dashboard-block">	<h1>Information about Devias kit users, actions and operations</h1>	<div class="dashboard-block__row dashboard-block__info-row">		<div class="info-block">			<div class="soft-bd info-unit info-block__budget-unit">				<div class="info-unit__title">Budget</div>				<div class="info-unit__amount">--</div>				<div class="info-unit__changes-row">					<span class="info-unit__change-percent">%</span>					<span class="info-unit__change-period">Since last month </span>				</div>			</div>			<div class="soft-bd info-unit info-block__users-unit">				<div class="info-unit__title">Total users </div>				<div class="info-unit__amount">--</div>				<div class="info-unit__changes-row">					<div class="info-unit__change-line"></div>				</div>			</div>			<div class="soft-bd info-unit info-block__progress-unit">				<div class="info-unit__title">Progress</div>				<div class="info-unit__amount">--</div>				<div class="info-unit__changes-row">					<span class="info-unit__change-percent">%</span>					<span class="info-unit__change-period">Since last month</span>				</div>			</div>			<div class="soft-bd info-unit info-block__profit-unit">				<div class="info-unit__title">Total profit </div>				<div class="info-unit__amount">--</div>				<div class="info-unit__changes-row">					<span class="info-unit__change-percent">%</span>					<span class="info-unit__change-period">Since last month</span>				</div>			</div>		</div>	</div>	<div class="dashboard-block__row dashboard-block__schedules-row">		<div class="soft-bd schedule-item users-schedule-item">			<div class="dashboard-block__item-top-row schedule-item__top-row">				<div class="dashboard-block__item-title">Users by device</div>				<select name="schedule-item__days-select">					<option>Last 7 days</option>					<option>Last 3 days</option>				</select>			</div>			<div class="schedule-item__main-row users-schedule-item__schedule-row">				<!-- -->			</div>			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Audience Overview</button>			</div>		</div>		<div class="soft-bd schedule-item pie-chart-item">			<div class="dashboard-block__item-top-row schedule-item__top-row">				<div class="dashboard-block__item-title">Users by device</div>				<div class="pie-chart-item__pie-reload">O</div>			</div>			<div class="schedule-item__main-row pie-chart-item__schedule-row">				<!-- -->			</div>			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">				<select name="schedule-item__days-select">					<option>7 days</option>					<option>3 days</option>				</select>				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Overview</button>			</div>		</div>	</div>	<div class="dashboard-block__row dashboard-block__bottom-row">		<div class="soft-bd latest-item latest-products-item">			<div class="dashboard-block__item-top-row latest-item__top-row">				<h2 class="dashboard-block__item-title">Latest Products</h2>				<div class="latest-products-item__products-count">5 in total</div>			</div>			<div class="latest-item__main-row latest-products-item__main-row">				<div class="prod-item">					<div class="prod-item__logo prod-item__logo-1"></div>					<div class="prod-item__text-column">						<h3 class="prod-item__product-name">							Dropbox						</h3>						<div class="prod-item__last-update">							Updated						</div>					</div>					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>				</div>				<div class="prod-item">					<div class="prod-item__logo prod-item__logo-2"></div>					<div class="prod-item__text-column">						<h3 class="prod-item__product-name">							Medium Corporation						</h3>						<div class="prod-item__last-update">							Updated						</div>					</div>					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>				</div>				<div class="prod-item">					<div class="prod-item__logo prod-item__logo-3"></div>					<div class="prod-item__text-column">						<h3 class="prod-item__product-name">							GitHub						</h3>						<div class="prod-item__last-update">							Updated						</div>					</div>					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>				</div>				<div class="prod-item">					<div class="prod-item__logo prod-item__logo-4"></div>					<div class="prod-item__text-column">						<h3 class="prod-item__product-name">							Slac						</h3>						<div class="prod-item__last-update">							Updated						</div>					</div>					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>				</div>			</div>			<div class="dashboard-block__item-bottom-row latest-products-item__bottom-row">				<button type="submit" class="clean-btn dashboard-block__bottom-btn">View all</button>			</div>		</div>		<div class="soft-bd latest-item latest-orders-item">			<div class="dashboard-block__item-top-row latest-item__top-row">				<div class="dashboard-block__item-title">Latest Orders</div>				<div class="latest-orders-item__total-count">total</div>				<!--  -->				<button type="submit" class="clean-btn latest-orders-item__create-entry-btn">new entry</button>			</div>			<div class="latest-item__main-row latest-orders-item__main-row">				<table class="orders-table">					<thead>						<tr>							<th class="orders-table__id-col">Order ID</th>							<th class="orders-table__customer-col">Customer</th>							<th>Date</th>							<th>Status</th>							<th class="orders-table__actions-col">Actions</th>						</tr>					</thead>					<tbody>						<tr class="l-orders-tr-0">							<th class="orders-table__id-col">--</th>							<th class="orders-table__customer-col">--</th>							<th>--</th>							<th>-</th>							<th class="orders-table__actions-col">--</th>						</tr>						<tr class="l-orders-tr-1">							<th class="orders-table__id-col"></th>							<th class="orders-table__customer-col"></th>							<th></th>							<th></th>							<th class="orders-table__actions-col"></th>						</tr>						<tr class="l-orders-tr-2">							<th class="orders-table__id-col"></th>							<th class="orders-table__customer-col"></th>							<th></th>							<th></th>							<th class="orders-table__actions-col"></th>						</tr>						<tr class="l-orders-tr-3">							<th class="orders-table__id-col"></th>							<th class="orders-table__customer-col"></th>							<th></th>							<th></th>							<th class="orders-table__actions-col"></th>						</tr>						<tr class="l-orders-tr-4">							<th class="orders-table__id-col"></th>							<th class="orders-table__customer-col"></th>							<th></th>							<th></th>							<th class="orders-table__actions-col"></th>						</tr>						<tr class="l-orders-tr-5">							<th class="orders-table__id-col"></th>							<th class="orders-table__customer-col"></th>							<th></th>							<th></th>							<th class="orders-table__actions-col"></th>						</tr>					</tbody>				</table>			</div>			<div class="latest-orders-item__bottom-row">				<span class="latest-orders-item__content-resize">					Rows per-page:					<select name="latest-orders-item__resize-select">						<option>5</option>						<option>10</option>					</select>				</span>				<span class="latest-orders-item__table-page">1-10 of --</span>				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-prew-page"					aria-label="previous orders"></button>				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-next-page"					aria-label="next orders"></button>			</div>		</div>	</div>	<footer class="footer">  <h2 class="footer__title">© Devias Io. 2019</h2>  <div class="footer__info">    This is a free version of an end product which will be launched soon. If you    want to get a free copy of the end product subscribe to our personal email    list  </div></footer></section>         <section class="prim-block users-block">	<h2>users-block</h2>	<footer class="footer">  <h2 class="footer__title">© Devias Io. 2019</h2>  <div class="footer__info">    This is a free version of an end product which will be launched soon. If you    want to get a free copy of the end product subscribe to our personal email    list  </div></footer></section>         <section class="prim-block products-block">	<h2>products-block</h2>	<footer class="footer">  <h2 class="footer__title">© Devias Io. 2019</h2>  <div class="footer__info">    This is a free version of an end product which will be launched soon. If you    want to get a free copy of the end product subscribe to our personal email    list  </div></footer></section>         <section class="prim-block authentication-block prim-block_active">  <div class="authentication-block__top-row">    <button type="button" class="clean-btn authentication-block__to-tab-btn authentication-block__to-tab-btn_active">      Profile    </button>    <button type="button" class="clean-btn authentication-block__to-tab-btn">Account</button>    <button type="button" class="clean-btn authentication-block__to-tab-btn">      Price Plans    </button>  </div>  <div class="authentication-tab tab-profile authentication-tab_active">    <div class="soft-bd avatar-change-block tab-profile__avatar-change-block">      <div class="avatar-change-block__top-row">        <div class="avatar-change-block__info-column">          <h1 class="avatar-change-block__person-name">Person name</h1>          <h2 class="avatar-change-block__location">Person location</h2>          <h2 class="avatar-change-block__time">Person time</h2>        </div>        <div class="avatar-change-block__avatar-column">          <picture>            <source srcset="images/nev-ava.webp" type="image/webp" />            <img class="avatar-change-block__new-image" src="images/nev-ava.webp" alt="new uploaded avatar" />          </picture>        </div>      </div>      <div class="avatar-change-block__bottom-row">        <button type="submit"          class="clean-btn avatar-change-block__button avatar-change-block__upload-button">Upload</button>        <button type="submit"          class="clean-btn avatar-change-block__button avatar-change-block__remove-button">Remove</button>      </div>    </div>    <div class="tab-profile__settings-wrapper">      <div class="soft-bd tab-profile__settings-block person-settings-block">        <div class="tab-profile__settings-top-row">          <span class="tab-profile__settings-title">Basic Profile</span>          <span class="tab-profile__settings-top-info">The information can be edited from your profile page</span>        </div>        <form class="tab-profile__settings-form person-settings-block__form" action="#" method="post">          <div class="prim-field-wrapper person-settings-block__field-wrapper">            <input class="prim-field person-settings-block__field" type="text" name="Name" placeholder="First Name"              id="setting1" />            <label class="prim-field-label person-settings-block__field-label" for="setting1">Name</label>          </div>          <div class="prim-field-wrapper person-settings-block__field-wrapper">            <input class="prim-field person-settings-block__field" type="text" name="lastName" placeholder="Last Name"              id="setting2" />            <label class="prim-field-label person-settings-block__field-label" for="setting2">Last Name</label>          </div>          <div class="prim-field-wrapper person-settings-block__field-wrapper">            <input class="prim-field person-settings-block__field" type="text" name="email" value="" placeholder="Email"              id="setting3" />            <label class="prim-field-label person-settings-block__field-label" for="setting3">Email</label>          </div>          <div class="prim-field-wrapper person-settings-block__field-wrapper">            <input class="prim-field person-settings-block__field" type="text" name="number" placeholder="Phone number"              id="setting4" />            <label class="prim-field-label person-settings-block__field-label" for="setting4">Phone number</label>          </div>          <div class="prim-field-wrapper person-settings-block__field-wrapper">            <input class="prim-field person-settings-block__field" type="text" name="country" maxlength="38"              placeholder="Country" id="setting5" />            <label class="prim-field-label person-settings-block__field-label" for="setting5">Country</label>          </div>          <div class="prim-field-wrapper person-settings-block__field-wrapper">            <input class="prim-field person-settings-block__field" type="text" name="city" maxlength="38"              placeholder="City" id="setting6" />            <label class="prim-field-label person-settings-block__field-label" for="setting6">City</label>          </div>          <input class="prim-submit tab-profile__submit-button submit-person-settings" type="submit"            name="submitSettings" value="SAVE SETTINGS" />        </form>      </div>      <div class="soft-bd tab-profile__settings-block notif-settings-block">        <div class="tab-profile__settings-top-row">          <span class="tab-profile__settings-title">Notifications</span>          <span class="tab-profile__settings-top-info">Mange the notifications emailing page</span>        </div>        <form class="tab-profile__settings-form notif-settings-block__form" action="#" method="post">          <div class="notif-settings-block__form-left-column">            <div class="notif-settings-block__form-column-title">Notifications</div>            <div class="prim-checkbox-wrapper">              <input id="check0" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox1"                value="email-setting-checkbox" />              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check0">Email</label>            </div>            <div class="prim-checkbox-wrapper">              <input id="check1" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"                name="checkbox2" value="pushes-setting-checkbox" />              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check1">Push                notifications</label>            </div>            <div class="prim-checkbox-wrapper">              <input id="check2" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"                name="checkbox3" value="messages-setting-checkbox" />              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check2">Text messages</label>            </div>            <div class="prim-checkbox-wrapper">              <input id="check3" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"                name="checkbox4" value="calls-setting-checkbox" />              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check3">Phone Calls</label>            </div>          </div>          <div class="notif-settings-block__form-right-column">            <div class="notif-settings-block__form-column-title">Messages</div>            <div class="prim-checkbox-wrapper">              <input id="check4" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox5"                value="email-setting-checkbox" />              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check4">Email</label>            </div>            <div class="prim-checkbox-wrapper">              <input id="check5" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox6"                value="pushes-setting-checkbox" />              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check5">Push                notifications</label>            </div>            <div class="prim-checkbox-wrapper">              <input id="check6" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox7"                value="messages-setting-checkbox" disabled />              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check6">Text messages</label>            </div>          </div>          <input class="prim-submit tab-profile__submit-button submit-notif-settings" type="submit"            name="submitNotifications" value="SAVE" />        </form>      </div>    </div>  </div>  <div class="authentication-tab tab-account">    Account tab    <br />Lorem ipsum <br />    dolor sit amet.  </div>  <div class="authentication-tab tab-price-plans">    Price Plans    <br />Lorem ipsum <br />    dolor sit amet.  </div></section>         <section class="prim-block typography-block">	<h2>typography-block</h2>	<footer class="footer">  <h2 class="footer__title">© Devias Io. 2019</h2>  <div class="footer__info">    This is a free version of an end product which will be launched soon. If you    want to get a free copy of the end product subscribe to our personal email    list  </div></footer></section>         <section class="prim-block icons-images-block">	<h2>icons-images-block</h2>	<footer class="footer">  <h2 class="footer__title">© Devias Io. 2019</h2>  <div class="footer__info">    This is a free version of an end product which will be launched soon. If you    want to get a free copy of the end product subscribe to our personal email    list  </div></footer></section>      </main>   </div>   <section class="notifications-bar">	<div class="notifications-bar__close-btn-wrapper">		<button class="clean-btn notifications-bar__close-btn">			&times;		</button>	</div>	<div class="notifications-bar__top-row">		<h2 class="notifications-bar__title">User Notifications</h2>		<span class="notifications-bar__count">new notifications</span>	</div>	<div class="notifications-bar__alerts-block">		<div class="notification-item">			<div class="notification-item__logo">Notification logo</div>			<div class="notification-item__message">				<div class="notification-item__message-name">					New order has been received				</div>				<div class="notification-item__message-time">					hours ago				</div>			</div>			<button type="submit" class="clean-btn notification-item__toevent-btn"				aria-label="show details of event"></button>		</div>		<div class="notification-item">			<div class="notification-item__logo">1</div>			<div class="notification-item__message">				<div class="notification-item__message-name">					New order has been received				</div>				<div class="notification-item__message-time">					hours ago				</div>			</div>			<button type="submit" class="clean-btn notification-item__toevent-btn"				aria-label="show details of event"></button>		</div>		<div class="notification-item">			<div class="notification-item__logo">1</div>			<div class="notification-item__message">				<div class="notification-item__message-name">					New order has been received				</div>				<div class="notification-item__message-time">					hours ago				</div>			</div>			<button type="submit" class="clean-btn notification-item__toevent-btn"				aria-label="show details of event"></button>		</div>		<div class="notification-item">			<div class="notification-item__logo">1</div>			<div class="notification-item__message">				<div class="notification-item__message-name">					New order has been received				</div>				<div class="notification-item__message-time">					hours ago				</div>			</div>			<button type="submit" class="clean-btn notification-item__toevent-btn"				aria-label="show details of event"></button>		</div>		<div class="notification-item">			<div class="notification-item__logo">1</div>			<div class="notification-item__message">				<div class="notification-item__message-name">					New order has been received				</div>				<div class="notification-item__message-time">					hours ago				</div>			</div>			<button type="submit" class="clean-btn notification-item__toevent-btn"				aria-label="show details of event"></button>		</div>		<div class="notification-item">			<div class="notification-item__logo">1</div>			<div class="notification-item__message">				<div class="notification-item__message-name">					New order has been received				</div>				<div class="notification-item__message-time">					hours ago				</div>			</div>			<button type="submit" class="clean-btn notification-item__toevent-btn"				aria-label="show details of event"></button>		</div>	</div></section>   <script src="js/script.min.js"></script>   <script type="module" src="js/indexOfElement.min.js"></script>   <script type="module" src="js/leftPanel.min.js"></script>   <script type="module" src="js/authenticationBlock.min.js"></script>   <script src="js/notifications.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Devias Kit</title>
+
+   <meta name="description" content="Devias profile page." />
+   <link rel="icon" href="/images/favicon.ico" />
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link href="css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   <!-- blue bar at the top -->
+   <header class="header">
+	<div class="header__logo">
+		<h1 class="main-logo">Devias Kit</h1>
+	</div>
+	<div class="header__version">
+		<div class="header__version-logo">Free</div>
+		<p class="header__version-upgrade">
+			See our PRO version for more design components & coded in React follow this link:
+			<a class="prim-link header__discover-pro-version-link"
+				href="https://devias.io/products/devias-kit-pro">https://devias.io/products/devias-kit-pro</a>
+		</p>
+
+		<p class="header__version-upgrade header__version-upgrade_tablet-size">
+			PRO version:
+			<a class="prim-link header__discover-pro-version-link" href="https://devias.io/products/devias-kit-pro">Devias kit
+				Pro</a>
+		</p>
+
+		<p class="header__version-upgrade header__version-upgrade_phone-size">
+			<a class="prim-link header__discover-pro-version-link" href="https://devias.io/products/devias-kit-pro">Become
+				PRO</a>
+		</p>
+	</div>
+	<div class="header__buttons-group">
+		<button type="submit" class="header__button header__notifications-btn" aria-label="open notifications bar"></button>
+		<button type="submit" class="header__button header__logout-btn" aria-label="logout"></button>
+	</div>
+</header>
+
+   <div class="page-wrapper">
+      <!-- aside left panel -->
+      <aside class="left-panel">
+  <button type="button" class="left-panel__switcher">MENU</button>
+  <div class="left-panel__user-chunk">
+    <div class="user-logo left-panel__user-logo"></div>
+    <div class="left-panel__about-user">
+      <h2 class="left-panel__user-name">User name</h2>
+      <h2 class="left-panel__user-post">User post</h2>
+    </div>
+  </div>
+  <nav class="left-panel__toblock-btns-chunk">
+    <button type="button" class="left-panel__button left-panel__button-0">
+      Dashboard
+    </button>
+    <button type="button" class="left-panel__button left-panel__button-1">
+      Users
+    </button>
+    <button type="button" class="left-panel__button left-panel__button-2">
+      Products
+    </button>
+    <button type="button" class="left-panel__button left-panel__button-3 left-panel__button_active">
+      Authentication
+    </button>
+    <button type="button" class="left-panel__button left-panel__button-4">
+      Typography
+    </button>
+    <button disabled type="button" class="left-panel__button left-panel__button-5">
+      Icons & Images
+    </button>
+  </nav>
+  <div class="left-panel__support-chunk">
+    <div class="left-panel__support-title">Support</div>
+    <button type="button" class="left-panel__button left-panel__open-support-btn">Support</button>
+  </div>
+</aside>
+
+      <main class="main">
+         <!-- primary blocks -->
+         <section class="prim-block dashboard-block">
+	<h2>Information about Devias kit users, actions and operations</h2>
+	<div class="dashboard-block__row dashboard-block__info-row">
+		<div class="info-block">
+			<div class="soft-bd info-unit info-block__budget-unit">
+				<div class="info-unit__title">Budget</div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month </span>
+				</div>
+			</div>
+			<div class="soft-bd info-unit info-block__users-unit">
+				<div class="info-unit__title">Total users </div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<div class="info-unit__change-line"></div>
+				</div>
+			</div>
+			<div class="soft-bd info-unit info-block__progress-unit">
+				<div class="info-unit__title">Progress</div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month</span>
+				</div>
+			</div>
+			<div class="soft-bd info-unit info-block__profit-unit">
+				<div class="info-unit__title">Total profit </div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="dashboard-block__row dashboard-block__schedules-row">
+		<div class="soft-bd schedule-item users-schedule-item">
+			<div class="dashboard-block__item-top-row schedule-item__top-row">
+				<div class="dashboard-block__item-title">Users by device</div>
+				<select name="schedule-item__days-select">
+					<option>Last 7 days</option>
+					<option>Last 3 days</option>
+				</select>
+			</div>
+			<div class="schedule-item__main-row users-schedule-item__schedule-row">
+				<!-- -->
+			</div>
+			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Audience Overview</button>
+			</div>
+		</div>
+		<div class="soft-bd schedule-item pie-chart-item">
+			<div class="dashboard-block__item-top-row schedule-item__top-row">
+				<div class="dashboard-block__item-title">Users by device</div>
+				<div class="pie-chart-item__pie-reload">O</div>
+			</div>
+			<div class="schedule-item__main-row pie-chart-item__schedule-row">
+				<!-- -->
+			</div>
+			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">
+				<select name="schedule-item__days-select">
+					<option>7 days</option>
+					<option>3 days</option>
+				</select>
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Overview</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="dashboard-block__row dashboard-block__bottom-row">
+		<div class="soft-bd latest-item latest-products-item">
+			<div class="dashboard-block__item-top-row latest-item__top-row">
+				<h2 class="dashboard-block__item-title">Latest Products</h2>
+				<div class="latest-products-item__products-count">5 in total</div>
+			</div>
+			<div class="latest-item__main-row latest-products-item__main-row">
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-1"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							Dropbox
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-2"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							Medium Corporation
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-3"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							GitHub
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-4"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							Slac
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+			</div>
+			<div class="dashboard-block__item-bottom-row latest-products-item__bottom-row">
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">View all</button>
+			</div>
+		</div>
+		<div class="soft-bd latest-item latest-orders-item">
+			<div class="dashboard-block__item-top-row latest-item__top-row">
+				<div class="dashboard-block__item-title">Latest Orders</div>
+				<div class="latest-orders-item__total-count">total</div>
+				<!--  -->
+				<button type="submit" class="clean-btn latest-orders-item__create-entry-btn">new entry</button>
+			</div>
+			<div class="latest-item__main-row latest-orders-item__main-row">
+				<table class="orders-table">
+					<thead>
+						<tr>
+							<th class="orders-table__id-col">Order ID</th>
+							<th class="orders-table__customer-col">Customer</th>
+							<th>Date</th>
+							<th>Status</th>
+							<th class="orders-table__actions-col">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="l-orders-tr-0">
+							<th class="orders-table__id-col">--</th>
+							<th class="orders-table__customer-col">--</th>
+							<th>--</th>
+							<th>-</th>
+							<th class="orders-table__actions-col">--</th>
+						</tr>
+						<tr class="l-orders-tr-1">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-2">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-3">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-4">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-5">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="latest-orders-item__bottom-row">
+				<span class="latest-orders-item__content-resize">
+					Rows per-page:
+					<select name="latest-orders-item__resize-select">
+						<option>5</option>
+						<option>10</option>
+					</select>
+				</span>
+				<span class="latest-orders-item__table-page">1-10 of --</span>
+				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-prew-page"
+					aria-label="previous orders"></button>
+				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-next-page"
+					aria-label="next orders"></button>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+  <h2 class="footer__title">© Devias Io. 2019</h2>
+  <div class="footer__info">
+    This is a free version of an end product which will be launched soon. If you
+    want to get a free copy of the end product subscribe to our personal email
+    list
+  </div>
+</footer>
+</section>
+         <section class="prim-block users-block">
+	<h2>users-block</h2>
+
+	<footer class="footer">
+  <h2 class="footer__title">© Devias Io. 2019</h2>
+  <div class="footer__info">
+    This is a free version of an end product which will be launched soon. If you
+    want to get a free copy of the end product subscribe to our personal email
+    list
+  </div>
+</footer>
+</section>
+         <section class="prim-block products-block">
+	<h2>products-block</h2>
+
+	<footer class="footer">
+  <h2 class="footer__title">© Devias Io. 2019</h2>
+  <div class="footer__info">
+    This is a free version of an end product which will be launched soon. If you
+    want to get a free copy of the end product subscribe to our personal email
+    list
+  </div>
+</footer>
+</section>
+         <section class="prim-block authentication-block prim-block_active">
+  <div class="authentication-block__top-row">
+    <button type="button" class="clean-btn authentication-block__to-tab-btn authentication-block__to-tab-btn_active">
+      Profile
+    </button>
+    <button type="button" class="clean-btn authentication-block__to-tab-btn">Account</button>
+    <button type="button" class="clean-btn authentication-block__to-tab-btn">
+      Price Plans
+    </button>
+  </div>
+
+  <div class="authentication-tab tab-profile authentication-tab_active">
+    <div class="soft-bd avatar-change-block tab-profile__avatar-change-block">
+      <div class="avatar-change-block__top-row">
+        <div class="avatar-change-block__info-column">
+          <h2 class="avatar-change-block__person-name">Person name</h2>
+          <h3 class="avatar-change-block__location">Person location</h3>
+          <h3 class="avatar-change-block__time">Person time</h3>
+        </div>
+        <div class="avatar-change-block__avatar-column">
+          <picture>
+            <source srcset="images/nev-ava.webp" type="image/webp" />
+            <img class="avatar-change-block__new-image" src="images/nev-ava.webp" alt="new uploaded avatar" />
+          </picture>
+        </div>
+      </div>
+      <div class="avatar-change-block__bottom-row">
+        <button type="submit"
+          class="clean-btn avatar-change-block__button avatar-change-block__upload-button">Upload</button>
+        <button type="submit"
+          class="clean-btn avatar-change-block__button avatar-change-block__remove-button">Remove</button>
+      </div>
+    </div>
+    <div class="tab-profile__settings-wrapper">
+      <div class="soft-bd tab-profile__settings-block person-settings-block">
+        <div class="tab-profile__settings-top-row">
+          <span class="tab-profile__settings-title">Basic Profile</span>
+          <span class="tab-profile__settings-top-info">The information can be edited from your profile page</span>
+        </div>
+
+        <form class="tab-profile__settings-form person-settings-block__form" action="#" method="post">
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="Name" placeholder="First Name"
+              id="setting1" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting1">Name</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="lastName" placeholder="Last Name"
+              id="setting2" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting2">Last Name</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="email" value="" placeholder="Email"
+              id="setting3" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting3">Email</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="number" placeholder="Phone number"
+              id="setting4" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting4">Phone number</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="country" maxlength="38"
+              placeholder="Country" id="setting5" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting5">Country</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="city" maxlength="38"
+              placeholder="City" id="setting6" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting6">City</label>
+          </div>
+          <input class="prim-submit tab-profile__submit-button submit-person-settings" type="submit"
+            name="submitSettings" value="SAVE SETTINGS" />
+        </form>
+      </div>
+      <div class="soft-bd tab-profile__settings-block notif-settings-block">
+        <div class="tab-profile__settings-top-row">
+          <span class="tab-profile__settings-title">Notifications</span>
+          <span class="tab-profile__settings-top-info">Mange the notifications emailing page</span>
+        </div>
+
+        <form class="tab-profile__settings-form notif-settings-block__form" action="#" method="post">
+          <div class="notif-settings-block__form-left-column">
+            <div class="notif-settings-block__form-column-title">Notifications</div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check0" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox1"
+                value="email-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check0">Email</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check1" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox2" value="pushes-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check1">Push
+                notifications</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check2" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox3" value="messages-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check2">Text messages</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check3" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox4" value="calls-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check3">Phone Calls</label>
+            </div>
+          </div>
+          <div class="notif-settings-block__form-right-column">
+            <div class="notif-settings-block__form-column-title">Messages</div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check4" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox5"
+                value="email-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check4">Email</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check5" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox6"
+                value="pushes-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check5">Push
+                notifications</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check6" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox7"
+                value="messages-setting-checkbox" disabled />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check6">Text messages</label>
+            </div>
+          </div>
+          <input class="prim-submit tab-profile__submit-button submit-notif-settings" type="submit"
+            name="submitNotifications" value="SAVE" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="authentication-tab tab-account">
+    Account tab
+    <br />Lorem ipsum <br />
+    dolor sit amet.
+  </div>
+  <div class="authentication-tab tab-price-plans">
+    Price Plans
+    <br />Lorem ipsum <br />
+    dolor sit amet.
+  </div>
+</section>
+         <section class="prim-block typography-block">
+	<h2>typography-block</h2>
+
+	<footer class="footer">
+  <h2 class="footer__title">© Devias Io. 2019</h2>
+  <div class="footer__info">
+    This is a free version of an end product which will be launched soon. If you
+    want to get a free copy of the end product subscribe to our personal email
+    list
+  </div>
+</footer>
+</section>
+         <section class="prim-block icons-images-block">
+	<h2>icons-images-block</h2>
+
+	<footer class="footer">
+  <h2 class="footer__title">© Devias Io. 2019</h2>
+  <div class="footer__info">
+    This is a free version of an end product which will be launched soon. If you
+    want to get a free copy of the end product subscribe to our personal email
+    list
+  </div>
+</footer>
+</section>
+      </main>
+   </div>
+
+   <section class="notifications-bar">
+	<div class="notifications-bar__close-btn-wrapper">
+		<button class="clean-btn notifications-bar__close-btn">
+			&times;
+		</button>
+	</div>
+	<div class="notifications-bar__top-row">
+		<h2 class="notifications-bar__title">User Notifications</h2>
+		<span class="notifications-bar__count">new notifications</span>
+	</div>
+	<div class="notifications-bar__alerts-block">
+		<div class="notification-item">
+			<div class="notification-item__logo">Notification logo</div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
+					New order has been received
+				</div>
+				<div class="notification-item__message-time">
+					hours ago
+				</div>
+			</div>
+			<button type="submit" class="clean-btn notification-item__toevent-btn"
+				aria-label="show details of event"></button>
+		</div>
+		<div class="notification-item">
+			<div class="notification-item__logo">1</div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
+					New order has been received
+				</div>
+				<div class="notification-item__message-time">
+					hours ago
+				</div>
+			</div>
+			<button type="submit" class="clean-btn notification-item__toevent-btn"
+				aria-label="show details of event"></button>
+		</div>
+		<div class="notification-item">
+			<div class="notification-item__logo">1</div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
+					New order has been received
+				</div>
+				<div class="notification-item__message-time">
+					hours ago
+				</div>
+			</div>
+			<button type="submit" class="clean-btn notification-item__toevent-btn"
+				aria-label="show details of event"></button>
+		</div>
+		<div class="notification-item">
+			<div class="notification-item__logo">1</div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
+					New order has been received
+				</div>
+				<div class="notification-item__message-time">
+					hours ago
+				</div>
+			</div>
+			<button type="submit" class="clean-btn notification-item__toevent-btn"
+				aria-label="show details of event"></button>
+		</div>
+		<div class="notification-item">
+			<div class="notification-item__logo">1</div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
+					New order has been received
+				</div>
+				<div class="notification-item__message-time">
+					hours ago
+				</div>
+			</div>
+			<button type="submit" class="clean-btn notification-item__toevent-btn"
+				aria-label="show details of event"></button>
+		</div>
+		<div class="notification-item">
+			<div class="notification-item__logo">1</div>
+			<div class="notification-item__message">
+				<div class="notification-item__message-name">
+					New order has been received
+				</div>
+				<div class="notification-item__message-time">
+					hours ago
+				</div>
+			</div>
+			<button type="submit" class="clean-btn notification-item__toevent-btn"
+				aria-label="show details of event"></button>
+		</div>
+	</div>
+</section>
+
+   <script src="js/script.min.js"></script>
+   <script type="module" src="js/indexOfElement.min.js"></script>
+   <script type="module" src="js/leftPanel.min.js"></script>
+   <script type="module" src="js/authenticationBlock.min.js"></script>
+
+   <script src="js/notifications.min.js"></script>
+</body>
+
+</html>
