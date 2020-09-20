@@ -42,34 +42,34 @@
           <h3 class="enter-page__subtitle">Sign up on the internal platform</h3>
           <form class="prim-form enter-page__form" action="#" method="get">
             <div class="prim-field-wrapper enter-page__field-wrapper">
-              <input class="prim-field enter-page__field" type="name" name="nameOfPerson" placeholder="First Name"
+              <input class="prim-field enter-page__field" type="text" name="firstName" placeholder="First Name"
                 id="enter-name-input" />
               <label class="prim-field-label enter-page__field-label" for="enter-name-input">Name</label>
             </div>
             <div class="prim-field-wrapper enter-page__field-wrapper">
-              <input class="prim-field enter-page__field" type="name" name="nameOfPerson" placeholder="Last Name"
+              <input class="prim-field enter-page__field" type="text" name="lastName" placeholder="Last Name"
                 id="enter-last-name-input" />
               <label class="prim-field-label enter-page__field-label" for="enter-last-name-input">Last Name</label>
             </div>
             <div class="prim-field-wrapper enter-page__field-wrapper">
-              <input class="prim-field enter-page__field" type="email" name="email" value="" placeholder="Email"
+              <input class="prim-field enter-page__field" type="email" name="newEmail" placeholder="Email"
                 id="enter-email-input" />
               <label class="prim-field-label enter-page__field-label" for="enter-email-input">Email</label>
             </div>
             <div class="prim-field-wrapper enter-page__field-wrapper">
-              <input class="prim-field enter-page__field" type="password" name="psw" maxlength="22"
-                placeholder="Password" id="enter-password-input" />
-              <label class="prim-field-label enter-page__field-label" for="enter-password-input">Password</label>
+              <input class="prim-field enter-page__field" type="password" name="newPassword" maxlength="22"
+                placeholder="Password" id="enter-page-password-input" />
+              <label class="prim-field-label enter-page__field-label" for="enter-page-password-input">Password</label>
             </div>
             <div class="prim-checkbox-wrapper enter-page__checkbox-wrapper">
-              <input class="prim-checkbox enter-page__terms-checkbox" type="checkbox" name="checkbox1"
+              <input class="prim-checkbox enter-page__terms-checkbox" type="checkbox" name="termsCheckbox"
                 value="agree with terms" id="terms-checkbox" />
               <label for="terms-checkbox" class="prim-checkbox-label enter-page__terms-check-label">
                 I have read the
               </label>
               <a class="prim-link enter-page__to-terms-link" href="#">Terms and Conditions.</a>
             </div>
-            <input class="prim-submit enter-page__submit-sign-up" type="submit" name="submit" value="submit" />
+            <input class="prim-submit enter-page__submit-sign-up" type="submit" name="submitRegistration" value="submit"/>
           </form>
         </div>
 
@@ -91,16 +91,16 @@
           </h3>
           <form class="prim-form enter-page__form" action="#" method="post">
             <div class="prim-field-wrapper enter-page__field-wrapper">
-              <input class="prim-field enter-page__field" type="name" name="nameOfPerson" placeholder="Name"
+              <input class="prim-field enter-page__field" type="text" name="userFirstName" placeholder="Name"
                 id="enter-nam-input" />
               <label class="prim-field-label enter-page__field-label" for="enter-nam-input">Name</label>
             </div>
             <div class="prim-field-wrapper enter-page__field-wrapper">
-              <input class="prim-field enter-page__field" type="password" name="psw" maxlength="22"
+              <input class="prim-field enter-page__field" type="password" name="userPassword" maxlength="22"
                 placeholder="Password" id="enter-pass-input" />
               <label class="prim-field-label enter-page__field-label" for="enter-pass-input">Password</label>
             </div>
-            <input class="prim-submit enter-page__submit-sign-in" type="submit" name="submit" value="submit" />
+            <input class="prim-submit enter-page__submit-sign-in" type="submit" name="submitLogin" value="submit" />
           </form>
         </div>
       </div>

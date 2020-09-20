@@ -5,7 +5,7 @@ html {
 	//fw: 300 400 500 700
 }
 
-main {
+.page-wrapper {
 	position: relative;
 	z-index: 1;
 	display: flex;
@@ -26,7 +26,7 @@ main {
 	background-color: $clean-bg;
 	box-shadow: 0 1px 3px rgba(63, 63, 68, 0.45);
 }                                                                                                                                        
-.prim-blocks-wrapper {
+.main {
 	position: relative;
 	flex: 1 0 auto;
 	background-color: $soft-background;
