@@ -442,7 +442,7 @@ html {
 .prim-field-label {
   position: absolute;
   z-index: 5;
-  top: -7px !important;
+  top: -8px !important;
   left: 10px !important;
   display: none;
   height: 16px;
@@ -450,6 +450,7 @@ html {
   letter-spacing: 0.08rem;
   color: #0a4db3;
   outline: none;
+  border-radius: 20%;
   background-color: #fff;
   font-size: 1.3rem;
   line-height: 1.4rem;
