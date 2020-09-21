@@ -12,10 +12,14 @@ h4,
 h5,
 h6 {
   margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
   font-weight: normal;
 }
 
@@ -35,10 +39,14 @@ button {
 }
 
 p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 /*1. Correct the line height in all browsers.
@@ -93,7 +101,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -467,7 +476,10 @@ html {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-size: 16px;
   line-height: 20px;
 }
@@ -727,6 +739,8 @@ html {
 
 @media (min-width: 991.98px) {
   .header__version {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 }
@@ -1431,6 +1445,8 @@ html {
 }
 
 .prod-item__text-column {
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   margin-right: auto;
 }
@@ -2356,4 +2372,15 @@ html {
   .footer {
     width: 70vw;
   }
+}
+.webp .prim-checkbox:checked + label::before { background-image: url(../images/checkbox-checked.webp); }
+.webp .prod-item__logo-1 { background-image: url(../images/dashboard/dropbox-logo.webp); }
+.webp .prod-item__logo-2 { background-image: url(../images/dashboard/medium-corp-logo.webp); }
+.webp .prod-item__logo-3 { background-image: url(../images/dashboard/github-logo.webp); }
+.webp .prod-item__logo-4 { background-image: url(../images/dashboard/slack-logo.webp); }
+.webp .enter-page__back-btn { background: url(../images/enter-page/toleft-arrow.webp) left 4px center/18px 14px no-repeat; }
+.webp .enter-page__decoration-column { background: url(../images/enter-page/login-bg.webp) center right/cover no-repeat; }
+.webp .enter-page__cit-author-chunk { background: url(../images/enter-page/login-cit-author.webp) left/32px 32px no-repeat; }
+@media (max-width: 575.98px) {
+  .webp .enter-page__back-btn { background: url(../images/enter-page/toleft-arrow.webp) left 4px center/14px 10px no-repeat; }
 }
