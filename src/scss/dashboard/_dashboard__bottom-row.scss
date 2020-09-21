@@ -1,5 +1,5 @@
 .latest-item {
-  min-height: 518px;
+  min-height: 502px;
   margin-bottom: 24px;
   vertical-align: top;
 
@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 87px;
+  height: 83px;
   margin: 0 20px 22px 20px;
   padding: 10px 0;
   border-bottom: 1px solid #dfe3e8;
@@ -66,8 +66,8 @@
     background-image: url(../images/dashboard/slack-logo.png);
   }
 
-  //contains title and update time
   &__text-column {
+    //contains title and update time
     width: min-content;
     margin-right: auto;
   }

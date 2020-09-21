@@ -1164,7 +1164,7 @@ html {
   color: #3a3b3f;
 }
 
-.dashboard-block h1 {
+.dashboard-block h2 {
   position: absolute;
   font-size: 0;
 }
@@ -1368,7 +1368,7 @@ html {
 }
 
 .latest-item {
-  min-height: 518px;
+  min-height: 502px;
   margin-bottom: 24px;
   vertical-align: top;
 }
@@ -1392,7 +1392,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 87px;
+  height: 83px;
   margin: 0 20px 22px 20px;
   padding: 10px 0;
   border-bottom: 1px solid #dfe3e8;
@@ -2254,7 +2254,7 @@ html {
   padding: 0 18px 24px 24px;
   color: #fff;
   border-radius: 0 8px 8px 0;
-  background: url(../images/enter-page/login-bg.svg) center right no-repeat;
+  background: url(../images/enter-page/login-bg.jpg) center right/cover no-repeat;
 }
 
 .enter-page__decoration-cit {

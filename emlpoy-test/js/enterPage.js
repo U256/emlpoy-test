@@ -13,7 +13,6 @@ let loginStep = document.querySelector(".enter-page__login-step");
 
 //let submitSignUp = document.querySelector('.submit-sign-up');
 
-//toLoginBtn
 document
   .querySelector(".enter-page__to-login-step-btn")
   .addEventListener("click", () => {
@@ -21,7 +20,6 @@ document
     toggleVisibility(loginStep);
   });
 
-//toRegistrationBtn
 document
   .querySelector(".enter-page__to-registration-step-btn")
   .addEventListener("click", () => {

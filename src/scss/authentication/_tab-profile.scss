@@ -8,9 +8,9 @@
   }
 
   &__settings-wrapper {
+    //contaions person & notif settings
     flex: 1 1 auto;
     max-width: 910px;
-    //contaions person & notif settings
     cursor: default;
   }
 
@@ -24,7 +24,7 @@
     }
 
     &::after {
-      // Линия перед submit. Иначе придётся делать отступ всем элементам ради border
+      // Линия перед кнопкой submit. Иначе придётся делать отступ всем элементам ради border
       position: absolute;
       bottom: 70px;
       left: 0;
@@ -80,7 +80,7 @@
 }
 
 .tab-profile__submit-button_active {
-  ///activate submit button on change
+  ///activate submit button when fields change
   cursor: pointer;
   color: $inv-text;
   background-color: $prim-highlight-text;
