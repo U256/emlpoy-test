@@ -1046,17 +1046,16 @@ html {
 .notifications-bar {
   position: fixed;
   z-index: -6;
-  right: 0;
-  bottom: 0;
+  right: 2px;
+  bottom: 2px;
   overflow: hidden;
   width: 342px;
   height: 395px;
   transition: 0.3s;
   opacity: 0;
   color: #3a3b3f;
-  border-top: 1px solid #1070ca;
-  border-left: 1px solid #1070ca;
-  border-radius: 8px 0 0 0;
+  border: 2px solid #1070ca;
+  border-radius: 8px;
   background-color: #fff;
 }
 
@@ -1081,16 +1080,25 @@ html {
 
 .notifications-bar__close-btn-wrapper {
   position: absolute;
-  top: -50px;
-  right: 10px;
-  height: 52px;
+  top: -46px;
+  right: -1px;
 }
 
 .notifications-bar__close-btn {
   cursor: pointer;
-  color: #9ea0a5;
-  background-color: transparent !important;
+  border-radius: 10px;
+  padding: 0 4px;
+  border: 2px solid #9ea0a5;
   font-size: 50px;
+  background-color: #f1f7ff;
+  line-height: 37px;
+  transition: 0.1s;
+}
+
+.notifications-bar__close-btn:hover {
+  border-radius: 12px;
+  font-size: 52px;
+  color: #000;
 }
 
 .notifications-bar__top-row {
@@ -1124,9 +1132,15 @@ html {
 .notification-item {
   display: flex;
   align-items: center;
+  cursor: pointer;
   width: 100%;
   height: 64px;
   border-bottom: 2px solid #f0f1f4;
+  border-radius: 5px;
+}
+
+.notification-item:hover {
+  background-color: #f1f7ff;
 }
 
 .notification-item__logo {
@@ -1154,12 +1168,23 @@ html {
 .notification-item__toevent-btn {
   width: 33px;
   height: 20px;
+  padding: 5px;
   margin-left: auto;
   color: #9ea0a5;
   background: url(../images/notifications-bar/toevent-btn-arrow.svg) center/12px 18px no-repeat;
   font-size: 2.6rem;
   font-weight: 500;
+  cursor: pointer;
   justify-self: flex-end;
+  transition: 0.1s;
+}
+
+.notification-item:hover .notification-item__message-name {
+  font-weight: 500;
+}
+
+.notification-item:hover button {
+  background-size: 20px 30px;
 }
 
 /*
