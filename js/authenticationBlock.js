@@ -129,15 +129,7 @@ personSettingsForm.addEventListener("submit", (e) => {
   }
 });
 
-////Form fiedls focus and hover actions
-//let formFields = document.querySelectorAll(".prim-fields");
-
 ///// Phone number mask
-let numberField = document.querySelector('input[name="number"]');
-numberField.addEventListener("input", mask);
-numberField.addEventListener("focus", mask);
-numberField.addEventListener("blur", mask);
-
 function setCursorPosition(pos, elem) {
   elem.focus();
   if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
@@ -167,6 +159,12 @@ function mask(event) {
     if (this.value.length == 2) this.value = "";
   } else setCursorPosition(this.value.length, this);
 }
+
+let numberField = document.querySelector('input[name="changedNumber"]');
+numberField.addEventListener("input", mask);
+numberField.addEventListener("focus", mask);
+numberField.addEventListener("blur", mask);
+
 
 ///// Notifications settings form
 function currentCheckboxesPositions(checksArr) {
