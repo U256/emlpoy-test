@@ -1,6 +1,10 @@
 .authentication-block {
   padding-top: 0;
 
+  @media (max-width: 992px) {
+     padding-top: 50px;
+  }
+
   &__top-row {
     display: flex;
     align-items: center;
@@ -8,6 +12,10 @@
     width: 100%;
     margin-bottom: 24px;
     border-bottom: 1px solid #ddd;
+
+    @media (max-width: 992px) {
+       margin-bottom: 12px;
+    }
   }
 
   &__to-tab-btn {
@@ -20,6 +28,10 @@
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2rem;
+
+    @media (max-width: 992px) {
+       margin-right: 10px;
+    }
 
     &:active {
       padding: 5px 10px;
@@ -66,23 +78,6 @@
     position: static;
     z-index: 1;
     opacity: 1;
-  }
-}
-
-/*
-	media
-*/
-@media (max-width: 991.98px) {
-  .authentication-block {
-    padding-top: 50px;
-  }
-
-  .authentication-block__top-row {
-    margin-bottom: 12px;
-  }
-
-  .authentication-block__to-tab-btn {
-    margin-right: 10px;
   }
 }
 

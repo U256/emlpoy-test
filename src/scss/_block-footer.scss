@@ -4,6 +4,10 @@
   text-align: left;
   word-wrap: initial;
 
+  @media (max-width: 576px) {
+    width: 70vw;
+  }
+
   &__title {
     padding: 16px 0 4px 0;
     color: #616161;
@@ -16,14 +20,5 @@
     color: #6b6c6f;
     font-size: 12px;
     line-height: 18px;
-  }
-}
-
-/*
-	media
-*/
-@media (max-width: 575.98px) {
-  .footer {
-    width: 70vw;
   }
 }

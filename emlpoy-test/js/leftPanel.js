@@ -22,7 +22,7 @@ toBlockButtonsContainer.addEventListener("click", function (e) {
     });
 
     blocksArray.forEach((block) => {
-      block.classList.remove("prim-block_active");
+      block.classList.add("prim-block_unactive");
     });
 
     //indexOfElem(e.target) - button and block number
@@ -30,7 +30,7 @@ toBlockButtonsContainer.addEventListener("click", function (e) {
 
     toBlockButtonsArray[buttonIndex].classList.add("left-panel__button_active");
 
-    blocksArray[buttonIndex].classList.add("prim-block_active");
+    blocksArray[buttonIndex].classList.remove("prim-block_unactive");
   }
 
   //wrap left panel to the left after block switching

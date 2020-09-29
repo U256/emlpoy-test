@@ -13,6 +13,11 @@
   border-radius: 8px;
   background-color: $clean-bg;
 
+  @media (max-width: 576px) {
+    width: 99%;
+    height: 330px;
+  }
+
   &_active {
     z-index: 21;
     overflow: visible;
@@ -63,6 +68,10 @@
     padding: 24px;
     background: $soft-background url(../images/notifications-bar/ntfs-logo.svg)
       right center/180px 87px no-repeat;
+
+    @media (max-width: 576px) {
+      padding-left: 10px;
+    }
   }
 
   &__title {
@@ -146,18 +155,4 @@
 
 .notification-item:hover button {
   background-size: 20px 30px;
-}
-
-/*
-	media
-*/
-@media (max-width: 575.98px) {
-  .notifications-bar {
-    width: 99%;
-    height: 330px;
-
-    &__top-row {
-      padding-left: 10px;
-    }
-  }
 }

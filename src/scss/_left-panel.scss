@@ -5,6 +5,23 @@
   transition: 0.3s;
   background-color: $clean-bg;
 
+  @media (max-width: 1200px) {
+    flex: 0 0 230px;
+  }
+
+  @media (max-width: 992px) {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 230px;
+    padding: 12px 9px;
+    transition: 0.3s;
+    transform: translate(-103%, 0);
+    border-radius: 0 0 15px 0;
+    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+  }
+
   &_active {
     transform: translate(0, 0) !important;
   }
@@ -26,6 +43,24 @@
     border-radius: 0 18px 18px 0;
     background-color: $clean-bg;
     font-size: 22px;
+
+    @media (min-width: 992px) {
+      //MIN width
+      //remove switcher on big screens
+      display: none;
+    }
+
+    @media (max-width: 576px) {
+      right: -70px;
+      width: 70px;
+      padding-top: 9px;
+      font-size: 17px;
+
+      &:hover {
+        right: -80px;
+        width: 80px;
+      }
+    }
 
     &:active {
       letter-spacing: 3px;
@@ -54,6 +89,13 @@
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid $soft-border;
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      padding-bottom: 0;
+    }
   }
 
   &__user-logo {
@@ -109,6 +151,11 @@
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 4.5rem;
+
+    @media (max-width: 768px) {
+      height: 41px;
+      line-height: 4rem;
+    }
 
     &_active {
       color: $small-title-text;
@@ -209,61 +256,4 @@
 .left-panel__button-5:not(:disabled):hover,
 .left-panel__button_active[class~="left-panel__button-5"] {
   background-image: url("../images/left-panel/toblock-btn-icon-5_active.svg");
-}
-
-/*
-	media
-*/
-@media (max-width: 1199.98px) {
-  .left-panel {
-    flex: 0 0 230px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .left-panel {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 230px;
-    padding: 12px 9px;
-    transition: 0.3s;
-    transform: translate(-100%, 0);
-  }
-}
-
-@media (min-width: 991.98px) {
-  //remove switcher on big screens
-  .left-panel__switcher {
-    display: none;
-  }
-}
-
-@media (max-width: 757.98px) {
-  .left-panel__user-block {
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    padding-bottom: 0;
-  }
-
-  .left-panel__button {
-    height: 41px;
-    margin: 3px 0 3px 3px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .left-panel__switcher {
-    right: -70px;
-    width: 70px;
-    padding-top: 9px;
-    font-size: 17px;
-
-    &:hover {
-      right: -80px;
-      width: 80px;
-    }
-  }
 }

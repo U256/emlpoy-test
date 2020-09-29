@@ -6,9 +6,18 @@
   color: $inv-text;
   background-color: $enter-accent;
 
+  @media (max-width: 576px) {
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
   &__logo {
     // contains main-logo
     margin-right: 34px;
+
+    @media (max-width: 992px) {
+      margin-right: 10px;
+    }
   }
 
   &__version {
@@ -21,6 +30,15 @@
     text-align: center;
     border-radius: 4px;
     background-color: #3c4a97;
+
+    @media (min-width: 992px) {
+      //MIN width
+      width: fit-content;
+    }
+
+    @media (max-width: 576px) {
+      justify-content: center;
+    }
   }
 
   &__version-logo {
@@ -33,6 +51,10 @@
     background-color: #39817a;
     font-size: 1rem;
     font-weight: 500;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 
   &__version-upgrade {
@@ -40,12 +62,25 @@
     font-size: 1.4rem;
     line-height: 2rem;
 
+    @media (max-width: 992px) {
+      display: none;
+    }
+
     &_tablet-size {
       display: none;
+
+      @media (max-width: 991.98px) and (min-width: 575.98px) {
+        display: block;
+      }
     }
 
     &_phone-size {
       display: none;
+      text-decoration: underline;
+
+      @media (max-width: 576px) {
+        display: block;
+      }
     }
   }
 
@@ -57,6 +92,10 @@
     display: flex;
     justify-content: space-between;
     margin-left: auto;
+
+    @media (max-width: 576px) {
+      margin-left: 0;
+    }
   }
 
   &__button {
@@ -69,6 +108,11 @@
     border: none;
     outline: none;
     outline-offset: 3px;
+
+    @media (max-width: 576px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
 
     &:active {
       top: 1px;
@@ -85,7 +129,8 @@
   }
 
   &__notifications-btn {
-    background: url(../images/header/notification-bell-icon.svg) center/contain no-repeat;
+    background: url(../images/header/notification-bell-icon.svg) center/contain
+      no-repeat;
   }
 
   &__logout-btn {
@@ -105,63 +150,8 @@
   font-size: 2rem;
   font-weight: 500;
   line-height: 24px;
-}
 
-/*
-	media
-*/
-
-@media (max-width: 991.98px) {
-  .header__logo {
-    margin-right: 10px;
-  }
-
-  .header__version-upgrade {
-    display: none;
-  }
-}
-
-@media (min-width: 991.98px) {
-  .header__version {
-    width: fit-content;
-  }
-}
-
-@media (max-width: 991.98px) and (min-width: 575.98px) {
-  .header__version-upgrade_tablet-size {
-    display: block;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .header {
-    justify-content: space-between;
-    padding: 0 15px;
-
-    &__buttons-group {
-      margin-left: 0;
-    }
-
-    &__version {
-      justify-content: center;
-    }
-
-    &__version-logo {
-      display: none;
-    }
-
-    &__version-upgrade_phone-size {
-      display: block;
-      text-decoration: underline;
-    }
-
-    &__button {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-  }
-
-  .main-logo {
+  @media (max-width: 576px) {
     font-size: 0;
   }
 }
