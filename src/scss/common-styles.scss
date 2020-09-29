@@ -1,8 +1,21 @@
+//For all html files
+
+@import "reset";
+
+@import "sass-attachment";
+
+//////////////////////////////
+//Page style
+
 html {
   cursor: default;
   font-family: Roboto, sans-serif;
   font-size: 10px;
   //fw: 300 400 500 700
+
+  @media (max-width: 575.98px) {
+    font-size: 9px;
+  }
 }
 
 .page-wrapper {
@@ -12,6 +25,15 @@ html {
   min-height: calc(100vh - 64px);
   background-color: $soft-background;
 }
+
+.main {
+  position: relative;
+  flex: 1 0 auto;
+  background-color: $soft-background;
+}
+
+//////////////////////////////
+//Blocks
 
 .clean-btn {
   color: inherit;
@@ -27,49 +49,44 @@ html {
   box-shadow: 0 1px 3px rgba(63, 63, 68, 0.45);
 }
 
-.main {
-  position: relative;
-  flex: 1 0 auto;
-  background-color: $soft-background;
-}
-
 .prim-block {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  display: flex;
-  visibility: hidden;
-  align-items: center;
+  @extend %flex-aiCenter-jcsBetween;
   flex-direction: column;
-  justify-content: space-between;
   width: 100%;
   height: 100%;
   padding: 24px 16px;
-  transition: 0.4s;
-  opacity: 0;
+  transition: opacity 2s;
   color: $small-title-text;
+
+  @media (max-width: 992px) {
+    padding: 70px 12px 12px 12px;
+  }
+}
+
+.prim-block_unactive {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0;
 
   * {
     position: absolute;
-    z-index: -1;
-    bottom: 0;
+    top: 0;
     left: 0;
+    width: 0 !important;
+    height: 0 !important;
   }
 }
 
-.prim-block_active {
-  position: relative;
-  z-index: 1;
-  visibility: visible;
-  transition: 0.4s;
-  opacity: 1;
-
-  * {
-    position: static;
-    z-index: 1;
-  }
-}
+// .prim-block_active {
+//   position: relative;
+//   z-index: 1;
+//   transition: 4s;
+// }
 
 .user-logo {
   width: 100px;
@@ -129,6 +146,14 @@ html {
   outline: none;
   font-size: 16px;
 
+  @media (max-width: 992px) {
+    height: 42px;
+  }
+
+  @media (max-width: 576px) {
+    height: 36px;
+  }
+
   &:focus {
     border: 2px solid $enter-accent;
     background-color: $input-focus;
@@ -152,8 +177,8 @@ html {
   padding: 0 5px;
   letter-spacing: 0.08rem;
   color: #0a4db3;
-  outline: none;
   border-radius: 20%;
+  outline: none;
   background-color: $clean-bg;
   font-size: 1.3rem;
   line-height: 1.4rem;
@@ -304,27 +329,4 @@ html {
   top: 150px;
   color: red;
   border-color: red;
-}
-
-/*
-	media
-*/
-@media (max-width: 991.98px) {
-  .prim-block {
-    padding: 70px 12px 12px 12px;
-  }
-
-  .prim-field {
-    height: 42px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  html {
-    font-size: 9px;
-  }
-
-  .prim-field {
-    height: 36px;
-  }
 }

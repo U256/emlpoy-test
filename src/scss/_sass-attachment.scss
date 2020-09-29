@@ -1,0 +1,37 @@
+// mixins, colors, functions required for all scss files.
+
+$enter-accent: #3f51b5;
+$prim-highlight-text: #1665d8;
+$sec-highlight-text: #1070ca;
+$small-title-text: #3a3b3f;
+
+$dark-title-text: #212529;
+$footnote: #66788a;
+$soft-border: #e4e7eb;
+
+$input-focus: #f1f7ff;
+$mouse-focus: #e9e8e8;
+$disabled: #e6e6e6;
+
+$pale-text: #9ea0a5;
+$inv-text: #fff;
+$clean-bg: #fff;
+$soft-background: #f9fafb;
+
+%flex-aiCenter-jcsBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-aiCenter-jcsAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+%flex-centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

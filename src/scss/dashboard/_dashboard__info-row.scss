@@ -1,9 +1,7 @@
 //all 4 units
 .info-block {
-  display: flex;
-  align-items: center;
+  @extend %flex-aiCenter-jcsBetween;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 100%;
 
   &__budget-unit {
@@ -22,8 +20,8 @@
   }
 
   &__profit-unit {
-    background: $enter-accent url(../images/dashboard/info-row-4.svg) right 15px top
-      17px/64px 64px no-repeat;
+    background: $enter-accent url(../images/dashboard/info-row-4.svg) right 15px
+      top 17px/64px 64px no-repeat;
 
     .info-unit__title {
       color: $clean-bg;
@@ -47,6 +45,24 @@
   height: 152px;
   margin-bottom: 24px;
   padding: 20px 15px 24px 24px;
+
+  @media (max-width: 1200px) {
+    height: 130px;
+    padding: 12px;
+    background-position: right 10px top 10px !important;
+    background-size: 35px !important;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 1 48.5%;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 576px) {
+    flex: 1 0 100%;
+    width: 100%;
+    height: 85px;
+  }
 
   &__title {
     letter-spacing: 1px;
@@ -78,31 +94,4 @@
   // &__change-line {
   //    in progress unit
   //}
-}
-
-/*
-	media
-*/
-@media (max-width: 1199.98px) {
-  .info-unit {
-    height: 130px;
-    padding: 12px;
-    background-position: right 10px top 10px !important;
-    background-size: 35px !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .info-unit {
-    flex: 0 1 48.5%;
-    margin-bottom: 12px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .info-unit {
-    flex: 1 0 100%;
-    width: 100%;
-    height: 85px;
-  }
 }

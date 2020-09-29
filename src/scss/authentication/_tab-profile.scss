@@ -3,8 +3,26 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media (max-width: 1500px) {
+    flex-direction: column;
+  }
+
   &__avatar-change-block {
     margin-bottom: 12px;
+
+    @media (min-width: 1500px) {
+      //MIN
+      margin-right: 24px;
+    }
+
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+
+    @media (max-width: 576px) {
+      width: 290px;
+      height: 220px;
+    }
   }
 
   &__settings-wrapper {
@@ -41,6 +59,10 @@
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid $soft-border;
+
+    @media (max-width: 992px) {
+      padding: 12px 0;
+    }
   }
 
   &__settings-title {
@@ -48,18 +70,31 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
+
+    @media (max-width: 992px) {
+      margin-left: 12px;
+    }
   }
 
   &__settings-top-info {
     color: $footnote;
     font-size: 16px;
     font-weight: 300;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 
   &__settings-form {
     width: 65vw;
     max-width: 730px;
     padding: 24px 24px 0 24px;
+
+    @media (max-width: 992px) {
+      min-width: 90vw;
+      padding: 18px 12px 0 12px;
+    }
   }
 
   &__submit-button {
@@ -114,6 +149,10 @@
     justify-content: space-between;
     width: 100%;
     padding: 24px;
+
+    @media (max-width: 576px) {
+      padding: 18px 12px;
+    }
   }
 
   &__info-column {
@@ -138,18 +177,20 @@
   }
 
   &__avatar-column {
-    display: flex;
+    @extend %flex-aiCenter-jcsBetween;
     flex: 0 0 50%;
-    justify-content: center;
     height: 100%;
   }
 
-  //&__new-image {}
+  &__new-image {
+    @media (max-width: 576px) {
+      width: 95%;
+      height: 95%;
+    }
+  }
 
   &__bottom-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @extend %flex-aiCenter-jcsAround;
     height: 60px;
     border-top: 2px solid #ebedf0;
   }
@@ -166,6 +207,11 @@
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.6rem;
+
+    @media (max-width: 992px) {
+      min-width: 90px;
+      padding: 0 10px;
+    }
 
     &:active {
       font-size: 1.5rem;
@@ -189,7 +235,15 @@
 }
 
 .person-settings-block {
-  //&__form {}
+  &__form {
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
 
   &__field-wrapper {
     position: relative;
@@ -198,6 +252,10 @@
     width: 44%;
     min-width: 250px;
     margin: 0 24px 24px 0;
+
+    @media (max-width: 1200px) {
+      margin: 0 12px 17px 0;
+    }
   }
 
   &__field {
@@ -221,10 +279,17 @@
 }
 
 .notif-settings-block {
-  //&__form {
-  // display: block;
-  // margin: 0;
-  //}
+  &__form {
+    margin: 0; ///?
+
+    @media (max-width: 576px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
 
   &__form-left-column {
     position: relative;
@@ -232,12 +297,16 @@
     display: inline-block;
     margin-right: 7vw;
     margin-bottom: 15px;
+
+    @media (max-width: 576px) {
+      margin-right: 0;
+    }
   }
 
   &__form-right-column {
     display: inline-block;
-    vertical-align: top;
     margin-bottom: 10px;
+    vertical-align: top;
   }
 
   &__form-column-title {
@@ -286,92 +355,4 @@
   height: 16px;
   color: $footnote;
   font-size: 1.2rem;
-}
-
-/*
-	media
-*/
-@media (max-width: 1500px) {
-  .tab-profile {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 1500px) {
-  .tab-profile__avatar-change-block {
-    margin-right: 24px;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .person-settings-block__field-wrapper {
-    margin: 0 12px 17px 0;
-    // width: 47%;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .avatar-change-block__button {
-    min-width: 90px;
-    padding: 0 10px;
-  }
-
-  .tab-profile__settings-top-row {
-    padding: 12px 0;
-  }
-
-  .tab-profile__settings-title {
-    margin-left: 12px;
-  }
-
-  .tab-profile__settings-top-info {
-    display: none;
-  }
-
-  .tab-profile__settings-form {
-    min-width: 90vw;
-    padding: 18px 12px 0 12px;
-  }
-}
-
-@media (max-width: 757.98px) {
-  .tab-profile__avatar-change-block {
-    align-self: center;
-  }
-
-  .person-settings-block__form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .avatar-change-block__new-image {
-    width: 95%;
-    height: 95%;
-  }
-
-  .tab-profile__avatar-change-block {
-    width: 290px;
-    height: 220px;
-  }
-
-  .avatar-change-block__top-row {
-    padding: 18px 12px;
-  }
-
-  .notif-settings-block__form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  .notif-settings-block__form-left-column {
-    margin-right: 0;
-  }
 }

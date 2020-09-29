@@ -1,7 +1,7 @@
+@import "sass-attachment";
+
 .enter-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centering;
   width: 100%;
   min-height: 100vh;
   color: $pale-text;
@@ -15,6 +15,16 @@
     border-radius: 8px;
     background-color: $clean-bg;
     box-shadow: 0 1px 3px rgba(63, 63, 68, 0.595), 0 0 0 rgba(63, 63, 68, 0.465);
+
+    @media (max-width: 992px) {
+      width: 530px;
+      height: 550px;
+    }
+
+    @media (max-width: 576px) {
+      width: 300px;
+      height: 520px;
+    }
   }
 
   &__main-column {
@@ -22,6 +32,15 @@
     flex: 0 0 487px;
     height: 100%;
     padding: 55px 63px;
+
+    @media (max-width: 992px) {
+      flex: 1 0 auto;
+    }
+
+    @media (max-width: 576px) {
+      flex: 1 0 300px;
+      padding: 20px;
+    }
   }
 
   &__step {
@@ -31,6 +50,10 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 992px) {
+      align-items: center;
+    }
 
     &_active {
       display: flex;
@@ -47,9 +70,7 @@
 
   &__top-row {
     //.enter-top-row
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flex-aiCenter-jcsBetween;
     width: 100%;
     height: 30px;
     margin-bottom: auto;
@@ -83,8 +104,14 @@
     // back to start section
     padding: 6px 10px 6px 30px;
     cursor: pointer;
-    background: url(../images/enter-page/toleft-arrow.png) left 4px center/18px 14px no-repeat;
+    background: url(../images/enter-page/toleft-arrow.png) left 4px center/18px
+      14px no-repeat;
     font-size: 1.4rem;
+
+    @media (max-width: 576px) {
+      padding-left: 23px;
+      background-size: 14px 10px;
+    }
   }
 
   &__switch-step-chunk {
@@ -112,9 +139,11 @@
     margin-bottom: 40px;
     font-size: 1.4rem;
     line-height: 20px;
-  }
 
-  &__
+    @media (max-width: 992px) {
+      margin-bottom: 15px;
+    }
+  }
 
   &__to-login-step-btn {
     //forward-buttons in start block:
@@ -147,6 +176,10 @@
   &__field {
     width: 100%;
     margin-bottom: 26px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
   }
 
   //&__field-label {}
@@ -159,6 +192,10 @@
 
   &__terms-check-label {
     max-width: 75%;
+
+    @media (max-width: 576px) {
+      margin-bottom: 5px;
+    }
   }
 
   &__to-terms-link {
@@ -168,6 +205,10 @@
     color: #5b5c5d;
     font-size: 16px;
     line-height: 20px;
+
+    @media (max-width: 576px) {
+      margin-left: 22px;
+    }
 
     &:focus,
     &:hover {
@@ -197,7 +238,12 @@
     padding: 0 18px 24px 24px;
     color: $inv-text;
     border-radius: 0 8px 8px 0;
-    background: url(../images/enter-page/login-bg.jpg) center right/cover no-repeat;
+    background: url(../images/enter-page/login-bg.jpg) center right/cover
+      no-repeat;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 
   &__decoration-cit {
@@ -213,7 +259,8 @@
     //.decoration-author
     display: flex;
     padding-left: 50px;
-    background: url(../images/enter-page/login-cit-author.png) left/32px 32px no-repeat;
+    background: url(../images/enter-page/login-cit-author.png) left/32px 32px
+      no-repeat;
   }
 
   &__cit-author-name {
@@ -225,60 +272,5 @@
     padding-top: 3px;
     letter-spacing: 0.5px;
     font-size: 13px;
-  }
-}
-
-/*
-	media
-*/
-@media (max-width: 991.98px) {
-  .enter-page__step {
-    align-items: center;
-  }
-
-  .enter-page__subtitle {
-    margin-bottom: 15px;
-  }
-
-  .enter-page__container {
-    width: 530px;
-    height: 550px;
-  }
-
-  .enter-page__main-column {
-    flex: 1 0 auto;
-  }
-
-  .enter-page__decoration-column {
-    display: none;
-  }
-
-  .enter-page-field {
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .enter-page__container {
-    width: 300px;
-    height: 520px;
-  }
-
-  .enter-page__main-column {
-    flex: 1 0 300px;
-    padding: 20px;
-  }
-
-  .enter-page__back-btn {
-    padding: 6px 10px 6px 23px;
-    background: url(../images/enter-page/toleft-arrow.png) left 4px center/14px 10px no-repeat;
-  }
-
-  .enter-page__terms-check-label {
-    margin-bottom: 5px;
-  }
-
-  .enter-page__to-terms-link {
-    margin-left: 22px;
   }
 }
