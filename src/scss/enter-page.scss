@@ -1,3 +1,5 @@
+@import "sass-attachment";
+
 .enter-page {
   display: flex;
   align-items: center;
@@ -113,8 +115,6 @@
     font-size: 1.4rem;
     line-height: 20px;
   }
-
-  &__
 
   &__to-login-step-btn {
     //forward-buttons in start block:

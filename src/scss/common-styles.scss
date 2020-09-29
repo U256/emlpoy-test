@@ -1,15 +1,37 @@
+//For all html files
+
+@import "reset";
+
+@import "sass-attachment";
+
+//////////////////////////////
+//Page style
+
 html {
   cursor: default;
   font-family: Roboto, sans-serif;
   font-size: 10px;
-  //fw: 300 400 500 700
+	//fw: 300 400 500 700
+	
+	@media (max-width: 575.98px) {
+    font-size: 9px;
+  }
 }
+
+//////////////////////////////
+//Blocks
 
 .page-wrapper {
   position: relative;
   z-index: 1;
   display: flex;
   min-height: calc(100vh - 64px);
+  background-color: $soft-background;
+}
+
+.main {
+  position: relative;
+  flex: 1 0 auto;
   background-color: $soft-background;
 }
 
@@ -25,12 +47,6 @@ html {
   border-radius: 4px;
   background-color: $clean-bg;
   box-shadow: 0 1px 3px rgba(63, 63, 68, 0.45);
-}
-
-.main {
-  position: relative;
-  flex: 1 0 auto;
-  background-color: $soft-background;
 }
 
 .prim-block {
@@ -320,10 +336,6 @@ html {
 }
 
 @media (max-width: 575.98px) {
-  html {
-    font-size: 9px;
-  }
-
   .prim-field {
     height: 36px;
   }
