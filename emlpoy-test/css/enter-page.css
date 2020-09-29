@@ -1,7 +1,16 @@
+.enter-page__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .enter-page {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.enter-page {
   width: 100%;
   min-height: 100vh;
   color: #9ea0a5;
@@ -41,9 +50,6 @@
 }
 
 .enter-page__top-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: 30px;
   margin-bottom: auto;

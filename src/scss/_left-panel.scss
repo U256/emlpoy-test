@@ -1,6 +1,6 @@
 .left-panel {
   flex: 0 0 270px;
-  min-height: calc(100vh - 64px);
+  min-height: calc(99vh - 64px);
   padding: 24px 16px;
   transition: 0.3s;
   background-color: $clean-bg;
@@ -17,9 +17,9 @@
     width: 230px;
     padding: 12px 9px;
     transition: 0.3s;
-    transform: translate(-103%, 0);
+    transform: translate(-101%, 0);
     border-radius: 0 0 15px 0;
-    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.75);
   }
 
   &_active {

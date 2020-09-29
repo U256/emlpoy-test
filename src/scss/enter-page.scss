@@ -1,9 +1,7 @@
 @import "sass-attachment";
 
 .enter-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centering;
   width: 100%;
   min-height: 100vh;
   color: $pale-text;
@@ -72,9 +70,7 @@
 
   &__top-row {
     //.enter-top-row
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flex-aiCenter-jcsBetween;
     width: 100%;
     height: 30px;
     margin-bottom: auto;
@@ -278,4 +274,3 @@
     font-size: 13px;
   }
 }
-

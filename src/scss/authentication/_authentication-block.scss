@@ -2,7 +2,7 @@
   padding-top: 0;
 
   @media (max-width: 992px) {
-     padding-top: 50px;
+    padding-top: 50px;
   }
 
   &__top-row {
@@ -14,7 +14,7 @@
     border-bottom: 1px solid #ddd;
 
     @media (max-width: 992px) {
-       margin-bottom: 12px;
+      margin-bottom: 12px;
     }
   }
 
@@ -30,7 +30,7 @@
     line-height: 2rem;
 
     @media (max-width: 992px) {
-       margin-right: 10px;
+      margin-right: 10px;
     }
 
     &:active {

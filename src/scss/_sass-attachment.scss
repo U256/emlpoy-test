@@ -17,3 +17,21 @@ $pale-text: #9ea0a5;
 $inv-text: #fff;
 $clean-bg: #fff;
 $soft-background: #f9fafb;
+
+%flex-aiCenter-jcsBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-aiCenter-jcsAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+%flex-centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

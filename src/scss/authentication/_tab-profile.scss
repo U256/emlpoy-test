@@ -177,9 +177,8 @@
   }
 
   &__avatar-column {
-    display: flex;
+    @extend %flex-aiCenter-jcsBetween;
     flex: 0 0 50%;
-    justify-content: center;
     height: 100%;
   }
 
@@ -191,9 +190,7 @@
   }
 
   &__bottom-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @extend %flex-aiCenter-jcsAround;
     height: 60px;
     border-top: 2px solid #ebedf0;
   }
@@ -288,8 +285,8 @@
     @media (max-width: 576px) {
       display: flex;
       align-items: center;
-      flex-direction: column;
       justify-content: center;
+      flex-direction: column;
       margin: 0 auto;
     }
   }
@@ -302,14 +299,14 @@
     margin-bottom: 15px;
 
     @media (max-width: 576px) {
-       margin-right: 0;
+      margin-right: 0;
     }
   }
 
   &__form-right-column {
     display: inline-block;
-    vertical-align: top;
     margin-bottom: 10px;
+    vertical-align: top;
   }
 
   &__form-column-title {
