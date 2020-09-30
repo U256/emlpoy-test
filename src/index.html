@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Devias Kit</title>
+
+   <meta name="description" content="Devias profile page." />
+   <link rel="icon" href="/images/favicon.ico" />
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link href="css/common-styles.min.css" rel="stylesheet" type="text/css">
+   <link href="css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   <!-- blue bar at the top -->
+   @@include("_header.html")
+
+   <div class="page-wrapper">
+      <!-- aside left panel -->
+      @@include("_left-panel.html")
+
+      <main class="main">
+         <!-- primary blocks -->
+         @@include("_dashboard-block.html")
+         @@include("_users-block.html")
+         @@include("_products-block.html")
+         @@include("_authentication-block.html")
+         @@include("_typography-block.html")
+         @@include("_icons-images-block.html")
+      </main>
+   </div>
+
+   @@include("_notifications-bar.html")
+
+   <script src="js/script.min.js"></script>
+   <script type="module" src="js/indexOfElement.min.js"></script>
+   <script type="module" src="js/leftPanel.min.js"></script>
+   <script type="module" src="js/authenticationBlock.min.js"></script>
+
+   <script src="js/notifications.min.js"></script>
+</body>
+
+</html>

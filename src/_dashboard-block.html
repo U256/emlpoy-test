@@ -1,0 +1,215 @@
+<section class="prim-block dashboard-block prim-block_unactive">
+	<h2 class="dashboard-block__title">Information about Devias kit users, actions and operations</h2>
+	<div class="dashboard-block__row dashboard-block__info-row">
+		<div class="info-block">
+			<div class="soft-bd info-unit info-block__budget-unit">
+				<div class="info-unit__title">Budget</div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month </span>
+				</div>
+			</div>
+			<div class="soft-bd info-unit info-block__users-unit">
+				<div class="info-unit__title">Total users </div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<div class="info-unit__change-line"></div>
+				</div>
+			</div>
+			<div class="soft-bd info-unit info-block__progress-unit">
+				<div class="info-unit__title">Progress</div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month</span>
+				</div>
+			</div>
+			<div class="soft-bd info-unit info-block__profit-unit">
+				<div class="info-unit__title">Total profit </div>
+				<div class="info-unit__amount">--</div>
+				<div class="info-unit__changes-row">
+					<span class="info-unit__change-percent">%</span>
+					<span class="info-unit__change-period">Since last month</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="dashboard-block__row dashboard-block__schedules-row">
+		<div class="soft-bd schedule-item users-schedule-item">
+			<div class="dashboard-block__item-top-row schedule-item__top-row">
+				<div class="dashboard-block__item-title">Users by device</div>
+				<select name="schedule-item__days-select">
+					<option>Last 7 days</option>
+					<option>Last 3 days</option>
+				</select>
+			</div>
+			<div class="schedule-item__main-row users-schedule-item__schedule-row">
+				<!-- -->
+			</div>
+			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Audience Overview</button>
+			</div>
+		</div>
+		<div class="soft-bd schedule-item pie-chart-item">
+			<div class="dashboard-block__item-top-row schedule-item__top-row">
+				<div class="dashboard-block__item-title">Users by device</div>
+				<div class="pie-chart-item__pie-reload">O</div>
+			</div>
+			<div class="schedule-item__main-row pie-chart-item__schedule-row">
+				<!-- -->
+			</div>
+			<div class="dashboard-block__item-bottom-row schedule-item__bottom-row">
+				<select name="schedule-item__days-select">
+					<option>7 days</option>
+					<option>3 days</option>
+				</select>
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">Overview</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="dashboard-block__row dashboard-block__bottom-row">
+		<div class="soft-bd latest-item latest-products-item">
+			<div class="dashboard-block__item-top-row latest-item__top-row">
+				<h2 class="dashboard-block__item-title">Latest Products</h2>
+				<div class="latest-products-item__products-count">5 in total</div>
+			</div>
+			<div class="latest-item__main-row latest-products-item__main-row">
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-1"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							Dropbox
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-2"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							Medium Corporation
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-3"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							GitHub
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+				<div class="prod-item">
+					<div class="prod-item__logo prod-item__logo-4"></div>
+					<div class="prod-item__text-column">
+						<h3 class="prod-item__product-name">
+							Slac
+						</h3>
+						<div class="prod-item__last-update">
+							Updated
+						</div>
+					</div>
+					<button type="button" class="clean-btn prod-item__toevent-btn" aria-label="read more about product"></button>
+				</div>
+			</div>
+			<div class="dashboard-block__item-bottom-row latest-products-item__bottom-row">
+				<button type="submit" class="clean-btn dashboard-block__bottom-btn">View all</button>
+			</div>
+		</div>
+		<div class="soft-bd latest-item latest-orders-item">
+			<div class="dashboard-block__item-top-row latest-item__top-row">
+				<div class="dashboard-block__item-title">Latest Orders</div>
+				<div class="latest-orders-item__total-count">total</div>
+				<!--  -->
+				<button type="submit" class="clean-btn latest-orders-item__create-entry-btn">new entry</button>
+			</div>
+			<div class="latest-item__main-row latest-orders-item__main-row">
+				<table class="orders-table">
+					<thead>
+						<tr>
+							<th class="orders-table__id-col">Order ID</th>
+							<th class="orders-table__customer-col">Customer</th>
+							<th>Date</th>
+							<th>Status</th>
+							<th class="orders-table__actions-col">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="l-orders-tr-0">
+							<th class="orders-table__id-col">--</th>
+							<th class="orders-table__customer-col">--</th>
+							<th>--</th>
+							<th>-</th>
+							<th class="orders-table__actions-col">--</th>
+						</tr>
+						<tr class="l-orders-tr-1">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-2">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-3">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-4">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+						<tr class="l-orders-tr-5">
+							<th class="orders-table__id-col"></th>
+							<th class="orders-table__customer-col"></th>
+							<th></th>
+							<th></th>
+							<th class="orders-table__actions-col"></th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="latest-orders-item__bottom-row">
+				<span class="latest-orders-item__content-resize">
+					Rows per-page:
+					<select name="latest-orders-item__resize-select">
+						<option>5</option>
+						<option>10</option>
+					</select>
+				</span>
+				<span class="latest-orders-item__table-page">1-10 of --</span>
+				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-prew-page"
+					aria-label="previous orders"></button>
+				<button type="submit" class="clean-btn latest-orders-item__page-turn-btn latest-orders-item__to-next-page"
+					aria-label="next orders"></button>
+			</div>
+		</div>
+	</div>
+
+	@@include("_footer.html")
+</section>

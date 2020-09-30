@@ -1,0 +1,358 @@
+//part of _authentication-block.scss
+.tab-profile {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 1500px) {
+    flex-direction: column;
+  }
+
+  &__avatar-change-block {
+    margin-bottom: 12px;
+
+    @media (min-width: 1500px) {
+      //MIN
+      margin-right: 24px;
+    }
+
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+
+    @media (max-width: 576px) {
+      width: 290px;
+      height: 220px;
+    }
+  }
+
+  &__settings-wrapper {
+    //contaions person & notif settings
+    flex: 1 1 auto;
+    max-width: 910px;
+    cursor: default;
+  }
+
+  &__settings-block {
+    //person-settings & notif-settings blocks
+    position: relative;
+    margin-bottom: 12px;
+
+    &:hover {
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    &::after {
+      // Линия перед кнопкой submit. Иначе придётся делать отступ всем элементам ради border
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      content: "";
+      background-color: $soft-border;
+    }
+  }
+
+  &__settings-top-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid $soft-border;
+
+    @media (max-width: 992px) {
+      padding: 12px 0;
+    }
+  }
+
+  &__settings-title {
+    margin: 0 16px 0 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+
+    @media (max-width: 992px) {
+      margin-left: 12px;
+    }
+  }
+
+  &__settings-top-info {
+    color: $footnote;
+    font-size: 16px;
+    font-weight: 300;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__settings-form {
+    width: 65vw;
+    max-width: 730px;
+    padding: 24px 24px 0 24px;
+
+    @media (max-width: 992px) {
+      min-width: 90vw;
+      padding: 18px 12px 0 12px;
+    }
+  }
+
+  &__submit-button {
+    display: block;
+    margin-bottom: 16px;
+    padding: 8px;
+    color: $prim-highlight-text;
+    border: 1px solid $pale-text;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      // to prevent "active" look for unactive submit buttons
+      border: 2px solid $pale-text;
+      box-shadow: none;
+    }
+  }
+}
+
+.tab-profile__submit-button_active {
+  ///activate submit button when fields change
+  cursor: pointer;
+  color: $inv-text;
+  background-color: $prim-highlight-text;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  &:hover,
+  &:focus {
+    background-color: $sec-highlight-text;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  &:hover {
+    border: 2px solid $enter-accent;
+  }
+}
+
+.avatar-change-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 375px;
+  height: 249px;
+
+  &:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  &__top-row {
+    //contains info & new-ava
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px;
+
+    @media (max-width: 576px) {
+      padding: 18px 12px;
+    }
+  }
+
+  &__info-column {
+    flex: 0 0 50%;
+    height: 100%;
+    color: $dark-title-text;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  &__person-name {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  &__location,
+  &__time {
+    color: $pale-text;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  &__avatar-column {
+    @extend %flex-aiCenter-jcsBetween;
+    flex: 0 0 50%;
+    height: 100%;
+  }
+
+  &__new-image {
+    @media (max-width: 576px) {
+      width: 95%;
+      height: 95%;
+    }
+  }
+
+  &__bottom-row {
+    @extend %flex-aiCenter-jcsAround;
+    height: 60px;
+    border-top: 2px solid #ebedf0;
+  }
+
+  &__button {
+    min-width: 120px;
+    height: 4rem;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: font-size 0.2s;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+
+    @media (max-width: 992px) {
+      min-width: 90px;
+      padding: 0 10px;
+    }
+
+    &:active {
+      font-size: 1.5rem;
+    }
+
+    &:focus {
+      border: 1px solid $prim-highlight-text;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      border: 2px solid $prim-highlight-text;
+    }
+  }
+
+  &__upload-button {
+    color: $prim-highlight-text;
+  }
+
+  // &__remove-button {}
+}
+
+.person-settings-block {
+  &__form {
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__field-wrapper {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 44%;
+    min-width: 250px;
+    margin: 0 24px 24px 0;
+
+    @media (max-width: 1200px) {
+      margin: 0 12px 17px 0;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    min-width: 240px;
+    height: 5.6rem;
+  }
+
+  &__field-label {
+    position: absolute;
+  }
+}
+
+.submit-person-settings {
+  width: 152px;
+  margin-top: 20px;
+
+  &:active {
+    font-size: 14px;
+  }
+}
+
+.notif-settings-block {
+  &__form {
+    margin: 0; ///?
+
+    @media (max-width: 576px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+
+  &__form-left-column {
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    margin-right: 7vw;
+    margin-bottom: 15px;
+
+    @media (max-width: 576px) {
+      margin-right: 0;
+    }
+  }
+
+  &__form-right-column {
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: top;
+  }
+
+  &__form-column-title {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+
+  //&__checkbox {}
+
+  &__checkbox-label {
+    margin-bottom: 24px;
+  }
+}
+
+.submit-notif-settings {
+  width: 120px;
+}
+
+.fill-required {
+  //hint in input form
+  position: relative;
+  z-index: 19;
+  bottom: -30px;
+  left: 15px;
+  width: 90%;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.person-settings-block__field:hover ~ .fill-required,
+.person-settings-block__field:focus ~ .fill-required {
+  color: $enter-accent;
+}
+
+.steer-for-checkbox {
+  //little hint on activation
+  position: relative;
+  top: -20px;
+  left: 31px;
+  width: 100%;
+  height: 16px;
+  color: $footnote;
+  font-size: 1.2rem;
+}

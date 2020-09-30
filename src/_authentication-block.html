@@ -1,0 +1,142 @@
+<section class="prim-block authentication-block">
+  <div class="authentication-block__top-row">
+    <button type="button" class="clean-btn authentication-block__to-tab-btn authentication-block__to-tab-btn_active">
+      Profile
+    </button>
+    <button type="button" class="clean-btn authentication-block__to-tab-btn">Account</button>
+    <button type="button" class="clean-btn authentication-block__to-tab-btn">
+      Price Plans
+    </button>
+  </div>
+
+  <div class="authentication-tab tab-profile authentication-tab_active">
+    <div class="soft-bd avatar-change-block tab-profile__avatar-change-block">
+      <div class="avatar-change-block__top-row">
+        <div class="avatar-change-block__info-column">
+          <h1 class="avatar-change-block__person-name">Person name</h1>
+          <h2 class="avatar-change-block__location">Person location</h2>
+          <h2 class="avatar-change-block__time">Person time</h2>
+        </div>
+        <div class="avatar-change-block__avatar-column">
+          <picture>
+            <source srcset="images/nev-ava.webp" type="image/webp" />
+            <img class="avatar-change-block__new-image" src="images/nev-ava.webp" alt="new uploaded avatar" />
+          </picture>
+        </div>
+      </div>
+      <div class="avatar-change-block__bottom-row">
+        <button type="submit"
+          class="clean-btn avatar-change-block__button avatar-change-block__upload-button">Upload</button>
+        <button type="submit"
+          class="clean-btn avatar-change-block__button avatar-change-block__remove-button">Remove</button>
+      </div>
+    </div>
+    <div class="tab-profile__settings-wrapper">
+      <div class="soft-bd tab-profile__settings-block person-settings-block">
+        <div class="tab-profile__settings-top-row">
+          <span class="tab-profile__settings-title">Basic Profile</span>
+          <span class="tab-profile__settings-top-info">The information can be edited from your profile page</span>
+        </div>
+
+        <form class="tab-profile__settings-form person-settings-block__form" action="#" method="post">
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="changedName"
+              placeholder="First Name" id="setting1" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting1">Name</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="changedLastName"
+              placeholder="Last Name" id="setting2" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting2">Last Name</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="changedEmail" placeholder="Email"
+              id="setting3" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting3">Email</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="changedNumber"
+              placeholder="Phone number" id="setting4" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting4">Phone number</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="changedCountry" maxlength="38"
+              placeholder="Country" id="setting5" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting5">Country</label>
+          </div>
+          <div class="prim-field-wrapper person-settings-block__field-wrapper">
+            <input class="prim-field person-settings-block__field" type="text" name="changedCity" maxlength="38"
+              placeholder="City" id="setting6" />
+            <label class="prim-field-label person-settings-block__field-label" for="setting6">City</label>
+          </div>
+          <input class="prim-submit tab-profile__submit-button submit-person-settings" type="submit"
+            name="submitSettings" value="SAVE SETTINGS" />
+        </form>
+      </div>
+      <div class="soft-bd tab-profile__settings-block notif-settings-block">
+        <div class="tab-profile__settings-top-row">
+          <span class="tab-profile__settings-title">Notifications</span>
+          <span class="tab-profile__settings-top-info">Mange the notifications emailing page</span>
+        </div>
+
+        <form class="tab-profile__settings-form notif-settings-block__form" action="#" method="post">
+          <div class="notif-settings-block__form-left-column">
+            <div class="notif-settings-block__form-column-title">Notifications</div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check0" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox1"
+                value="email-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check0">Email</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check1" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox2" value="pushes-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check1">Push
+                notifications</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check2" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox3" value="messages-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check2">Text messages</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check3" checked class="prim-checkbox notif-settings-block__checkbox" type="checkbox"
+                name="checkbox4" value="calls-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check3">Phone Calls</label>
+            </div>
+          </div>
+          <div class="notif-settings-block__form-right-column">
+            <div class="notif-settings-block__form-column-title">Messages</div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check4" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox5"
+                value="email-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check4">Email</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check5" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox6"
+                value="pushes-setting-checkbox" />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check5">Push
+                notifications</label>
+            </div>
+            <div class="prim-checkbox-wrapper">
+              <input id="check6" class="prim-checkbox notif-settings-block__checkbox" type="checkbox" name="checkbox7"
+                value="messages-setting-checkbox" disabled />
+              <label class="prim-checkbox-label notif-settings-block__checkbox-label" for="check6">Text messages</label>
+            </div>
+          </div>
+          <input class="prim-submit tab-profile__submit-button submit-notif-settings" type="submit"
+            name="submitNotifications" value="SAVE" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="authentication-tab tab-account">
+    Account tab
+    <br />Lorem ipsum <br />
+    dolor sit amet.
+  </div>
+  <div class="authentication-tab tab-price-plans">
+    Price Plans
+    <br />Lorem ipsum <br />
+    dolor sit amet.
+  </div>
+</section>

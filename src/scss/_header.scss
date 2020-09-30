@@ -1,0 +1,157 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
+  color: $inv-text;
+  background-color: $enter-accent;
+
+  @media (max-width: 576px) {
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  &__logo {
+    // contains main-logo
+    margin-right: 34px;
+
+    @media (max-width: 992px) {
+      margin-right: 10px;
+    }
+  }
+
+  &__version {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    min-height: 3rem;
+    margin: 0 15px 0 0;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #3c4a97;
+
+    @media (min-width: 992px) {
+      //MIN width
+      width: fit-content;
+    }
+
+    @media (max-width: 576px) {
+      justify-content: center;
+    }
+  }
+
+  &__version-logo {
+    height: 19px;
+    margin: 0 14px 0 6px;
+    padding: 4px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    background-color: #39817a;
+    font-size: 1rem;
+    font-weight: 500;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &__version-upgrade {
+    color: #cdd1ea;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+    &_tablet-size {
+      display: none;
+
+      @media (max-width: 991.98px) and (min-width: 575.98px) {
+        display: block;
+      }
+    }
+
+    &_phone-size {
+      display: none;
+      text-decoration: underline;
+
+      @media (max-width: 576px) {
+        display: block;
+      }
+    }
+  }
+
+  &__discover-pro-version-link {
+    padding: 0 2px;
+  }
+
+  &__buttons-group {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+
+    @media (max-width: 576px) {
+      margin-left: 0;
+    }
+  }
+
+  &__button {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    outline-offset: 3px;
+
+    @media (max-width: 576px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &:active {
+      top: 1px;
+      left: 1px;
+    }
+
+    &:hover {
+      outline: 1px solid $soft-background;
+    }
+
+    &:focus {
+      outline: 3px solid $soft-background;
+    }
+  }
+
+  &__notifications-btn {
+    background: url(../images/header/notification-bell-icon.svg) center/contain
+      no-repeat;
+  }
+
+  &__logout-btn {
+    margin-left: 14px;
+    background: url(../images/header/logout-icon.svg) center/contain no-repeat;
+  }
+}
+
+.main-logo {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding-left: 43px;
+  white-space: nowrap;
+  letter-spacing: -0.06px;
+  background: url(../images/header/header-logo.svg) left center/36px no-repeat;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 24px;
+
+  @media (max-width: 576px) {
+    font-size: 0;
+  }
+}

@@ -1,0 +1,86 @@
+.authentication-block {
+  padding-top: 0;
+
+  @media (max-width: 992px) {
+    padding-top: 50px;
+  }
+
+  &__top-row {
+    display: flex;
+    align-items: center;
+    flex: 0 0 57px;
+    width: 100%;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+
+    @media (max-width: 992px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__to-tab-btn {
+    height: 100%;
+    margin-right: 30px;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    background-color: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+
+    @media (max-width: 992px) {
+      margin-right: 10px;
+    }
+
+    &:active {
+      padding: 5px 10px;
+      font-size: 1.7rem;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $mouse-focus;
+    }
+
+    &_active {
+      border-bottom: 3px solid $prim-highlight-text;
+    }
+  }
+}
+
+.authentication-tab {
+  //all 3 tabs
+  position: absolute;
+  z-index: -4;
+  visibility: hidden;
+  flex: 1 0 auto;
+  width: 100%;
+  transition: opacity 0.4s;
+  opacity: 0;
+
+  * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+.authentication-tab_active {
+  position: relative;
+  z-index: 5;
+  visibility: visible;
+  opacity: 1;
+
+  * {
+    // z-index здесь нужнен, чтобы при использовании pos:relative в табе не приходилось каждый раз проставлять z-index
+    position: static;
+    z-index: 1;
+    opacity: 1;
+  }
+}
+
+@import "tab-profile";
+@import "tab-account";
+@import "tab-plans";
