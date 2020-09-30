@@ -1,2 +1,2 @@
 # employ-test
-Full dev pack version in another branch
+Version for Vercel app in another branch
