@@ -1,8 +1,4 @@
 .vscode
-src
-package.json
-package-lock.json
-gulpfile.js
 
 # Logs
 logs
@@ -19,9 +15,6 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 .nyc_output
-
-# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
